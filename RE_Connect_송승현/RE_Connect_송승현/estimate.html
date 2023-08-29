@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <title>마음을 다시 연결하는 결혼 정보 플랫폼 DASH | 견적문의</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+        name="keyworeds" content="결혼, wedding, 결혼정보업체, DASH, Re:Connect, 듀오, 가연,"
+        />
+        <meta
+        name="description" content="안녕하세요, 마음을 다시 연결하는 결혼 정보 플랫폼 DASH 입니다."
+        />
+        <link rel="icon" href="./favicon.png" />
+        <link rel="stylesheet" href="CSS/style.css" />
+    </head>
+
+    <body>
+        <header>
+            <!-- 메뉴바들어갈 부분 -->
+        </header>
+        <main>
+            <div class="container">
+                <h2 class="title">견적문의</h2>
+                <p class="sub-explan">아래 양식을 작성하여 견적문의를 보내주세요.</p>
+                <form action="submit.jsp" accept-charset="UTF-8" method="post">
+
+                <p class="para">1.상담 일정 선택</p>
+                <!-- 상담일정 JS로 달력모양만들기 -->
+                <div class="select-date"> 
+                    <label for="consulting">상담 예정일:</label>
+                    <input type="datetime-local" id="consulting" name="consulting_date" /><br />
+                </div>
+            <br>
+                <p class="para">2.문의자 정보 입력</p> 
+                <div class="info">
+                    <span>성함*<br></span>
+                    <input type="text" name="name" placeholder="성함" required /><br />
+                    <span>성별*</span>
+                    <div>
+                        <label><input type="radio" name="sex" required >남자</label>
+                        <label><input type="radio" name="sex" required >여자 </label>
+                    </div>
+                    <div>
+                        출생년도<input type="text" name="year"> 
+                        <!-- js로 달력 만들기 -->
+                    </div>
+                    <span>연락처*<br></span>
+                    <div>
+                        <select name="phone" id="phone-list">
+                            <option value="">::선택::</option>
+                            <option value="010">010</option>
+                            <option value="011">011</option>
+                            <option value="016">016</option>
+                            <option value="017">017</option>
+                            <option value="018">018</option>
+                            <option value="019">019</option>
+                        </select>
+                        <input type="tel" id="phone" name="phone" required maxlength="8"/>
+                    </div>
+                    <input type="text" id="email" name="email" placeholder="이메일 입력"/>@
+                    <input type="text" id="email" name="email"/>
+                    <select name="email" id="email-list">
+                        <option value="">::직접 입력::</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="google.com">google.com</option>
+                        <option value="hanmail.net">hanmail.net</option>
+                        <option value="nate.com">nate.com</option>
+                        <option value="kakao.com">kakao.com</option>
+                    </select>
+                </div>
+                <br>
+                <label for="message">추가 메시지</label><br />
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><br />
+        
+                <button type="submit">상담하기</button>
+                </form>
+
+            </div>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>

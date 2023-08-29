@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>FAQ</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .collapsible {
+          background-color: #777;
+          color: white;
+          cursor: pointer;
+          padding: 18px;
+          width: 100%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+        }
+        
+        .active, .collapsible:hover {
+          background-color: #555;
+        }
+        
+        .content {
+          padding: 0 18px;
+          display: none;
+          overflow: hidden;
+          background-color: #f1f1f1;
+        }
+        </style>
+</head>
+<body>
+    <header></header>
+    <main>
+
+        <h2>자주 묻는 질문 (FAQ)</h2>
+
+<button type="button" class="collapsible">재혼이나 나이 많은 사람도 가입할 수 있나요?</button>
+<div class="content">
+  <p>네, 가능합니다.</p>
+</div>
+
+<button type="button" class="collapsible">비밀 번호를 변경하고 싶은데 어떻게 하나요?</button>
+<div class="content">
+  <p>잘 하시면 됩니다.</p>
+</div>
+<button type="button" class="collapsible">재혼시 자녀가 있어도 가입이 가능할까요?</button>
+<div class="content">
+  <p>네 가능합니다.</p>
+</div>
+<button type="button" class="collapsible">~~할까요?</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laborum?</p>
+</div>
+<button type="button" class="collapsible">~~할까요?</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laborum?</p>
+</div>
+<button type="button" class="collapsible">~~할까요?</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laborum?</p>
+</div>
+<button type="button" class="collapsible">~~할까요?</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laborum?</p>
+</div>
+<button type="button" class="collapsible">~~할까요?</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laborum?</p>
+</div>
+<button type="button" class="collapsible">~~할까요?</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laborum?</p>
+</div>
+<button type="button" class="collapsible">~~할까요?</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laborum?</p>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+    </main>
+    <footer></footer>
+</body>
+</html>

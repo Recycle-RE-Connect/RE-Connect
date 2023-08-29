@@ -1,83 +1,217 @@
 <!DOCTYPE html>
-    <html lang="ko">
-    <head>
-        <title>마음을 다시 연결하는 결혼 정보 플랫폼 DASH | 견적문의</title>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-        name="keyworeds" content="결혼, wedding, 결혼정보업체, DASH, Re:Connect, 듀오, 가연,"
-        />
-        <meta
-        name="description" content="안녕하세요, 마음을 다시 연결하는 결혼 정보 플랫폼 DASH 입니다."
-        />
-        <link rel="icon" href="./favicon.png" />
-        <link rel="stylesheet" href="CSS/style.css" />
-    </head>
+<html lang="ko">
 
-    <body>
-        <header>
-            <!-- 메뉴바들어갈 부분 -->
-        </header>
-        <main>
-            <div class="container">
-                <h2 class="title">견적문의</h2>
-                <p class="sub-explan">아래 양식을 작성하여 견적문의를 보내주세요.</p>
-                <form action="submit.jsp" accept-charset="UTF-8" method="post">
+<head>
+    <title>마음을 다시 연결하는 결혼 정보 플랫폼 DASH | 견적문의</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keyworeds" content="결혼, wedding, 결혼정보업체, DASH, Re:Connect, 듀오, 가연," />
+    <meta name="description" content="안녕하세요, 마음을 다시 연결하는 결혼 정보 플랫폼 DASH 입니다." />
+    <link rel="icon" href="./favicon.png" />
+    <link rel="stylesheet" href="CSS/style.css" />
+</head>
 
-                <p class="para">1.상담 일정 선택</p>
-                <!-- 상담일정 JS로 달력모양만들기 -->
-                <div class="select-date"> 
+<body>
+    <header>
+        <!-- 메뉴바들어갈 부분 -->
+    </header>
+    <main>
+        <div class="container">
+            <h2 class="title">가입비 진단</h2>
+            <p class="sub-title">아래 질문에 답해주시면 가입비에 대한 진단을 도와드립니다.</p>
+            <form action="submit.jsp" accept-charset="UTF-8" method="post" class="form">
+                <div class="select-date">
+                    <p class="explan-date">1.상담 일정 선택</p>
+                    <!-- 상담일정 JS로 달력모양만들기 -->
                     <label for="consulting">상담 예정일:</label>
                     <input type="datetime-local" id="consulting" name="consulting_date" /><br />
                 </div>
-            <br>
-                <p class="para">2.문의자 정보 입력</p> 
-                <div class="info">
-                    <span>성함*<br></span>
-                    <input type="text" name="name" placeholder="성함" required /><br />
-                    <span>성별*</span>
-                    <div>
-                        <label><input type="radio" name="sex" required >남자</label>
-                        <label><input type="radio" name="sex" required >여자 </label>
-                    </div>
-                    <div>
-                        출생년도<input type="text" name="year"> 
-                        <!-- js로 달력 만들기 -->
-                    </div>
-                    <span>연락처*<br></span>
-                    <div>
-                        <select name="phone" id="phone-list">
-                            <option value="">::선택::</option>
-                            <option value="010">010</option>
-                            <option value="011">011</option>
-                            <option value="016">016</option>
-                            <option value="017">017</option>
-                            <option value="018">018</option>
-                            <option value="019">019</option>
-                        </select>
-                        <input type="tel" id="phone" name="phone" required maxlength="8"/>
-                    </div>
-                    <input type="text" id="email" name="email" placeholder="이메일 입력"/>@
-                    <input type="text" id="email" name="email"/>
-                    <select name="email" id="email-list">
-                        <option value="">::직접 입력::</option>
-                        <option value="naver.com">naver.com</option>
-                        <option value="google.com">google.com</option>
-                        <option value="hanmail.net">hanmail.net</option>
-                        <option value="nate.com">nate.com</option>
-                        <option value="kakao.com">kakao.com</option>
-                    </select>
-                </div>
                 <br>
-                <label for="message">추가 메시지</label><br />
-                <textarea id="message" name="message" rows="4" cols="50"></textarea><br />
-        
-                <button type="submit">상담하기</button>
-                </form>
+                <div class="info">
+                    <p class="para">2.문의자 정보 입력</p>
+                    <p class="para2">* 필수입력 입니다.</p>
+                    <!-- 성별 -->
+                    <div class="form1">
+                        <div class="form-text">
+                            성별 <span class="ast">*</span>
+                        </div>
+                        <div class="form-content">
+                            <label><input type="radio" name="sex" value="M" required>남자</label>
+                            <label><input type="radio" name="sex" value="F" required>여자 </label>
+                        </div>
+                    </div>
 
-            </div>
-        </main>
-        <footer>
-        </footer>
-    </body>
+                    <!-- 성함 -->
+                    <div class="form2">
+                        <div class="form-text">
+                            성함 <span class="ast">*</span>
+                        </div>
+                        <div class="form-content">
+                            <input type="text" name="name" placeholder="성함을 입력해 주세요." required />
+                        </div>
+                    </div>
+
+                    <!-- 생년 -->
+                    <div class="form2">
+                        <div class="form-text">
+                            출생년도 <span class="ast">*</span>
+                        </div>
+                        <div class="form-content">
+                            <input type="text" name="year" maxlength="4" placeholder="출생년도를 입력해 주세요.">
+                        </div>
+                    </div>
+
+                    <!-- 직업 -->
+                    <div class="form2">
+                        <div class="form-text">
+                            직업 <span class="ast">*</span>
+                        </div>
+                        <div class="form-content">
+                            <select name="career" required="">
+                                <option value="" selected="">선택해 주세요.</option>
+                                <option value="판사">판사</option>
+                                <option value="검사">검사</option>
+                                <option value="변호사">변호사</option>
+                                <option value="전문의">전문의</option>
+                                <option value="치과의사">치과의사</option>
+                                <option value="한의사">한의사</option>
+                                <option value="수의사">수의사</option>
+                                <option value="약사">약사</option>
+                                <option value="회계사">회계사</option>
+                                <option value="변리사">변리사</option>
+                                <option value="기타전문직">기타전문직</option>
+                                <option value="대학교수">대학교수</option>
+                                <option value="펀드매니저">펀드매니저</option>
+                                <option value="연구원">연구원</option>
+                                <option value="CEO">CEO</option>
+                                <option value="임대업">임대업</option>
+                                <option value="방송/연예인">방송/연예인</option>
+                                <option value="문화/예술계통">문화/예술계통</option>
+                                <option value="프리랜서">프리랜서</option>
+                                <option value="승무원/항공관련">승무원/항공관련</option>
+                                <option value="공기업">공기업</option>
+                                <option value="대기업">대기업</option>
+                                <option value="금융계열">금융계열</option>
+                                <option value="자영업">자영업</option>
+                                <option value="일반회사원">일반회사원</option>
+                                <option value="일반공무원">일반공무원</option>
+                                <option value="경찰/군인">경찰/군인</option>
+                                <option value="종교인">종교인</option>
+                                <option value="병원기술직">병원기술직</option>
+                                <option value="교사(임용교사)">교사(임용교사)</option>
+                                <option value="유치원 교사">유치원 교사</option>
+                                <option value="교직원">교직원</option>
+                                <option value="간호사">간호사</option>
+                                <option value="대학생">대학생</option>
+                                <option value="직접입력">직접입력</option>
+                            </select>
+                            <!-- 직접입력시 입력칸 만들어야함  -->
+                        </div>
+                    </div>
+
+                    <!-- 학력 -->
+                    <div class="form2">
+                        <div class="form-text">
+                            학력 <span class="ast">*</span>
+                        </div>
+                        <div class="form-content">
+                            <select name="Education" required="">
+                                <option value="고등학교졸업">고등학교졸업</option>
+                                <option value="전문대졸업">전문대졸업</option>
+                                <option value="대학교졸업" selected="">대학교졸업</option>
+                                <option value="대학원졸">대학원졸</option>
+                                <option value="유학파">유학파</option>
+                                <option value="박사이상">박사이상</option>
+                                <option value="기타">기타</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- 지역 -->
+                    <div class="form2">
+                        <div class="form-text">
+                            지역 <span class="ast">*</span>
+                        </div>
+                        <div class="form-content">
+                            <select name="country" required="">
+                                <option value="">선택해 주세요.</option>
+                                <option value="서울특별시">서울특별시</option>
+                                <option value="경기도">경기도</option>
+                                <option value="인천광역시">인천광역시</option>
+                                <option value="부산광역시">부산광역시</option>
+                                <option value="울산광역시">울산광역시</option>
+                                <option value="세종특별자치시">세종특별자치시</option>
+                                <option value="대구광역시">대구광역시</option>
+                                <option value="대전광역시">대전광역시</option>
+                                <option value="광주광역시">광주광역시</option>
+                                <option value="강원특별자치도">강원특별자치도</option>
+                                <option value="충청남도">충청남도</option>
+                                <option value="충청북도">충청북도</option>
+                                <option value="경상남도">경상남도</option>
+                                <option value="경상북도">경상북도</option>
+                                <option value="전라남도">전라남도</option>
+                                <option value="전라북도">전라북도</option>
+                                <option value="제주특별자치도">제주특별자치도</option>
+                                <option value="해외거주">해외거주</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- 연락처 -->
+                    <div class="form2">
+                        <div class="form-text">
+                            연락처 <span class="ast">*</span>
+                        </div>
+                        <div class="form-content">
+                            <select name="phone" required="">
+                                <option value="">::선택::</option>
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                                <option value="016">016</option>
+                                <option value="017">017</option>
+                                <option value="018">018</option>
+                                <option value="019">019</option>
+                            </select>
+                            <input type="tel" name="phone" required maxlength="4" placeholder="숫자만 입력해주세요." /> -
+                            <input type="tel" name="phone" required maxlength="4" />
+                        </div>
+                    </div>
+
+                    <div class="form2">
+                        <div class="form-text">
+                            이메일
+                        </div>
+                        <div class="form-content">
+                            <input type="text" id="email" name="email" placeholder="이메일 입력" />@
+                            <input type="text" id="email" name="email" />
+                            <select name="email" id="email-list">
+                                <option value="">::직접 입력::</option>
+                                <option value="naver.com">naver.com</option>
+                                <option value="google.com">google.com</option>
+                                <option value="hanmail.net">hanmail.net</option>
+                                <option value="nate.com">nate.com</option>
+                                <option value="kakao.com">kakao.com</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form3">
+                        <div class="agree">
+                            <label>
+                                <input type="checkbox" name="agree" required>개인정보처리방침에 동의합니다.
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="submit">
+                    <button type="submit">가입비 확인하기</button>
+                </div>
+            </form>
+
+        </div>
+    </main>
+    <footer>
+    </footer>
+</body>
+
 </html>

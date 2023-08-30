@@ -14,7 +14,72 @@
 <body>
     <header>
         <!-- 메뉴바들어갈 부분 -->
+        <div id="title-logo">
+            <a href="#"><img src="images/logo.svg" alt="logo">DASH</a>
+        </div>
+        <nav>
+            <ul class="main-menu">
+                <li class="item">
+                    <a href="#">
+                        <div class="item-name">회사소개</div>
+                    </a>
+                    <div class="contents-menu">
+                        <ul class="inner">
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">커플 매니저 소개</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <div class="item-name">커뮤니티</div>
+                    </a>
+                    <div class="contents-menu">
+                        <ul class="inner">
+                            <li><a href="#">문의하기</a></li>
+                            <li><a href="#">게시판</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">공지사항</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <div class="item-name">이용안내</div>
+                    </a>
+                    <div class="contents-menu">
+                        <ul class="inner">
+                            <li><a href="#">견적문의</a></li>
+                            <li><a href="#">Price</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <div class="item-name">후기정보</div>
+                    </a>
+                    <div class="contents-menu">
+                        <ul class="inner">
+                            <li><a href="#">인터뷰</a></li>
+                            <li><a href="#">스토리</a></li>
+                            <li><a href="#">후기</a></li>
+                            <li><a href="#">매니저 후기</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <div class="item-name">매칭하기</div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div id="login">
+            <a href="#">로그인</a>
+            <a href="#">회원가입</a>
+        </div>
     </header>
+    <!-- 메뉴바 -->
     <main>
         <div class="container">
             <h2 class="title">상담예약</h2>
@@ -25,33 +90,33 @@
                     <div class="select-date">
                         <p class="compartment">1.상담 일정 선택</p>
                         <!-- 상담일정 JS로 달력모양만들기 -->
-                            <table class="scriptCalendar">
-                                <thead>
-                                    <tr>
-                                        <td class="calendarBtn" id="btnPrevCalendar">&#60;&#60;</td>
-                                        <td colspan="5">
-                                            <span id="calYear">YYYY</span>년
-                                            <span id="calMonth">MM</span>월
-                                        </td>
-                                        <td class="calendarBtn" id="nextNextCalendar">&#62;&#62;</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sun</td>
-                                        <td>Mon</td>
-                                        <td>Tue</td>
-                                        <td>Wed</td>
-                                        <td>Thu</td>
-                                        <td>Fri</td>
-                                        <td>Sat</td>
-                                    </tr>
-                                </thead>
-                                <tbody></tbody>
-                            </table>
+                        <table class="scriptCalendar">
+                            <thead>
+                                <tr>
+                                    <td class="calendarBtn" id="btnPrevCalendar">&#60;&#60;</td>
+                                    <td colspan="5">
+                                        <span id="calYear">YYYY</span>년
+                                        <span id="calMonth">MM</span>월
+                                    </td>
+                                    <td class="calendarBtn" id="nextNextCalendar">&#62;&#62;</td>
+                                </tr>
+                                <tr>
+                                    <td>Sun</td>
+                                    <td>Mon</td>
+                                    <td>Tue</td>
+                                    <td>Wed</td>
+                                    <td>Thu</td>
+                                    <td>Fri</td>
+                                    <td>Sat</td>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
                         <!-- <label for="consulting">상담 예정일:</label>
                         <input type="datetime-local" id="consulting" name="consulting_date" /><br /> -->
                     </div>
-    
-                    
+
+
                     <br>
                     <div class="info">
                         <p class="compartment">2.문의자 정보 입력</p>
@@ -66,7 +131,7 @@
                                 <label><input type="radio" name="sex" value="F" required>여자 </label>
                             </div>
                         </div>
-    
+
                         <!-- 성함 -->
                         <div class="form2">
                             <div class="form-text">
@@ -76,7 +141,7 @@
                                 <input type="text" name="name" placeholder="성함을 입력해 주세요." required />
                             </div>
                         </div>
-    
+
                         <!-- 생년 -->
                         <div class="form2">
                             <div class="form-text">
@@ -86,7 +151,7 @@
                                 <input type="text" name="year" maxlength="4" placeholder="출생년도를 입력해 주세요.">
                             </div>
                         </div>
-    
+
                         <!-- 직업 -->
                         <div class="form2">
                             <div class="form-text">
@@ -134,7 +199,7 @@
                                 <!-- 직접입력시 입력칸 만들어야함  -->
                             </div>
                         </div>
-    
+
                         <!-- 학력 -->
                         <div class="form2">
                             <div class="form-text">
@@ -152,7 +217,7 @@
                                 </select>
                             </div>
                         </div>
-    
+
                         <!-- 지역 -->
                         <div class="form2">
                             <div class="form-text">
@@ -182,7 +247,7 @@
                                 </select>
                             </div>
                         </div>
-    
+
                         <!-- 연락처 -->
                         <div class="form2">
                             <div class="form-text">
@@ -202,14 +267,14 @@
                                 <input type="text" name="phone" required maxlength="4" />
                             </div>
                         </div>
-    
+
                         <div class="form2">
                             <div class="form-text">
                                 이메일
                             </div>
                             <div class="form-content">
                                 <input type="text" id="emailId" name="email" placeholder="이메일 입력" />@
-                                <input type= "text" id="textEmail" name="email" />
+                                <input type="text" id="textEmail" name="email" />
                                 <select id="email-select" class="dropdown" name="email" onchange="checkEmailAddy()">
                                     <option value=" " selected>선택해주세요</option>
                                     <option value="naver.com">naver.com</option>
@@ -220,7 +285,7 @@
                                 </select>
                             </div>
                         </div>
-    
+
                     </div>
                 </div>
                 <div class="submit">

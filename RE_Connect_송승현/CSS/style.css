@@ -1,7 +1,6 @@
 @font-face {
   font-family: "Pretendard-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -13,6 +12,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html,
 body {
   width: 100%;
@@ -20,10 +20,59 @@ body {
   height: 100%;
   font-family: "Pretendard-Regular";
 }
+
 img {
   width: 100%;
   max-width: 100%;
 }
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+/* 메뉴바 */
+header {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+#title-logo {
+  display: flex;
+  align-items: center;
+}
+
+#title-logo a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 900;
+  text-decoration: none;
+  color: black;
+}
+#title-logo a img {
+  width: 80px;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.main-menu {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+.item-name {
+  font-weight: 600;
+  font-size: 20px;
+  color: black;
+}
+
+/* 메뉴바 */
+
 .container {
   display: flex;
   flex-direction: column;
@@ -41,6 +90,7 @@ img {
   font-weight: 600;
   text-align: center;
 }
+
 .sub-title {
   color: #bcbcbc;
 }
@@ -48,14 +98,17 @@ img {
 .compartment {
   font-weight: 600;
 }
+
 .para2 {
   font-size: 13px;
   color: rgba(255, 0, 0, 0.515);
 }
+
 .select-date {
   padding: 1rem;
   border: 1px solid black;
 }
+
 .info {
   padding: 1rem;
   border: 1px solid black;
@@ -85,9 +138,11 @@ input[type="radio"] {
   width: 1.25em;
   height: 1.25em;
 }
+
 input[type="radio"]:checked {
   border: 0.4em solid #92d7d6;
 }
+
 /* type = text 디자인 */
 input[type="text"] {
   width: 10rem;
@@ -95,6 +150,7 @@ input[type="text"] {
   font-size: 12px;
   padding-left: 6px;
 }
+
 input[type="text"]:focus {
   outline: none;
   border: 2px solid #92d7d6;
@@ -109,6 +165,7 @@ input[type="text"]:focus {
   align-items: center;
   gap: 1rem;
 }
+
 .agree-content {
   width: 856px;
   height: 130px;
@@ -121,22 +178,27 @@ input[type="text"]:focus {
 .scriptCalendar {
   text-align: center;
 }
-.scriptCalendar > thead > tr > td {
+
+.scriptCalendar>thead>tr>td {
   width: 1rem;
   height: 1rem;
 }
-.scriptCalendar > thead > tr:first-child > td {
+
+.scriptCalendar>thead>tr:first-child>td {
   font-weight: 600;
   color: rgb(136, 130, 130);
 }
-.scriptCalendar > thead > tr:last-child > td {
+
+.scriptCalendar>thead>tr:last-child>td {
   background-color: #f2f2f2;
   /* border: 1px solid black; */
 }
-.scriptCalendar > tbody > tr > td {
+
+.scriptCalendar>tbody>tr>td {
   width: 3rem;
   height: 4rem;
 }
+
 .calendarBtn {
   cursor: pointer;
 }

@@ -1,20 +1,26 @@
 @font-face {
-  font-family: 'Pretendard-Regular'; 
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-  font-weight: 400; font-style: normal; 
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
-*,*::after,*::before{
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html,body{
+html,
+body {
   width: 100%;
+  /* max-width: 1425px; */
   height: 100%;
-  font-family: 'Pretendard-Regular'; 
+  font-family: "Pretendard-Regular";
 }
-img{
+img {
   width: 100%;
   max-width: 100%;
 }
@@ -24,18 +30,113 @@ img{
   align-items: center;
   gap: 1rem;
 }
-.container .title{
+
+.container2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container .title {
   font-weight: 600;
   text-align: center;
 }
-.sub-title{
+.sub-title {
   color: #bcbcbc;
 }
-.form{
-  display: flex;
-  gap: 1rem;
+
+.compartment {
+  font-weight: 600;
 }
 .para2 {
   font-size: 13px;
   color: rgba(255, 0, 0, 0.515);
+}
+.select-date {
+  padding: 1rem;
+  border: 1px solid black;
+}
+.info {
+  padding: 1rem;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.form-text {
+  margin-bottom: 3px;
+}
+
+/* type = radio 디자인 */
+input[type="radio"] {
+  vertical-align: middle;
+  appearance: none;
+  border: max(2px, 0.1em) solid gray;
+  border-radius: 50%;
+  width: 1.25em;
+  height: 1.25em;
+}
+input[type="radio"]:checked {
+  border: 0.4em solid #92d7d6;
+}
+/* type = text 디자인 */
+input[type="text"] {
+  width: 10rem;
+  height: 2rem;
+  font-size: 12px;
+  padding-left: 6px;
+}
+input[type="text"]:focus {
+  outline: none;
+  border: 2px solid #92d7d6;
+}
+
+/* .dropdown 포커싱 - 디자인 변경해야 함 https://velog.io/@heejin-k/CSS-%EC%8B%A4%EC%A0%84-1-checkbox%EB%9E%91-select%EB%A5%BC-%EC%9D%B4%EC%81%98%EA%B2%8C-%EA%BE%B8%EB%AF%B8%EA%B3%A0-%EC%8B%B6%EC%96%B4  */
+
+.submit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.agree-content {
+  width: 856px;
+  height: 130px;
+  overflow: auto;
+  border: 1px dashed black;
+  font-size: 12px;
+}
+
+/* 캘린더영역 */
+.scriptCalendar {
+  text-align: center;
+}
+.scriptCalendar > thead > tr > td {
+  width: 1rem;
+  height: 1rem;
+}
+.scriptCalendar > thead > tr:first-child > td {
+  font-weight: 600;
+  color: rgb(136, 130, 130);
+}
+.scriptCalendar > thead > tr:last-child > td {
+  background-color: #f2f2f2;
+  /* border: 1px solid black; */
+}
+.scriptCalendar > tbody > tr > td {
+  width: 3rem;
+  height: 4rem;
+}
+.calendarBtn {
+  cursor: pointer;
 }

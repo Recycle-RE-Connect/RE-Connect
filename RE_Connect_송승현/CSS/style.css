@@ -33,43 +33,6 @@ a{
 }
 
 /* 메뉴바 */
-header {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 1rem;
-  align-items: center;
-}
-
-#title-logo {
-  display: flex;
-  align-items: center;
-}
-
-#title-logo a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
-  font-weight: 900;
-  text-decoration: none;
-  color: black;
-}
-#title-logo a img {
-  width: 80px;
-  height: 100%;
-  margin-right: 10px;
-}
-
-.main-menu {
-  list-style: none;
-  display: flex;
-  gap: 3rem;
-}
-.item-name {
-  font-weight: 600;
-  font-size: 20px;
-  color: black;
-}
 
 /* 메뉴바 */
 
@@ -110,7 +73,7 @@ header {
 }
 
 .info {
-  padding: 1rem;
+  padding: 2rem;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
@@ -139,16 +102,27 @@ input[type="radio"] {
   height: 1.25em;
 }
 
+.form1 .form-content {
+  display: flex;
+  gap: 1rem;
+}
+
 input[type="radio"]:checked {
   border: 0.4em solid #92d7d6;
 }
 
 /* type = text 디자인 */
 input[type="text"] {
-  width: 10rem;
-  height: 2rem;
+  width: 160px;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 8px 9px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
   font-size: 12px;
-  padding-left: 6px;
+  line-height: 16px;
 }
 
 input[type="text"]:focus {
@@ -156,8 +130,34 @@ input[type="text"]:focus {
   border: 2px solid #92d7d6;
 }
 
-/* .dropdown 포커싱 - 디자인 변경해야 함 https://velog.io/@heejin-k/CSS-%EC%8B%A4%EC%A0%84-1-checkbox%EB%9E%91-select%EB%A5%BC-%EC%9D%B4%EC%81%98%EA%B2%8C-%EA%BE%B8%EB%AF%B8%EA%B3%A0-%EC%8B%B6%EC%96%B4  */
+.phone{
+  width: 150px;
+  border: 1px solid #C4C4C4;
+  border-radius: 10px;
+  padding: 5px 6px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+/* type = select 디자인 */
+.dropdown {
+  width: 150px;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 8px 9px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
 
+.dropdown:focus {
+  outline: none;
+  border: 2px solid #92d7d6;
+}
+/* select 디자인 */
+
+/*  */
 .submit {
   display: flex;
   flex-direction: column;

@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pretendard-Regular';
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  width: 1920px;
+  height: 940px;
+  background-color: #F6F4E8;
+  background-image: url("../images/dash.png");
+}
+
+#title {
+  position: absolute;
+  top: 15px;
+  left: 180px;
+}
+
+/* 드롭다운 글씨 색 */
+a:visited {
+  color: #1D3124;
+}
+
+#top_menu {
+  position: absolute;
+  top: 40px;
+  right: 160px;
+  word-spacing: 2.5rem;
+}
+
+#top_menu a {
+  color: #1D3124;
+  font-weight: 600;
+  padding-bottom: 2rem;
+}
+
+/* 아래 고정되어있는 바 */
+#footer {
+  position: fixed;
+  background-color: #1D3124;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4rem;
+}
+
+/* 카테고리 위치, 사이즈, 높낮이 */
+.nav .gnb{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  gap: 6rem;
+  top: 30px;
+  /* left: 550px; */
+  font-size: 20px;
+  /* height: 50px; */
+}
+
+.nav-bar {
+  /* padding-bottom: 2rem; */
+  line-height: 3.8rem;
+}
+
+/* 드롭다운 폰트 */
+.nav-bar .nav-menu a{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* 풀드롭다운 */
+.nav-menu {
+  position: absolute;
+  background-color: whitesmoke;
+  border-top: dashed 1px #1D3124;
+  /* right: 200px; */
+  width: 50%;
+  height: 340px;
+  padding-top: 1.5rem;
+  /* margin-left: -36.8rem; */
+  min-width: 140px;
+  min-height: 200px;
+  
+}
+
+/* 카테고리 */
+.nav {
+  display: inline;
+  margin-left: 80px;
+  font-weight: 700;
+}
+
+/* 카테고리 글씨 색 */
+.nav-bar>a:visited {
+  color: black;
+}
+
+.gnb>.nav-bar .nav-menu {
+  display: none;
+}
+
+.gnb>.nav-bar:hover>.nav-menu {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.nav ul.gnb:hover .nav-bar .nav-menu {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+.first {
+  margin-left: -36.8rem;
+  /* left: 1rem; */
+}
+.first a{
+  /* margin-left: -36.8rem; */
+  padding-left: 36.8rem ;
+}
+

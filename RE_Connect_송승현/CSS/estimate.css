@@ -1,0 +1,204 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  /* max-width: 1425px; */
+  height: 100%;
+  font-family: "Pretendard-Regular";
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+/* 메뉴바 */
+
+/* 메뉴바 */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container .title {
+  font-weight: 600;
+  text-align: center;
+}
+
+.sub-title {
+  color: #bcbcbc;
+}
+
+.compartment {
+  font-weight: 600;
+}
+
+.para2 {
+  font-size: 13px;
+  color: rgba(255, 0, 0, 0.515);
+}
+
+.select-date {
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.info {
+  padding: 2rem;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.form-text {
+  margin-bottom: 3px;
+}
+
+/* type = radio 디자인 */
+input[type="radio"] {
+  vertical-align: middle;
+  appearance: none;
+  border: max(2px, 0.1em) solid gray;
+  border-radius: 50%;
+  width: 1.25em;
+  height: 1.25em;
+}
+
+.form1 .form-content {
+  display: flex;
+  gap: 1rem;
+}
+
+input[type="radio"]:checked {
+  border: 0.4em solid #92d7d6;
+}
+
+/* type = text 디자인 */
+input[type="text"] {
+  width: 160px;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 8px 9px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border: 2px solid #92d7d6;
+}
+
+.phone{
+  width: 150px;
+  border: 1px solid #C4C4C4;
+  border-radius: 10px;
+  padding: 5px 6px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+/* type = select 디자인 */
+.dropdown {
+  width: 150px;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 8px 9px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.dropdown:focus {
+  outline: none;
+  border: 2px solid #92d7d6;
+}
+/* select 디자인 */
+
+/*  */
+.submit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.agree-content {
+  width: 856px;
+  height: 130px;
+  overflow: auto;
+  border: 1px dashed black;
+  font-size: 12px;
+}
+
+/* 캘린더영역 */
+.scriptCalendar {
+  text-align: center;
+}
+
+.scriptCalendar>thead>tr>td {
+  width: 1rem;
+  height: 1rem;
+}
+
+.scriptCalendar>thead>tr:first-child>td {
+  font-weight: 600;
+  color: rgb(136, 130, 130);
+}
+
+.scriptCalendar>thead>tr:last-child>td {
+  background-color: #f2f2f2;
+  /* border: 1px solid black; */
+}
+
+.scriptCalendar>tbody>tr>td {
+  width: 3rem;
+  height: 4rem;
+}
+
+.calendarBtn {
+  cursor: pointer;
+}

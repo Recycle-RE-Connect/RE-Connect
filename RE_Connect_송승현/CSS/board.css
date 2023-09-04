@@ -1,20 +1,38 @@
-* {
+@font-face {
+    font-family: "Pretendard-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  *,
+  *::after,
+  *::before {
     margin: 0;
     padding: 0;
-}
-
-html {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    width: 100%;
+    /* max-width: 1425px; */
+    height: 100%;
+    font-family: "Pretendard-Regular";
     font-size: 10px;
-}
-
-ul, li {
+  }
+  
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
+  ul,li{
     list-style: none;
-}
-
-a {
+  }
+  a{
     text-decoration: none;
-    color: inherit;
-}
+    color: black;
+  }
 
 .board_wrap {
     width: 1000px;
@@ -23,6 +41,7 @@ a {
 
 .board_title {
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .board_title strong {
@@ -40,8 +59,10 @@ a {
     font-size: 0;
 }
 
-.bt_wrap a {
+/* a태그 이상함 */
+.bt_wrap a { 
     display: inline-block;
+    height: 40.91px;
     min-width: 80px;
     margin-left: 10px;
     padding: 10px;
@@ -49,13 +70,33 @@ a {
     border-radius: 2px;
     font-size: 1.4rem;
 }
-
+.bt_wrap button:last-child {
+    border: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+}
 .bt_wrap a:first-child {
     margin-left: 0;
 }
 
 .bt_wrap a.on {
     background: #000;
+    color: #fff;
+}
+button {
+    background-color: #fff;
+    min-width: 80px;
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+button.on{
+    background-color: black;
     color: #fff;
 }
 

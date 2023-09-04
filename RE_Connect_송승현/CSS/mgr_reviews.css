@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  /* max-width: 1425px; */
+  height: 100%;
+  font-family: "Pretendard-Regular";
+}
+
+img {
+  width: 35%;
+  max-width: 100%;
+  border-radius: 1rem;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 5rem;
+}
+.container .title {
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.sub-title {
+  color: #bcbcbc;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+}
+.odd{ 
+    align-items: end;
+}
+.text {
+    width: 35%;
+    max-width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.even .text{
+    text-align: end;
+}
+.en_name {
+    color: #bcbcbc;
+}
+.explan {
+    font-weight: 700;
+    font-size: 20px;
+    color: #92d7d6;
+}
+.container::before{
+    content: "";
+    border: 1px black dashed;
+    height: 100vh;
+}

@@ -1,0 +1,60 @@
+.backImage{
+  background-image: url(../images/dash.png);
+  height: 100vh;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+.gnb{
+  display: flex;
+  text-align: center;
+  height: 5rem;
+  padding-top: 2rem;
+  width: 700px;
+  justify-content: center;
+  /* background-color: #F6F4E8; */
+
+}
+.gnb-menu{
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.sub-menu{
+  display: none;
+}
+
+.gnb:hover .sub-menu{
+  display: inline;
+  text-align: center;  
+  background-color: white;
+  height: 0;
+  padding-bottom: 250px;
+    
+}
+
+.sub-menu li{
+  padding-top: 1.5rem;
+}
+
+.login_menu{
+  display: flex;
+  padding-left: 2rem;
+  gap: 1rem;
+}
+.login_menu div{
+  /* border: 1px solid black; */
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  background-color: white;
+  min-width: 90px;
+  text-align: center;
+}

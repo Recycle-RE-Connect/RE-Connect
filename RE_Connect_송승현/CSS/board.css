@@ -35,10 +35,49 @@ a {
   text-decoration: none;
   color: black;
 }
+/* 사이드바 부분 */
+.side-bar {
+  position: sticky;
+  /* top: 0; */
+  top: calc(0% + 200px);
+  left: 30px;
+  width: 244px;
+  padding: 30px 20px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  height: 250px;
+}
+
+.side-bar h2::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  width: 70px;
+  border: 1px solid #bcbcbc;
+}
+
+.sb-list {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+}
+
+.sb-list li {
+  padding: 1rem;
+}
+.side-bar .sb-list li:hover {
+  background-color: #f5f7f8;
+}
+.side-bar .sb-list li:hover a {
+  color: #a0c2ac;
+}
 
 .board_wrap {
   width: 1000px;
-  margin: 100px auto;
+  margin: auto;
+  padding-bottom: 3rem;
 }
 
 .board_title {
@@ -404,5 +443,25 @@ button.on {
   .board_write .info input[type="text"],
   .board_write .info input[type="password"] {
     width: 100%;
+  }
+}
+
+@media (max-width: 1500px) {
+  .side-bar .sb-list li:hover {
+    background-color: transparent;
+  }
+  #box {
+    height: 0px;
+  }
+}
+@media (max-width: 1300px) {
+  .side-bar {
+    display: none;
+  }
+  #box {
+    height: 250px;
+  }
+  .board_wrap {
+    padding-bottom: 3rem;
   }
 }

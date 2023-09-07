@@ -34,6 +34,9 @@ li {
 a {
   text-decoration: none;
 }
+#box{
+  height: 0px;
+}
 
 /* 메뉴바 */
 header {
@@ -41,6 +44,8 @@ header {
   flex-direction: column;
   align-items: center;
   background-color: #fafafa;
+  position: absolute;
+  z-index: 10;
 }
 /* 로고 및 로그인 */
 .header {
@@ -89,7 +94,6 @@ header {
   text-align: center;
   position: relative;
   transition: all 300ms ease-in-out;
-  z-index: 1000;
 }
 
 .gnb::before {
@@ -151,8 +155,9 @@ header {
 
 /* 사이드바 부분 */
 .side-bar {
-  position: fixed;
-  top: calc(95px + 30px);
+  position: sticky;
+  /* top: 0; */
+  top: calc(0% + 200px);
   left: 30px;
   width: 244px;
   padding: 30px 20px;
@@ -160,6 +165,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  height: 250px;
 }
 
 .side-bar h2::before {
@@ -191,7 +197,7 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  padding: 5rem;
+  padding: 3rem;
 }
 
 .container2 {
@@ -433,9 +439,15 @@ button {
   .side-bar .sb-list li:hover {
     background-color: transparent;
   }
+  #box{
+    height: 0px;
+  }
 }
 @media (max-width: 1300px) {
   .side-bar {
     display: none;
+  }
+  #box{
+    height: 250px;
   }
 }

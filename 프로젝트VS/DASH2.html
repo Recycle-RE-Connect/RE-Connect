@@ -15,9 +15,84 @@
   />
   <link rel="icon" href="images/favicon.png">
   <link rel="stylesheet" href="./style2.css">
+  <link rel="stylesheet" href="./css/header_style.css">
+  <link rel="stylesheet" href="./css/footer_style.css">
+  <link rel="stylesheet" href="./css/sidebar_style.css">
 </head>
 <body>
-    <main>
+  <header>
+    <div class="header">
+      <div class="air"></div>
+      <a href="./header.html" id="logo">
+        <img src="/images/logo.svg" alt="로고" />
+      </a>
+      <div class="login_menu">
+        <div>
+          <a href="#">로그인</a>
+        </div>
+        <div>
+          <a href="#">회원가입</a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav">
+      <ul class="gnb">
+        <!-- <div id="test"></div> -->
+        <li class="gnb-menu">
+          <a href="#">회사소개</a>
+          <ul class="sub-menu">
+            <li><a href="#">인사말</a></li>
+            <li><a href="#">커플 매니저 소개</a></li>
+          </ul>
+        </li>
+
+        <li class="gnb-menu">
+          <a href="#">커뮤니티</a>
+          <ul class="sub-menu">
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">게시판</a></li>
+            <li><a href="#">문의하기</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </li>
+
+        <li class="gnb-menu">
+          <a href="#">이용안내</a>
+          <ul class="sub-menu">
+            <li><a href="#">Dash란?</a></li>
+            <li><a href="#">견적문의</a></li>
+            <li><a href="#">이용요금</a></li>
+          </ul>
+        </li>
+
+        <li class="gnb-menu">
+          <a href="#">후기정보</a>
+          <ul class="sub-menu">
+            <li><a href="#">매니저 후기</a></li>
+            <li><a href="#">인터뷰</a></li>
+          </ul>
+        </li>
+
+        <li class="gnb-menu">
+          <a href="#">매칭하기</a>
+          <ul class="sub-menu">
+            <li><a href="#">Dash매칭</a></li>
+            <li><a href="#">This Is Me</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+      <nav class="side-bar">
+      <h2>이용안내</h2>
+      <ul class="sb-list">
+        <li><a href="#">Dash란?</a></li>
+        <li><a href="#">상담예약</a></li>
+        <li><a href="#">이용요금</a></li>
+      </ul>
+    </nav>
+    <div id="box"></div>
         <!-- <div>
             <img src="./logo.svg" alt="결혼">
         </div> -->
@@ -42,9 +117,9 @@
             </p>
         </div>
         <div class="form1">
-          <img src="./결혼사진.jpg" width="450" height="230" alt="marry">
+          <img src="./결혼사진4.jpg" width="450" height="230" alt="marry">
           <div class="content-text">
-            <h3>1. DASH의 소개</h3>
+            <h3 class="sub">1. DASH의 소개</h3>
             <p>저희 DASH는 결혼뿐만 아니라 저렴한 가격에 소개팅, 맞선 등 다양한 서비스를 
               이용할 수 있어 많은 고객들이 이용합니다. 타사와 다른 서비스를 활용하여 많은 고객을 
               보유하고 있으며 가격또한 저렴한 가격으로 이용하실 수 있습니다.
@@ -55,24 +130,62 @@
         <div class="form2">
           <img src="./logo의미+사진.png" width="450" height="230" alt="marry">
           <div class="content-text">
-            <h3>2. DASH의 로고에는 이런 뜻이?</h3>
+            <h3 class="sub">2. DASH의 로고에는 이런 뜻이?</h3>
             <P>DASH라는 로고가 만들어진 이유!! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum consequatur vero at quos dolorem beatae ad provident laboriosam nesciunt, enim perspiciatis repellat distinctio sequi ullam non quidem animi. Assumenda, aperiam?</P>
           </div>
         </div>
         <div class="form3">
-          <img src="./결혼사진4.jpg" width="450" height="230" alt="marry">
+          <img src="./DASH직원현황.png" width="450" height="230" alt="marry">
           <div class="content-text">
-            <h3>3. DASH 고객현황? 직원현황?</h3>
+            <h3 class="sub">3. DASH 고객현황? 직원현황?</h3>
             <P>Lorem ipsum dolor sit amet. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum consequatur vero at quos dolorem beatae ad provident laboriosam nesciunt, enim perspiciatis repellat distinctio sequi ullam non quidem animi. Assumenda, aperiam?</P>
           </div>
         </div>
         <div class="form4">
-          <img src="./결혼사진2.jpg" width="450" height="230" alt="marry">
+          <img src="./결혼사진.jpg" width="450" height="230" alt="marry">
           <div class="content-text">
-            <h3>4. DASH 고객현황?, 직원현황?</h3>
+            <h3 class="sub">4. DASH 성혼율</h3>
             <P>Lorem ipsum dolor sit amet. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum consequatur vero at quos dolorem beatae ad provident laboriosam nesciunt, enim perspiciatis repellat distinctio sequi ullam non quidem animi. Assumenda, aperiam?</P>
           </div>
         </div>
     </main>
+    <footer class="footer">
+      <div class="footer-content">
+        <h3>(주)Re:connect</h3>
+        <span>대표 : Recycle</span>
+        <span>사업자등록번호 : 999-99-99999</span>
+        <span
+          >주소 : (34838)대전광역시 중구 중앙로121번길 20 (선화동 41) 2층</span
+        >
+        <span>Tel.042-222-2402</span>
+        <ul class="footer-socials">
+          <li>
+            <a href="#"><img src="/images/ico_image.svg" alt="ico_image" /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="/images/ico_instagram.svg" alt="ico_instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="/images/ico_youtube.svg" alt="ico_youtube"
+            /></a>
+          </li>
+        </ul>
+        <div class="footer-menu">
+          <p>
+            copyright &copy;2023 by<a href="”#”"> Re:connect.</a> All pictures
+            cannot be copied without permission.
+          </p>
+          <ul class="f-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pretendard-Regular';
+}
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+
+#box{
+  height: 0;
+}
+
+#title{
+  font-size: 50px;
+  font-weight: 400;
+}
+#sub-title{
+  font-size: 16px;
+}
+#title, #sub-title{
+  text-align: center;
+  padding: 1rem;
+}
+
+
+.container{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin-top: 1rem;
+  padding-bottom: 3rem;
+  gap: 1rem;
+}
+
+
+
+
+.con{
+  width: 100vw;
+  padding: 3rem 0;
+
+}
+
+.con1{
+  background-image: url(../images/back-image1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  
+}
+.con2{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  /* width: 1100px; */
+}
+.con2>.content{
+  text-align: center;
+}
+
+.con3{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  /* width: 1100px; */
+}
+.con3>.content{
+  text-align: center;
+}
+.con1, .con4{
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  /* width: 1100px; */
+  /* background-color: #ffeffb; */
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  gap: 1rem;
+}
+.con4{
+  flex-direction: row-reverse; 
+  background-image: url(../images/back-image3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-size: cover;
+}
+.con5{
+  background-image: url(../images/back-image2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 4.5rem;
+}
+
+
+.con1>img, .con4>img{
+  width:550px;
+}
+.con2>img{
+  width:800px;
+}
+.con3>img{
+  width:700px;
+}
+.con img{
+  object-fit: cover;
+  max-width: 100%;
+}
+
+@media (max-width: 850px){
+  .con1, .con4{
+    flex-direction: column;
+    /* transition: all 300ms ease-in-out; */
+  }
+}

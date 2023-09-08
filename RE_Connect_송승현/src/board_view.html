@@ -28,7 +28,7 @@
           </a>
           <div class="login_menu">
             <div>
-              <a href="#">로그인</a>
+              <a href="login.html">로그인</a>
             </div>
             <div>
               <a href="#">회원가입</a>
@@ -36,52 +36,58 @@
           </div>
         </div>
         <nav class="nav">
+          <a href="./header.html" id="logo2">
+            <img src="/images/logo.svg" alt="로고" width="95"/>
+          </a>
           <ul class="gnb">
             <!-- <div id="test"></div> -->
             <li class="gnb-menu">
-              <a href="#">회사소개</a>
+              <a href="#" class="menu-btn">회사소개</a>
               <ul class="sub-menu">
                 <li><a href="#">인사말</a></li>
                 <li><a href="#">커플 매니저 소개</a></li>
               </ul>
             </li>
-
+      
             <li class="gnb-menu">
-              <a href="#">커뮤니티</a>
+              <a href="#" class="menu-btn">커뮤니티</a>
               <ul class="sub-menu">
                 <li><a href="#">공지사항</a></li>
-                <li><a href="#">게시판</a></li>
+                <li><a href="board_main.html">게시판</a></li>
                 <li><a href="#">문의하기</a></li>
                 <li><a href="#">FAQ</a></li>
               </ul>
             </li>
-
+      
             <li class="gnb-menu">
-              <a href="#">이용안내</a>
+              <a href="#" class="menu-btn">이용안내</a>
               <ul class="sub-menu">
                 <li><a href="#">Dash란?</a></li>
-                <li><a href="#">견적문의</a></li>
+                <li><a href="estimate.html">견적문의</a></li>
                 <li><a href="#">이용요금</a></li>
               </ul>
             </li>
-
+      
             <li class="gnb-menu">
-              <a href="#">후기정보</a>
+              <a href="#" class="menu-btn">후기정보</a>
               <ul class="sub-menu">
-                <li><a href="#">매니저 후기</a></li>
+                <li><a href="mgr_reviews.html">매니저 후기</a></li>
                 <li><a href="#">인터뷰</a></li>
               </ul>
             </li>
-
+      
             <li class="gnb-menu">
-              <a href="#">매칭하기</a>
+              <a href="#" class="menu-btn">매칭하기</a>
               <ul class="sub-menu">
                 <li><a href="#">Dash매칭</a></li>
                 <li><a href="#">This Is Me</a></li>
               </ul>
             </li>
           </ul>
+          <button class="nav-icon"><iconify-icon icon="ph:list-fill"></iconify-icon></button>
+      
         </nav>
+        <div class="dim-layer"></div>
       </header>
       <main>
         <div id="box"></div>
@@ -164,12 +170,15 @@
             <ul class="f-menu">
               <li><a href="index.html">Home</a></li>
               <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="estimate.html">Contact</a></li>
               <li><a href="#">FAQ</a></li>
             </ul>
           </div>
         </div>
       </footer>
+      <script src="/script/header.js"></script>
+      <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
     </body>
   </html>
 </html>

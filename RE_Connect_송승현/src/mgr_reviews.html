@@ -13,7 +13,9 @@
       content="안녕하세요, 마음을 다시 연결하는 결혼 정보 플랫폼 DASH 입니다."
     />
     <link rel="icon" href="../favicon.png" />
+    <link rel="stylesheet" href="/CSS/header_footer.css" />
     <link rel="stylesheet" href="/CSS/mgr_reviews.css" />
+    <link rel="stylesheet" href="/CSS/reset.css" />
   </head>
 
   <body>
@@ -26,7 +28,7 @@
         </a>
         <div class="login_menu">
           <div>
-            <a href="#">로그인</a>
+            <a href="login.html">로그인</a>
           </div>
           <div>
             <a href="#">회원가입</a>
@@ -34,10 +36,12 @@
         </div>
       </div>
       <nav class="nav">
+        <a href="./header.html" id="logo2">
+          <img src="/images/logo.svg" alt="로고" width="95" />
+        </a>
         <ul class="gnb">
-          <!-- <div id="test"></div> -->
           <li class="gnb-menu">
-            <a href="#">회사소개</a>
+            <a href="#" class="menu-btn">회사소개</a>
             <ul class="sub-menu">
               <li><a href="#">인사말</a></li>
               <li><a href="#">커플 매니저 소개</a></li>
@@ -45,53 +49,79 @@
           </li>
 
           <li class="gnb-menu">
-            <a href="#">커뮤니티</a>
+            <a href="#" class="menu-btn">커뮤니티</a>
             <ul class="sub-menu">
               <li><a href="#">공지사항</a></li>
-              <li><a href="#">게시판</a></li>
+              <li><a href="board_main.html">게시판</a></li>
               <li><a href="#">문의하기</a></li>
               <li><a href="#">FAQ</a></li>
             </ul>
           </li>
 
           <li class="gnb-menu">
-            <a href="#">이용안내</a>
+            <a href="#" class="menu-btn">이용안내</a>
             <ul class="sub-menu">
               <li><a href="#">Dash란?</a></li>
-              <li><a href="#">견적문의</a></li>
+              <li><a href="estimate.html">견적문의</a></li>
               <li><a href="#">이용요금</a></li>
             </ul>
           </li>
 
           <li class="gnb-menu">
-            <a href="#">후기정보</a>
+            <a href="#" class="menu-btn">후기정보</a>
             <ul class="sub-menu">
-              <li><a href="#">매니저 후기</a></li>
+              <li><a href="mgr_reviews.html">매니저 후기</a></li>
               <li><a href="#">인터뷰</a></li>
             </ul>
           </li>
 
           <li class="gnb-menu">
-            <a href="#">매칭하기</a>
+            <a href="#" class="menu-btn">매칭하기</a>
             <ul class="sub-menu">
               <li><a href="#">Dash매칭</a></li>
               <li><a href="#">This Is Me</a></li>
             </ul>
           </li>
         </ul>
+        <button class="nav-icon">
+          <iconify-icon icon="ph:list-fill"></iconify-icon>
+        </button>
       </nav>
+      <div class="dim-layer"></div>
     </header>
     <!-- 메뉴바 -->
     <main>
-            <!-- 사이드바 -->
-            <nav class="side-bar">
-              <h2>이용안내</h2>
-              <ul class="sb-list">
-                <li><a href="#">Dash란?</a></li>
-                <li><a href="#">상담예약</a></li>
-                <li><a href="#">이용요금</a></li>
-              </ul>
-            </nav>
+      <!-- 모달 창들 -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">모달 1 내용</div>
+        <button onclick="closeModal('modal1')" class="close_btn">닫기</button>
+      </div>
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          모달 2 내용
+          <button onclick="closeModal('modal2')">닫기</button>
+        </div>
+      </div>
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+          모달 3 내용
+          <button onclick="closeModal('modal3')">닫기</button>
+        </div>
+      </div>
+      <div id="modal4" class="modal">
+        <div class="modal-content">
+          모달 4 내용
+          <button onclick="closeModal('modal4')">닫기</button>
+        </div>
+      </div>
+      <!-- 사이드바 -->
+      <nav class="side-bar">
+        <h2>후기정보</h2>
+        <ul class="sb-list">
+          <li><a href="#">매니저 후기</a></li>
+          <li><a href="#">인터뷰</a></li>
+        </ul>
+      </nav>
       <div class="container">
         <div id="box"></div>
         <div class="title-box">
@@ -102,7 +132,11 @@
           <ul class="list">
             <li>
               <div class="content even">
-                <img src="/images/An.jpg" alt="안영태" />
+                <img
+                  src="/images/An.jpg"
+                  alt="안영태"
+                  onclick="openModal('modal1')"
+                />
                 <div class="text">
                   <h3>안영태 커플매니저</h3>
                   <p class="en_name">AnYoungTae</p>
@@ -114,7 +148,11 @@
             </li>
             <li>
               <div class="content odd">
-                <img src="/images/Jin.jpg" alt="진소이" />
+                <img
+                  src="/images/Jin.jpg"
+                  alt="진소이"
+                  onclick="openModal('modal2')"
+                />
                 <div class="text">
                   <h3>진소이 커플매니저</h3>
                   <p class="en_name">JinSoI</p>
@@ -126,7 +164,11 @@
             </li>
             <li>
               <div class="content even">
-                <img src="/images/Song.jpg" alt="송승현" />
+                <img
+                  src="/images/Song.jpg"
+                  alt="송승현"
+                  onclick="openModal('modal3')"
+                />
                 <div class="text">
                   <h3>송승현 커플매니저</h3>
                   <p class="en_name">SongSeungHyeon</p>
@@ -136,7 +178,11 @@
             </li>
             <li>
               <div class="content odd">
-                <img src="/images/Yoo.jpg" alt="유세나" />
+                <img
+                  src="/images/Yoo.jpg"
+                  alt="유세나"
+                  onclick="openModal('modal4')"
+                />
                 <div class="text">
                   <h3>유세나 커플매니저</h3>
                   <p class="en_name">YooSeNa</p>
@@ -180,12 +226,14 @@
           <ul class="f-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="estimate.html">Contact</a></li>
             <li><a href="#">FAQ</a></li>
           </ul>
         </div>
       </div>
     </footer>
-    <script src="/script/estimate.js"></script>
+    <script src="/script/header.js"></script>
+    <script src="/script/mgr_reviews.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   </body>
 </html>

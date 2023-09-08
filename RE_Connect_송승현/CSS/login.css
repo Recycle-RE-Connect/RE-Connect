@@ -81,18 +81,23 @@ img {
   padding: 1rem;
 }
 
-.easy-login-text,.new,.find{
+.easy-login-text,
+.new,
+.find {
   text-align: center;
   color: #bcbcbc;
   margin-top: 10px;
-  }
+}
 
-.new,.find{
+.new,
+.find {
   font-size: 13px;
 }
 
-.easy-login-text,.new>a,.find>a{
-  color: #A0C2AC;
+.easy-login-text,
+.new > a,
+.find > a {
+  color: #a0c2ac;
 }
 
 .easy-login {

@@ -1,0 +1,46 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  /* max-width: 1425px; */
+  height: 100%;
+  font-family: "Pretendard-Regular";
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+#box {
+  height: 0px;
+}
+
+.singUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.singUp h2 {
+  font-size: 24px;
+  color: #a0c2ac;
+  margin-bottom: 20px;
+}
+.agree_text {
+  width: 850px;
+  height: 130px;
+  overflow: auto;
+  border: 1px dashed black;
+  font-size: 12px;
+}

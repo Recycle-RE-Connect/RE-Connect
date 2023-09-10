@@ -237,6 +237,14 @@ input[type="text"]:focus {
 .calendarBtn {
   cursor: pointer;
 }
+/*캘린더 모양*/
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+/*캘린더*/
 
 button {
   background-color: #fff;

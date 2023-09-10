@@ -12,6 +12,18 @@ document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("click", function (event) {
       nextCalendar();
     });
+  document.querySelector(".scriptCalendar tbody").addEventListener("click", function (event) {
+    const clickedDate = new Date(document.getElementById("calYear").textContent, document.getElementById("calMonth").textContent - 1, event.target.textContent);
+    const currentDate = new Date();
+    if (event.target.tagName === "TD" && clickedDate > currentDate && event.target.style.backgroundColor !== "rgba(168, 168, 168, 0.9)") {
+      // 클릭한 날짜를 YYYY-MM-DD 형식으로 가져와 input에 설정
+      const selectedDate = document.getElementById("calYear").textContent + '-' +
+        document.getElementById("calMonth").textContent + '-' +
+        event.target.textContent.padStart(2, '0');
+      document.getElementById("consulting").value = selectedDate;
+    }
+  });
+
 });
 
 var toDay = new Date(); // @param 전역 변수, 오늘 날짜 / 내 컴퓨터 로컬을 기준으로 toDay에 Date 객체를 넣어줌
@@ -182,9 +194,9 @@ function calendarChoiceDay(column) {
     // @see 금일인 경우
     if (
       document.getElementById("calMonth").innerText ==
-        autoLeftPad(nowDate.getMonth() + 1, 2) &&
+      autoLeftPad(nowDate.getMonth() + 1, 2) &&
       document.getElementsByClassName("choiceDay")[0].innerText ==
-        autoLeftPad(toDay.getDate(), 2)
+      autoLeftPad(toDay.getDate(), 2)
     ) {
       document.getElementsByClassName("choiceDay")[0].style.backgroundColor =
         "#FEDD89";

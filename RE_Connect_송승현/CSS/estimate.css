@@ -128,13 +128,30 @@ a {
 }
 
 /* type = radio 디자인 */
-input[type="radio"] {
-  vertical-align: middle;
-  appearance: none;
-  border: max(2px, 0.1em) solid gray;
-  border-radius: 50%;
-  width: 1.25em;
-  height: 1.25em;
+input[type=radio]{
+  display: none;
+}
+.input[type=radio]+label{
+  display: inline-block;
+  cursor: pointer;
+  line-height: 50px;
+  text-align: center;
+  font-weight:bold;
+  font-size:13px;
+}
+input[type=radio]+label{
+  background-color: #fff;
+  height: 50px;
+  width: 70px;
+  border: 1px solid #e5e4e4;
+  color: #333;
+  text-align: center;
+  padding: 1rem;
+}
+input[type=radio]:checked+label{
+  border-radius: 5px;
+  background-color: #A0C2AC;
+  color: #fff;
 }
 
 .form1 .form-content {
@@ -142,9 +159,7 @@ input[type="radio"] {
   gap: 1rem;
 }
 
-input[type="radio"]:checked {
-  border: 0.4em solid #92d7d6;
-}
+
 
 /* type = text 디자인 */
 input[type="text"] {

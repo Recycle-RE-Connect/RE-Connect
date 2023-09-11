@@ -98,11 +98,13 @@
             <input
               type="text"
               name="user_id"
+              id="user_id"
               placeholder="아이디"
               maxlength="10"
               required
+              oninput="checkDuplicate()"
             />
-            <span class="id-explan"
+            <span id="id-explan" class="id-explan"
               >아이디는 영문, 숫자만 사용하실 수 있습니다.</span
             >
           </div>
@@ -111,16 +113,32 @@
             <input
               type="password"
               name="user_pw"
+              id="user_pw"
               placeholder="비밀번호"
               minlength="8"
               maxlength="15"
               required
+              oninput="validatePassword()"
             />
             <span class="pw-explan"
-              >영문/숫자/특수문자 조합으로 8자 이상 15자 이하 사용가능.</span
+              >영문/숫자/특수문자 조합으로 8자 이상 15자 이하 사용 가능.
+              <br />사용가능 특수문자: !@#$%^&*?_~</span
             >
-            <span>사용가능 특수문자 : !@#$%^&amp;*?_~</span>
           </div>
+          <div class="info-pw">
+            <input
+              type="password"
+              name="user_pw_confirm"
+              id="user_pw_confirm"
+              placeholder="비밀번호 확인"
+              minlength="8"
+              maxlength="15"
+              required
+              oninput="validatePassword()"
+            />
+          </div>
+          <span id="pw-match-message" style="color: red"></span>
+
           <div class="name-sex-box">
             <div class="info-name">
               <input
@@ -133,21 +151,11 @@
             </div>
 
             <div class="info-sex">
-              <label
-                ><input
-                  type="radio"
-                  name="user_sex"
-                  value="M"
-                  required
-                />남자</label
+              <input type="radio" id="male" name="MF" /><label for="male"
+                >남자</label
               >
-              <label
-                ><input
-                  type="radio"
-                  name="user_sex"
-                  value="F"
-                  required
-                />여자</label
+              <input type="radio" id="female" name="MF" /><label for="female"
+                >여자</label
               >
             </div>
           </div>
@@ -278,13 +286,35 @@
               name="user_phone"
               required
               maxlength="8"
-              required
+              oninput="formatPhoneNumber(this)"
             />
             <input
               type="button"
               value="인증번호 받기"
               class="phone-check"
-              onclick=""
+              id="sendVerificationButton"
+              onclick="sendVerificationCode()"
+              disabled
+            />
+          </div>
+
+          <div class="verification-code" style="display: none">
+            <input
+              type="text"
+              name="verification_code"
+              id="verificationCode"
+              placeholder="인증번호 입력"
+              maxlength="6"
+              required
+              oninput="checkVerificationCode()"
+            />
+            <input
+              type="button"
+              value="인증번호 확인"
+              class="verify-button"
+              id="verifyButton"
+              onclick="verifyCode()"
+              disabled
             />
           </div>
 
@@ -965,8 +995,8 @@
               />
               <label for="agree_chk3" class="chk_label">
                 <span>
-                  마케팅 활용 동의 (선택)
-                  <br /><span>서비스안내 수신동의 내용 포함</span>
+                  마케팅 활용 동의 (선택)<br />
+                  <span>서비스안내 수신동의 내용 포함</span>
                 </span>
               </label>
             </div>

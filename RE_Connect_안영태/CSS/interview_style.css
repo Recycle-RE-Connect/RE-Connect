@@ -92,11 +92,11 @@ li{
 }
 
 .prev{
-  left: 10px;
+  left: 50px;
 }
 
 .next{
-  right: 10px;
+  right: 50px;
 }
 
 
@@ -155,8 +155,10 @@ p{
 
   .review:nth-child(3n){
     margin-right: 1.5rem;
-  }
-
+  } 
+  .review:nth-child(2n), .review:nth-child(4n){
+    margin-right: 0;
+  } 
 
   
 

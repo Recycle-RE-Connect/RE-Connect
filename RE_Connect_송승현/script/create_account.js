@@ -67,7 +67,7 @@ function checkEmailAddy() {
 // 문자인증 필드
 function formatPhoneNumber(inputElement) {
   // 입력 필드에서 숫자만 추출
-  let inputValue = inputElement.value.replace(/[^0-9]/g, '');
+  let inputValue = inputElement.value.replace(/[^0-9]/g, "");
 
   // 8자리 숫자인 경우 뒤에 "-" 추가
   if (inputValue.length === 8) {
@@ -78,11 +78,13 @@ function formatPhoneNumber(inputElement) {
   inputElement.value = inputValue;
 
   // 입력 필드에서 공백을 제거하여 길이를 확인
-  const inputText = inputValue.replace(/\s/g, ''); // 공백 제거
+  const inputText = inputValue.replace(/\s/g, ""); // 공백 제거
   const isValid = inputText.length === 9; // 하이픈 포함 길이
 
   // "인증번호 받기" 버튼 활성화/비활성화 설정
-  const sendVerificationButton = document.getElementById('sendVerificationButton');
+  const sendVerificationButton = document.getElementById(
+    "sendVerificationButton"
+  );
   sendVerificationButton.disabled = !isValid;
 }
 
@@ -95,23 +97,22 @@ function sendVerificationCode() {
   alert("인증번호를 전송했습니다."); // 실제로는 이 부분을 서버와 통신하여 대체해야 합니다.
 
   // "인증번호 입력" 필드와 "인증번호 확인" 버튼을 표시하고 활성화
-  const verificationCodeDiv = document.querySelector('.verification-code');
-  verificationCodeDiv.style.display = 'block';
+  const verificationCodeDiv = document.querySelector(".verification-code");
+  verificationCodeDiv.style.display = "block";
 
-  const verificationCodeInput = document.getElementById('verificationCode');
-  const verifyButton = document.getElementById('verifyButton');
-  verificationCodeInput.removeAttribute('disabled');
-  verifyButton.removeAttribute('disabled');
+  const verificationCodeInput = document.getElementById("verificationCode");
+  const verifyButton = document.getElementById("verifyButton");
+  verificationCodeInput.removeAttribute("disabled");
+  // verifyButton.removeAttribute("disabled");
 }
 
 function checkVerificationCode() {
-  const verificationCodeInput = document.getElementById('verificationCode');
-  const verifyButton = document.getElementById('verifyButton');
+  const verificationCodeInput = document.getElementById("verificationCode");
+  const verifyButton = document.getElementById("verifyButton");
 
   // 입력 필드에서 공백을 제거하여 길이를 확인
-  const inputText = verificationCodeInput.value.replace(/\s/g, ''); // 공백 제거
+  const inputText = verificationCodeInput.value.replace(/\s/g, ""); // 공백 제거
   const isValid = inputText.length === 6; // 인증번호 길이
-
 
   // "인증번호 확인" 버튼 활성화/비활성화 설정
   verifyButton.disabled = !isValid;
@@ -124,10 +125,6 @@ function verifyCode() {
   // 아래는 간단한 예시입니다.
   alert("인증번호가 확인되었습니다."); // 실제로는 이 부분을 인증 로직에 대체해야 합니다.
 }
-
-
-
-
 
 // 동의하기 버튼 부분
 document.addEventListener("DOMContentLoaded", function () {

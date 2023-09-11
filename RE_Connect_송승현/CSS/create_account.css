@@ -38,7 +38,7 @@ img {
   margin-bottom: 20px;
 }
 
-.singUp input[type=text] {
+.singUp input[type="text"] {
   width: 600px;
   height: 60px;
   border: 1px solid #e5e4e4;
@@ -47,7 +47,7 @@ img {
   font-size: 12px;
   /* line-height: 16px; */
 }
-.singUp input[type=password] {
+.singUp input[type="password"] {
   width: 600px;
   height: 60px;
   border: 1px solid #e5e4e4;
@@ -57,14 +57,14 @@ img {
   line-height: 16px;
 }
 
-.info-name input[type=text] {
+.info-name input[type="text"] {
   width: 445px;
 }
 
-.info-sex input[type=radio]{
+.info-sex input[type="radio"] {
   display: none;
 }
-.info-sex input[type=radio]+label{
+.info-sex input[type="radio"] + label {
   display: inline-block;
   cursor: pointer;
   height: 50px;
@@ -72,19 +72,25 @@ img {
   border: 1px solid #e5e4e4;
   line-height: 50px;
   text-align: center;
-  font-weight:bold;
-  font-size:13px;
+  font-weight: bold;
+  font-size: 13px;
 }
-.info-sex input[type=radio]+label{
+.info-sex input[type="radio"] + label {
   background-color: #fff;
   color: #333;
 }
-.info-sex input[type=radio]:checked+label{
-  background-color: #A0C2AC;
+.info-sex input[type="radio"]:checked + label {
+  background-color: #a0c2ac;
   color: #fff;
 }
 
-.b-year,.b-month,.b-day,.phone-first,.email-select,.country,.education {
+.b-year,
+.b-month,
+.b-day,
+.phone-first,
+.email-select,
+.country,
+.education {
   width: 400px;
   height: 50px;
   border: 1px solid #e5e4e4;
@@ -100,7 +106,9 @@ img {
   margin: 0.5rem;
   gap: 0.5rem;
 }
-.b-year,.b-month,.b-day {
+.b-year,
+.b-month,
+.b-day {
   width: 194px;
   height: 60px;
 }
@@ -117,7 +125,9 @@ img {
   cursor: pointer;
 }
 
-.phone-first,.info-tel input[type=text],.phone-check {
+.phone-first,
+.info-tel input[type="text"],
+.phone-check {
   width: 194px;
   height: 60px;
 }
@@ -136,28 +146,32 @@ img {
   height: 60px;
 }
 
-.verification-code input[type=text]{
+.verification-code input[type="text"] {
   width: 396px;
   height: 60px;
+  margin-right: 5px;
 }
 
-.singUp .info-id{
+.singUp .info-id {
   display: flex;
   flex-direction: column;
   margin: 0.5rem;
   /* gap: 0.5rem; */
 }
 
-.singUp .info-pw{
+.singUp .info-pw {
   display: flex;
   flex-direction: column;
   margin: 0.5rem;
   /* gap: 0.5rem; */
 }
 
-.id-explan,.pw-explan {
+.id-explan,
+.pw-explan {
   font-size: 10px;
   color: red;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 #pw-match-message {
@@ -179,7 +193,8 @@ img {
   gap: 0.5rem;
 }
 
-.info-email input[type=text], .email-select {
+.info-email input[type="text"],
+.email-select {
   width: 187px;
   height: 60px;
 }
@@ -191,8 +206,9 @@ img {
   gap: 0.5rem;
 }
 
-.country,.education{
-  width: 298px;
+.country,
+.education {
+  width: 296px;
   height: 60px;
 }
 
@@ -209,7 +225,7 @@ img {
   font-size: 12px;
 }
 
-.agree_second .agree_text{
+.agree_second .agree_text {
   width: 301px;
   height: 130px;
   overflow-y: auto;
@@ -218,7 +234,8 @@ img {
   margin-top: 0.5rem;
 }
 
-span,.agree_chk,.agree_all {
+.chek_all > span,
+.chk_label > span {
   font-size: 13px;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;

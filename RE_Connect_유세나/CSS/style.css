@@ -35,8 +35,10 @@ body {
 
 
 .collapsible {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   background-color: #F5F7F8;
-  color: rgb(0, 0, 0);
   cursor: pointer;
   padding: 18px;
   width: 100%;

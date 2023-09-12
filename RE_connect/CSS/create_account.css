@@ -1,0 +1,259 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  /* max-width: 1425px; */
+  height: 100%;
+  font-family: "Pretendard-Regular";
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+#box {
+  height: 0px;
+}
+
+.singUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.singUp h2 {
+  font-size: 24px;
+  color: #a0c2ac;
+  margin-bottom: 20px;
+}
+
+.singUp input[type="text"] {
+  width: 600px;
+  height: 60px;
+  border: 1px solid #e5e4e4;
+  padding: 8px 9px;
+  font-weight: 400;
+  font-size: 12px;
+  /* line-height: 16px; */
+}
+.singUp input[type="password"] {
+  width: 600px;
+  height: 60px;
+  border: 1px solid #e5e4e4;
+  padding: 8px 9px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.info-name input[type="text"] {
+  width: 445px;
+}
+
+.info-sex input[type="radio"] {
+  display: none;
+}
+.info-sex input[type="radio"] + label {
+  display: inline-block;
+  cursor: pointer;
+  height: 50px;
+  width: 70px;
+  border: 1px solid #e5e4e4;
+  line-height: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
+}
+.info-sex input[type="radio"] + label {
+  background-color: #fff;
+  color: #333;
+}
+.info-sex input[type="radio"]:checked + label {
+  background-color: #a0c2ac;
+  color: #fff;
+}
+
+.b-year,
+.b-month,
+.b-day,
+.phone-first,
+.email-select,
+.country,
+.education {
+  width: 400px;
+  height: 50px;
+  border: 1px solid #e5e4e4;
+  padding: 8px 9px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.info-birth {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+  gap: 0.5rem;
+}
+.b-year,
+.b-month,
+.b-day {
+  width: 194px;
+  height: 60px;
+}
+
+.info-tel {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+  gap: 0.5rem;
+}
+
+.phone-check {
+  border: 1px solid #e5e4e4;
+  cursor: pointer;
+}
+
+.phone-first,
+.info-tel input[type="text"],
+.phone-check {
+  width: 194px;
+  height: 60px;
+}
+
+.verification-code {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+  gap: 0.5rem;
+}
+
+.verify-button {
+  border: 1px solid #e5e4e4;
+  cursor: pointer;
+  width: 194px;
+  height: 60px;
+}
+
+.verification-code input[type="text"] {
+  width: 396px;
+  height: 60px;
+  margin-right: 5px;
+}
+
+.singUp .info-id {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  /* gap: 0.5rem; */
+}
+
+.singUp .info-pw {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  /* gap: 0.5rem; */
+}
+
+.id-explan,
+.pw-explan {
+  font-size: 10px;
+  color: red;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#pw-match-message {
+  margin-left: 10px;
+}
+
+.name-sex-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info-email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  gap: 0.5rem;
+}
+
+.info-email input[type="text"],
+.email-select {
+  width: 187px;
+  height: 60px;
+}
+
+.country-education-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.country,
+.education {
+  width: 296px;
+  height: 60px;
+}
+
+.agree_second {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.agree_text {
+  width: 610px;
+  height: 130px;
+  overflow-y: auto;
+  border: 1px solid #e5e4e4;
+  font-size: 12px;
+}
+
+.agree_second .agree_text {
+  width: 301px;
+  height: 130px;
+  overflow-y: auto;
+  border: 1px solid #e5e4e4;
+  font-size: 12px;
+  margin-top: 0.5rem;
+}
+
+.chek_all>span,.chk_label>span{
+  font-size: 13px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+#submit-singUp {
+  width: 100%;
+  height: 48px;
+  padding: 0 10px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+  color: #fff;
+  font-size: 16px;
+  background-color: #a0c2ac;
+  margin-top: 20px;
+  cursor: pointer;
+}

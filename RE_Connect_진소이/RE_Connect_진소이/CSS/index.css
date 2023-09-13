@@ -342,6 +342,66 @@ section:nth-child(2) {
   cursor: pointer;
 }
 
-section:nth-child(6) {
-  background-color: #aaa;
+.area_6 {
+  /* width: 1920px; */
+  height: 1280px;
+  padding-bottom: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #a0c2ac;
 }
+
+.area_6 .container_02{
+  width: 1500px;
+  /* height: 540px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.area_6 h4{
+  display: flex;
+  font-size: 70px;
+  font-weight: 500;
+  color: white;
+  overflow: hidden;
+  padding-bottom: 2rem;
+}
+
+.area_6 .marriage {
+  margin-bottom: 7rem;
+}
+
+.area_6 .marriage span {
+  color: #ffffff;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.area_6 .marriage span:nth-child(1){
+  color: #42614d;
+}
+
+.area_6 .container_02 .current_1 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1320px;
+  /* height: 350px; */
+}
+
+.area_6 .container_02 .current_1 div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.area_6 .container_02 .current_1>div {
+  color: rgb(39, 39, 39);
+  font-size: 26px;
+  font-weight: 400;
+}
+

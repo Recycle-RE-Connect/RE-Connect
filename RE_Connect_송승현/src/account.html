@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>마이페이지 | 마음을 다시 연결하는 결혼 정보 플랫폼 DASH</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keyworeds"
+      content="결혼, wedding, 결혼정보업체, DASH, Re:Connect, 듀오, 가연,"
+    />
+    <meta
+      name="description"
+      content="안녕하세요, 마음을 다시 연결하는 결혼 정보 플랫폼 DASH 입니다."
+    />
+    <link rel="icon" href="../favicon.png" />
+    <link rel="stylesheet" href="/CSS/account.css" />
+    <link rel="stylesheet" href="/CSS/reset.css" />
+  </head>
+
+  <body>
+    <header class="account_header">
+      <div class="header_btn">
+        <div class="message_badge">
+          <button type="button" class="btn_messenger" onclick="">메신저</button>
+          <span class="push_num" style="display: none">0</span>
+        </div>
+        <div class="alarm_badge">
+          <button type="button" class="btn_alarm" onclick="">알림</button>
+          <span class="push_num" style="display: none">0</span>
+        </div>
+      </div>
+
+      <div class="member">
+        <button type="button" class="btn_member">
+          <div class="user_photo">
+            <figure class="user_img"><img src="/images/Song.jpg" alt="user_img" /></figure>
+          </div>
+        </button>
+
+        <div class="layer_member">
+          <ul>
+            <li><img src="/images/Song.jpg" alt="user_img"><span>송승현</span></li>
+            <li><a href="#"><span>개인정보 수정</span><iconify-icon icon="la:edit-solid" width="30"></iconify-icon></a></li>
+            <li><a href="index.html"><span>로그아웃</span><iconify-icon icon="material-symbols:logout" width="25"></iconify-icon></a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="nav">
+      <a href="index.html" id="logo2">
+        <img src="/images/logo.svg" alt="logo">
+      </a>
+      <ul class="gnb">
+        <li class="gnb-menu">
+            <a href=""class="menu-btn">개인정보수정</a></li>
+        <li class="gnb-menu">
+            <a href=""class="menu-btn">내가 작성한 글</a></li>
+        <li class="gnb-menu">
+            <a href=""class="menu-btn">좋아요 현황</a></li>
+        <li class="gnb-menu">
+            <a href=""class="menu-btn">매칭현황</a></li>
+        <li class="gnb-menu">
+            <a href=""class="menu-btn">멤버십</a></li>
+        <li class="gnb-menu">
+            <a href=""class="menu-btn secession">회원탈퇴</a></li>
+      </ul>
+      <button type="button" class="nav-icon">
+        <iconify-icon icon="ph:list-fill"></iconify-icon>
+      </button>
+    </div>
+    <main>
+      <div class="container">
+
+        <div class="container_main">
+          <div class="content">
+            <h2>개인정보수정</h2>
+            <div class="privacy_user">
+              <form action="#" method="post" id="privacy_form">
+                <div class="privacy_pic">
+                  <div id="image-preview"></div>
+                  <label for="profile-picture">프로필 사진:</label>
+                  <input type="file" id="profile-picture" name="profile-picture" accept="image/*" onchange="previewImage()">
+                </div>
+
+                <div class="privacy_name">
+                  <label for="full-name">본명:</label>
+                  <input type="text" id="full-name" name="full-name"><br>
+                </div>
+                
+                <div class="privacy_age">
+                  <label for="age">나이:</label>
+                  <input type="number" id="age" name="age"><br>
+                </div>
+        
+                <label for="location">지역:</label>
+                <input type="text" id="location" name="location"><br>
+        
+                <label for="height">키:</label>
+                <input type="number" id="height" name="height"><br>
+        
+                <label for="occupation">직업:</label>
+                <input type="text" id="occupation" name="occupation"><br>
+        
+                <label for="education">학력:</label>
+                <input type="text" id="education" name="education"><br>
+        
+                <label for="body-type">체형:</label>
+                <input type="text" id="body-type" name="body-type"><br>
+        
+                <label for="gender">성별:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">남성</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">여성</label><br>
+        
+                <label for="salary">연봉:</label>
+                <input type="number" id="salary" name="salary"><br>
+        
+                <label for="marital-status">결혼 여부:</label>
+                <input type="radio" id="married" name="marital-status" value="married">
+                <label for="married">기혼</label>
+                <input type="radio" id="single" name="marital-status" value="single">
+                <label for="single">미혼</label><br>
+        
+                <label for="children">자녀 유무:</label>
+                <input type="radio" id="has-children" name="children" value="yes">
+                <label for="has-children">있음</label>
+                <input type="radio" id="no-children" name="children" value="no">
+                <label for="no-children">없음</label><br>
+        
+                <label for="hobbies">취미:</label>
+                <textarea id="hobbies" name="hobbies" rows="4" cols="50"></textarea><br>
+        
+                <label for="skills">특기:</label>
+                <textarea id="skills" name="skills" rows="4" cols="50"></textarea><br>
+        
+                <label for="mbti">MBTI:</label>
+                <input type="text" id="mbti" name="mbti"><br>
+        
+                <label for="religion">종교:</label>
+                <input type="text" id="religion" name="religion"><br>
+        
+                <label for="blood-type">혈액형:</label>
+                <input type="text" id="blood-type" name="blood-type"><br>
+        
+                <label for="alcohol">음주:</label>
+                <input type="checkbox" id="alcohol" name="alcohol" value="yes">
+                <label for="alcohol">예</label><br>
+        
+                <label for="smoking">흡연:</label>
+                <input type="checkbox" id="smoking" name="smoking" value="yes">
+                <label for="smoking">예</label><br>
+        
+                <label for="personality">성격:</label>
+                <textarea id="personality" name="personality" rows="4" cols="50"></textarea><br>
+        
+                <input type="submit" value="저장">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="/script/account.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  </body>
+</html>

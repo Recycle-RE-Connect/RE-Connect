@@ -1,0 +1,145 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  /* max-width: 1425px; */
+  height: 100%;
+  font-family: "Pretendard-Regular";
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+#box {
+  height: 0px;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 400px; */
+  margin: 0 auto;
+  /* height: 485px; */
+  padding: 2rem;
+}
+
+.login h2 {
+  font-size: 24px;
+  color: #a0c2ac;
+  margin-bottom: 20px;
+}
+#login-form > input {
+  width: 100%;
+  height: 48px;
+  padding: 0 10px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+}
+#login-form > input::placeholder {
+  color: #d2d2d2;
+}
+
+#submit-login {
+  width: 100%;
+  height: 48px;
+  padding: 0 10px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+  color: #fff;
+  font-size: 16px;
+  background-color: #a0c2ac;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#login-form > input[type="checkbox"] {
+  display: none;
+}
+#login-form > label {
+  color: #999999;
+}
+#login-form input[type="checkbox"] + label {
+  cursor: pointer;
+  padding-left: 26px;
+}
+
+/* 간편로그인 */
+
+.easy-login-text {
+  padding: 1rem;
+}
+
+.easy-login-text,
+.new,
+.find {
+  text-align: center;
+  color: #bcbcbc;
+  margin-top: 10px;
+}
+
+.new,
+.find {
+  font-size: 13px;
+}
+
+.easy-login-text,
+.new > a,
+.find > a {
+  color: #a0c2ac;
+}
+
+.easy-login {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.naver_login {
+  background-color: #27d34a !important;
+  background-image: url(https://vendor-cdn.imweb.me/images/naver_login2x.png);
+  background-size: 16px;
+  background-position: 15px 50%;
+  background-repeat: no-repeat;
+  border-color: #27d34a !important;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 12px;
+  padding: 0;
+}
+.btn-naver,
+.btn-kakao {
+  display: flex;
+  flex-direction: column;
+  line-height: 42px;
+  padding: 0 33px;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.4s ease;
+  font-size: 16px;
+  width: 100%;
+}
+
+.kakao_login {
+  background-color: #ffeb00 !important;
+  background-image: url(https://vendor-cdn.imweb.me/images/kakao_icon.png);
+  background-size: 20px;
+  background-position: 12px 49%;
+  background-repeat: no-repeat;
+  border-color: #ffeb00 !important;
+  border-radius: 6px;
+  color: #fff;
+  color: #333;
+  font-size: 12px;
+  padding: 0;
+}

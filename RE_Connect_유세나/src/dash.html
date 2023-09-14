@@ -20,76 +20,85 @@
   <link rel="stylesheet" href="/CSS/sidebar_style.css">
 </head>
 <body>
+  <!-- 헤더 -->
   <header>
     <div class="header">
       <div class="air"></div>
-      <a href="./header.html" id="logo">
-        <img src="/images/logo.svg" alt="로고" />
+      <a href="./index.html" id="logo">
+        <img src="../images/logo.svg" alt="로고" />
       </a>
       <div class="login_menu">
         <div>
-          <a href="#">로그인</a>
+          <a href="./login.html">로그인</a>
         </div>
         <div>
-          <a href="#">회원가입</a>
+          <a href="./create_account.html">회원가입</a>
         </div>
       </div>
     </div>
     <nav class="nav">
+      <a href="./index.html" id="logo2">
+        <img src="../images/logo.svg" alt="로고" width="95"/>
+      </a>
       <ul class="gnb">
         <!-- <div id="test"></div> -->
         <li class="gnb-menu">
-          <a href="#">회사소개</a>
+          <a href="#" class="menu-btn">회사소개</a>
           <ul class="sub-menu">
-            <li><a href="#">인사말</a></li>
+            <li><a href="./dash.html">Dash란?</a></li>
+            <li><a href="../src/greeting.html">인사말</a></li>
             <li><a href="#">커플 매니저 소개</a></li>
           </ul>
         </li>
 
         <li class="gnb-menu">
-          <a href="#">커뮤니티</a>
+          <a href="#" class="menu-btn">커뮤니티</a>
           <ul class="sub-menu">
-            <li><a href="#">공지사항</a></li>
-            <li><a href="#">게시판</a></li>
-            <li><a href="#">문의하기</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="../src/notice.html">공지사항</a></li>
+            <li><a href="./board_main.html">문의하기</a></li>
+            <!-- <li><a href="#">문의하기</a></li> -->
+            <li><a href="./FAQ.html">FAQ</a></li>
           </ul>
         </li>
 
         <li class="gnb-menu">
-          <a href="#">이용안내</a>
+          <a href="#" class="menu-btn">이용안내</a>
           <ul class="sub-menu">
-            <li><a href="#">Dash란?</a></li>
-            <li><a href="#">견적문의</a></li>
-            <li><a href="#">이용요금</a></li>
+            
+            <li><a href="./estimate.html">상담예약</a></li>
+            <li><a href="./price.html">이용요금</a></li>
           </ul>
         </li>
 
         <li class="gnb-menu">
-          <a href="#">후기정보</a>
+          <a href="#" class="menu-btn">후기정보</a>
           <ul class="sub-menu">
-            <li><a href="#">매니저 후기</a></li>
-            <li><a href="#">인터뷰</a></li>
+            <li><a href="./mgr_reviews.html">매니저 후기</a></li>
+            <li><a href="../src/interview.html">인터뷰</a></li>
           </ul>
         </li>
 
         <li class="gnb-menu">
-          <a href="#">매칭하기</a>
+          <a href="#" class="menu-btn">매칭하기</a>
           <ul class="sub-menu">
             <li><a href="#">Dash매칭</a></li>
             <li><a href="#">This Is Me</a></li>
           </ul>
         </li>
       </ul>
+      <button class="nav-icon"><iconify-icon icon="ph:list-fill"></iconify-icon></button>
+
     </nav>
+    <div class="dim-layer"></div>
   </header>
+
   <main>
       <nav class="side-bar">
       <h2>이용안내</h2>
       <ul class="sb-list">
-        <li><a href="#">Dash란?</a></li>
-        <li><a href="#">상담예약</a></li>
-        <li><a href="#">이용요금</a></li>
+        <li><a href="./dash.html">Dash란?</a></li>
+        <li><a href="./estimate.html">상담예약</a></li>
+        <li><a href="./price.html">이용요금</a></li>
       </ul>
     </nav>
     <div id="box"></div>
@@ -97,15 +106,15 @@
             <img src="./logo.svg" alt="결혼">
         </div> -->
         <div class="content">
-          <h2 class="title">DASH란?</h2>
+          <h2 class="title">DASH 란?</h2>
             <p class="sub_title">“DASH는 고객님께 가장 잘 맞는 배우자를 찾아드린다는 믿음을 실천합니다.”</p>
             <p class="para">
-              고객님께서 “DASH” 로 인해 소중한 인연을 찾게 된다면,</br>
-              저희에게도 그보다 더 행복한 일은 없을 겁니다.</br>
+              고객님께서 저희 “DASH” 로 인해 소중한 인연을 찾게 된다면</br>
+              그보다 더 행복한 일은 없을 겁니다.</br>
               그렇기에 DASH 임직원은 항상 고객님의 눈높이에서 바라보고 고객님의 마음으로 생각합니다.</br>
               </br>
               </br>
-              DASH를 믿고 함께해주시는 고객님 한 분 한 분께 과학적이고 체계적인 시스템을 바탕으로</br>
+              DASH를 믿고 함께해 주시는 고객님 한 분 한 분께 과학적이고 체계적인 시스템을 바탕으로</br>
               고객님과 가장 잘 맞는 배우자를 만나게 해드리는데 최선의 노력을 다할 것입니다.</br>
               실력 있는 커플매니저의 숙련된 노하우와 탄탄한 DASH만의 매칭 서비스로</br>
               고객님의 소중한 인연을 찾아드리겠습니다.</br>
@@ -124,7 +133,7 @@
               소명의식을 바탕으로 좋은 배우자와의 만남을 주선합니다.
               저희 DASH는 결혼뿐만 아니라 저렴한 가격에 소개팅, 맞선 등 다양한 서비스를 
               이용할 수 있어 많은 고객들이 이용합니다. 타사와 다른 서비스를 활용하여 많은 고객을 
-              보유하고 있으며 가격또한 저렴한 가격으로 이용하실 수 있습니다. 많은 고객들이 부담 없이 쉽게 접할 수 있도록 노력하고 있습니다.
+              보유하고 있으며 가격 또한 저렴한 가격으로 이용하실 수 있습니다. 많은 고객들이 부담 없이 쉽게 접할 수 있도록 노력하고 있습니다.
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum saepe dolorum unde voluptates assumenda odit cum fugiat, velit laudantium delectus!
             </p>
           </div>
@@ -148,7 +157,7 @@
           <div class="content-text">
             <h3 class="sub">4. DASH만의 특별한 혜택</h3>
             <P>회원 가입시 랜덤매칭 3회 서비스 (랜덤매칭 약관 확인 바람)를 제공해 드리고 있으며
-              타사에 비해서 저렴한 가격뿐만 아니라 할인 이베트까지 더해져 부담없이 이용 가능합니다.
+              타사에 비해서 저렴한 가격뿐만 아니라 할인 이벤트까지 더해져 부담없이 이용 가능합니다.
             </P>
           </div>
         </div>
@@ -183,10 +192,10 @@
             cannot be copied without permission.
           </p>
           <ul class="f-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./dash.html">About</a></li>
+            <li><a href="./estimate.html">Contact</a></li>
+            <li><a href="./FAQ.html">FAQ</a></li>
           </ul>
         </div>
       </div>

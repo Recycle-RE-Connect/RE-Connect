@@ -110,7 +110,12 @@
           </div>
 
           <div class="info-pw">
-            <input type="password" name="user_pw" id="user_pw" placeholder="비밀번호" minlength="8"
+            <input
+              type="password"
+              name="user_pw"
+              id="user_pw"
+              placeholder="비밀번호"
+              minlength="8"
               maxlength="15"
               required
               oninput="validatePassword()"
@@ -136,22 +141,12 @@
 
           <div class="name-sex-box">
             <div class="info-name">
-              <input
-                type="text"
-                name="user_name"
-                placeholder="이름"
-                maxlength="10"
-                required
-              />
+              <input type="text" name="user_name" placeholder="이름" maxlength="10" required/>
             </div>
 
             <div class="info-sex">
-              <input type="radio" id="male" name="MF" /><label for="male"
-                >남자</label
-              >
-              <input type="radio" id="female" name="MF" /><label for="female"
-                >여자</label
-              >
+              <input type="radio" id="male" name="MF" /><label for="male">남자</label>
+              <input type="radio" id="female" name="MF" /><label for="female">여자</label>
             </div>
           </div>
 
@@ -786,7 +781,8 @@
               id="agree_chk1"
               required
             />
-            <label for="agree_chk1" class="chk_label"><span>이용약관 동의 (필수)</span></label
+            <label for="agree_chk1" class="chk_label"
+              ><span>이용약관 동의 (필수)</span></label
             >
           </div>
 

@@ -26,19 +26,123 @@ toggleBtn.addEventListener("click", () => {
 });
 
 
-function previewImage() {
-  const input = document.getElementById("profile-picture");
-  const preview = document.getElementById("image-preview");
-  
-  if (input.files && input.files[0]) {
-      const reader = new FileReader();
-      
-      reader.onload = function (e) {
-          preview.innerHTML = `<img src="${e.target.result}" alt="프로필 사진">`;
-      }
-      
-      reader.readAsDataURL(input.files[0]);
-  } else {
-      preview.innerHTML = "";
-  }
+// 프로필이미지
+function toggleEditMenu() {
+  var editMenu = document.getElementById('edit_menu');
+  editMenu.style.display = (editMenu.style.display === 'block') ? 'none' : 'block';
 }
+
+function deleteProfilePhoto() {
+  var profileImage = document.getElementById('myhome_profile_photo').getElementsByTagName('img')[0];
+  profileImage.src = 'default-profile-image.jpg';
+  toggleEditMenu();
+}
+
+var profilePictureInput = document.getElementById('profile_picture_input');
+profilePictureInput.addEventListener('change', function() {
+  var file = profilePictureInput.files[0];
+  if (file) {
+      var reader = new FileReader();
+      reader.onload = function(event) {
+          var profileImage = document.getElementById('myhome_profile_photo').getElementsByTagName('img')[0];
+          profileImage.src = event.target.result;
+      };
+      reader.readAsDataURL(file);
+      toggleEditMenu();
+  }
+});
+
+
+    // 입력 필드에 숫자만 입력되도록 하고, 입력이 끝났을 때 "세"를 추가하는 코드
+    var userAgeInput = document.getElementById('user_age');
+
+    userAgeInput.addEventListener('input', function() {
+        var inputValue = userAgeInput.value;
+
+        // 입력 값에서 숫자만 추출
+        var numericValue = inputValue.replace(/\D/g, '');
+
+        // 입력 값이 숫자가 아니라면 빈 문자열로 처리
+        if (isNaN(numericValue)) {
+            numericValue = '';
+        }
+
+        // 숫자만 입력된 값에 "세"를 추가
+        userAgeInput.value = numericValue + '세';
+    });
+
+    // 입력 필드를 떠날 때 "세"를 추가 (입력이 끝났을 때)
+    userAgeInput.addEventListener('blur', function() {
+        var inputValue = userAgeInput.value;
+
+        // 입력 값에서 숫자만 추출
+        var numericValue = inputValue.replace(/\D/g, '');
+
+        // 입력 값이 숫자가 아니라면 빈 문자열로 처리
+        if (isNaN(numericValue)) {
+            numericValue = '';
+        }
+
+        // 숫자만 입력된 값에 "세"를 추가
+        userAgeInput.value = numericValue + '세';
+    });
+
+
+// 키세션
+
+var userHightInput = document.getElementById('user_hight');
+
+userHightInput.addEventListener('input', function() {
+    var inputValue = userHightInput.value;
+
+    // 입력 값에서 숫자만 추출
+    var numericValue = inputValue.replace(/\D/g, '');
+
+    // 입력 값이 숫자가 아니라면 빈 문자열로 처리
+    if (isNaN(numericValue)) {
+        numericValue = '';
+    }
+
+    // 숫자만 입력된 값에 "cm"을 추가
+    userHightInput.value = numericValue + 'cm';
+});
+
+// 입력 필드를 떠날 때 "cm"을 추가 (입력이 끝났을 때)
+userHightInput.addEventListener('blur', function() {
+    var inputValue = userHightInput.value;
+
+    // 입력 값에서 숫자만 추출
+    var numericValue = inputValue.replace(/\D/g, '');
+
+    // 입력 값이 숫자가 아니라면 빈 문자열로 처리
+    if (isNaN(numericValue)) {
+        numericValue = '';
+    }
+
+    // 숫자만 입력된 값에 "cm"을 추가
+    userHightInput.value = numericValue + 'cm';
+});
+
+
+// 자녀수 필드
+
+    // 라디오 버튼에 이벤트 리스너 추가
+    var hasChildrenRadio = document.getElementById("has_children");
+    var noChildrenRadio = document.getElementById("no_children");
+    var childCountContainer = document.getElementById("child_count_container");
+
+    hasChildrenRadio.addEventListener("change", function() {
+        // "베베있음" 선택 시 자녀수 선택 창 표시
+        if (hasChildrenRadio.checked) {
+            childCountContainer.style.display = "block";
+        } else {
+            childCountContainer.style.display = "none";
+        }
+    });
+
+    noChildrenRadio.addEventListener("change", function() {
+        // "베베없음" 선택 시 자녀수 선택 창 숨김
+        if (noChildrenRadio.checked) {
+            childCountContainer.style.display = "none";
+        }
+    });

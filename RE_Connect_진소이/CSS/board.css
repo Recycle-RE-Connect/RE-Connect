@@ -281,8 +281,8 @@ button.on {
   font-size: 1.4rem;
 }
 
-.board_view .info dl dt {
-}
+/* .board_view .info dl dt {
+} */
 
 .board_view .info dl dd {
   margin-left: 10px;

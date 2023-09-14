@@ -1,4 +1,6 @@
 /* ----- style_02.css */
+@font-face { font-family: 'KimjungchulMyungjo-Bold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Bold.woff2') format('woff2'); font-weight: 400; font-style: normal; }
+
 
 .index_wrap {
   height: 100%;
@@ -29,22 +31,17 @@ section:nth-child(2) {
 }
 
 .area_2 div {
+  font-family:'KimjungchulMyungjo-Bold';
   height: 400px;
   width: 100%;
   background-color: #a0c2ac;
   color: white;
   padding: 35px;
-  font-weight: 300;
-
+  /* font-weight: 300; */
   display: flex;
   align-items: flex-start;
   justify-content: left;
-
   font-size: 50px;
-
-  /* --- 자주하는거 */
-  /* background-image: url("../images/dush_img.svg");
-  background-position: center; */
 }
 
 /* ------------------ */
@@ -101,7 +98,7 @@ section:nth-child(2) {
   /* margin-left: 10px; */
 }
 
-.area_3 .container .inner2 button {
+.area_3 .container .inner2 a {
   border: 3px solid #ddd;
   background-color: white;
   color: #444444;
@@ -159,10 +156,6 @@ section:nth-child(2) {
   /* align-items: center; */
 }
 
-.area_4 .inner_1 div ul li {
-  /* text-align: center; */
-}
-
 .area_4 .inner_1 div ul li:nth-child(1) {
   font-size: 50px;
   font-weight: 400;
@@ -185,7 +178,7 @@ section:nth-child(2) {
   line-height: 1.5;
 }
 
-.area_4 .inner_1 div button {
+.area_4 .inner_1 div a {
   text-align: center;
   width: 300px;
   border: 4px solid #ddd;
@@ -400,8 +393,8 @@ section:nth-child(2) {
 }
 
 .area_6 .container_02 .current_1>div {
-  color: rgb(39, 39, 39);
+  color: rgb(51, 51, 51);
   font-size: 26px;
-  font-weight: 400;
+  font-weight: 600;
 }
 

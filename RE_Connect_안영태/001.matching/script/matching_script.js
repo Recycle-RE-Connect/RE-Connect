@@ -26,7 +26,11 @@ new e(".swiper", {
       for (let s = 0; s < e.slides.length; s += 1) {
         const t = e.slides[s], o = e.slides[s].progress, i = Math.abs(o);
         let a = 1;
-        i > 1 && (a = .3 * (i - 1) + 1); const n = t.querySelectorAll(".swiper-carousel-animate-opacity"), l = o * a * 50 * (e.rtlTranslate ? -1 : 1) + "%", c = 1 - .2 * i, u = r - Math.abs(Math.round(o)); t.style.transform = `translateX(${l}) scale(${c})`, t.style.zIndex = u, t.style.opacity = i > 3 ? 0 : 1, n.forEach((e => { e.style.opacity = 1 - i / 3 }))
+        i > 1 && (a = .3 * (i - 1) + 1); 
+        const n = t.querySelectorAll(".swiper-carousel-animate-opacity"), l = o * a * 50 * (e.rtlTranslate ? -1 : 1) + "%", c = 1 - .2 * i, u = r - Math.abs(Math.round(o)); 
+        t.style.transform = `translateX(${l}) scale(${c})`, t.style.zIndex = u, 
+        t.style.opacity = i > 3 ? 0 : 1, 
+        n.forEach((e => { e.style.opacity = 1 /*- i / 3*/ }))
       }
     })), r("setTransition", ((r, s) => {
       if ("carousel" === e.params.effect) for (let t = 0; t < e.slides.length; t += 1) {
@@ -50,3 +54,10 @@ function close() {
 
 document.querySelector("#show").addEventListener("click", show);
 document.querySelector("#close").addEventListener("click", close);
+
+// -----------------------------------
+document.querySelectorAll('.swiper-slide').forEach(function(slide) {
+  slide.addEventListener('click', function() {
+    this.querySelector('.flip-container').classList.toggle('flipped');
+  });
+});

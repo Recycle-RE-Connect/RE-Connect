@@ -238,11 +238,92 @@
               <!-- 상세 정보 섹션 -->
               <div class="privacy_info" id="detailed_info" style="display: none;">
                 <!-- 내용을 여기에 추가하세요. -->
-                <label for="address">주소:</label>
-                <input type="text" id="address" name="address">
-                <label for="phone">전화번호:</label>
-                <input type="tel" id="phone" name="phone">
+                <h2 class="privacy_info_header">관심사</h2>
+                <span id="selectionLimit">최대 3개 선택가능 (3/3)</span>
+                <div class="info-hobby">
+                  <label><input type="checkbox" value="음악"><span>음악</span></label>
+                  <label><input type="checkbox" value="영화"><span>영화</span></label>
+                  <label><input type="checkbox" value="스포츠"> <span>스포츠</span></label>
+                  <label><input type="checkbox" value="요리"><span>요리</span></label>
+                  <label><input type="checkbox" value="여행"><span>여행</span></label>
+                  <label><input type="checkbox" value="DIY"><span>DIY</span></label>
+                  <label><input type="checkbox" value="낚시"><span>낚시</span></label>
+                  <label><input type="checkbox" value="게임"><span>게임</span></label>
+                  <label><input type="checkbox" value="등산"><span>등산</span></label>
+                  <label><input type="checkbox" value="전시회관람"><span>전시회관람</span></label>
+                  <label><input type="checkbox" value="사진"><span>사진</span></label>
+                  <label><input type="checkbox" value="요가"><span>요가</span></label>
+                  <label><input type="checkbox" value="반려동물"><span>반려동물</span></label>
+                  <label><input type="checkbox" value="캠핑"><span>캠핑</span></label>
+                  <label><input type="checkbox" value="운동"><span>운동</span></label>
+                  <label><input type="checkbox" value="미술"><span>미술</span></label>
+                  <label><input type="checkbox" value="골프"><span>골프</span></label>
+                  <label><input type="checkbox" value="독서"><span>독서</span></label>
+              </div>
+              <h2 class="privacy_info_header">혈액형</h2>
+              <div class="info-blood-type">
+                <label><input type="radio" name="bloodType" value="A"><span>A형</span></label>
+                <label><input type="radio" name="bloodType" value="B"><span>B형</span></label>
+                <label><input type="radio" name="bloodType" value="O"><span>O형</span></label>
+                <label><input type="radio" name="bloodType" value="AB"><span>AB형</span></label>
+            </div>
+            <div class="privacy_info-mbti">
+              <input type="text" name="user_mbti" placeholder="MBTI" maxlength="4">
+            </div>
                 <button type="button" id="prev_page" onclick="showPage('basic_info')">이전</button>
+                <button type="button" id="next_page2" onclick="showPage('additional_info1')">다음</button>
+              </div>
+               <!-- 추가 정보 페이지 1 -->
+               <div class="privacy_info" id="additional_info1" style="display: none;">
+                <h2 class="privacy_info_header">종교</h2>
+                <div class="privacy_info_religion">
+                  <label><input type="radio" name="religion" value="기독교"><span>기독교</span></label>
+                  <label><input type="radio" name="religion" value="천주교"><span>천주교</span></label>
+                  <label><input type="radio" name="religion" value="불교"><span>불교</span></label>
+                  <label><input type="radio" name="religion" value="원불교"><span>원불교</span></label>
+                  <label><input type="radio" name="religion" value="무교"><span>무교</span></label>
+              </div>
+              <div class="info-alcohol">
+                <input type="radio" id="drinking" name="alcohol" /><label
+                  for="drinking">음주</label>
+                <input type="radio" id="non-drinking" name="alcohol" /><label
+                  for="non-drinking">비음주</label>
+              </div>
+              <div class="info-smoking">
+                <input type="radio" id="smoking" name="smoking" /><label for="smoking">흡연</label>
+                <input type="radio" id="non-smoking" name="smoking"/><label for="non-smoking">비흡연</label>
+              </div>
+              <h2 class="privacy_info_personality">성격</h2>
+              <span id="personalitySelectionLimit">최대 3개 선택가능 (3/3)</span>
+              <div class="info-personality">
+                <label><input type="checkbox" value="음악"><span>음악</span></label>
+                <label><input type="checkbox" value="영화"><span>영화</span></label>
+                <label><input type="checkbox" value="스포츠"> <span>스포츠</span></label>
+                <label><input type="checkbox" value="요리"><span>요리</span></label>
+                <label><input type="checkbox" value="여행"><span>여행</span></label>
+                <label><input type="checkbox" value="DIY"><span>DIY</span></label>
+                <label><input type="checkbox" value="낚시"><span>낚시</span></label>
+                <label><input type="checkbox" value="게임"><span>게임</span></label>
+                <label><input type="checkbox" value="등산"><span>등산</span></label>
+                <label><input type="checkbox" value="전시회관람"><span>전시회관람</span></label>
+                <label><input type="checkbox" value="사진"><span>사진</span></label>
+                <label><input type="checkbox" value="요가"><span>요가</span></label>
+                <label><input type="checkbox" value="반려동물"><span>반려동물</span></label>
+                <label><input type="checkbox" value="캠핑"><span>캠핑</span></label>
+                <label><input type="checkbox" value="운동"><span>운동</span></label>
+                <label><input type="checkbox" value="미술"><span>미술</span></label>
+                <label><input type="checkbox" value="골프"><span>골프</span></label>
+                <label><input type="checkbox" value="독서"><span>독서</span></label>
+            </div>
+                 <button type="button" id="prev_page2" onclick="showPage('detailed_info')">이전</button>
+                 <button type="button" id="next_page3" onclick="showPage('additional_info2')">다음</button>
+              </div>
+                <!-- 추가 정보 페이지 2 -->
+                <div class="privacy_info" id="additional_info2" style="display: none;">
+                  <!-- 내용을 여기에 추가하세요. -->
+                  <!-- 추가 정보 입력 필드 추가 -->
+                  <button type="button" id="prev_page3" onclick="showPage('additional_info1')">이전</button>
+                  <button type="submit" id="submit-privacy">저장하기</button>
               </div>
             </form>
           </div>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- head 내용 -->
+</head>
+<body>
+    <header class="account_header">
+        <!-- Header 내용 -->
+    </header>
+
+    <div class="nav">
+        <!-- Navigation 내용 -->
+    </div>
+    <main>
+        <div class="container">
+            <div class="container_main">
+                <div class="content">
+                    <h1>개인정보 수정</h1>
+                    <div class="privacy_update">
+                        <form action="#" method="post" id="privacy_form" enctype="multipart/form-data">
+                            <!-- 프로필 사진 업로드 섹션 -->
+                            <!-- 기본 정보 섹션 -->
+                            <div class="privacy_info" id="basic_info">
+                                <!-- 내용을 여기에 추가하세요. -->
+                                <!-- 여기에 기본 정보 입력 필드 추가 -->
+                                <button type="button" id="next_page1" onclick="showPage('detailed_info')">다음</button>
+                            </div>
+
+                            <!-- 상세 정보 섹션 -->
+                            <div class="privacy_info" id="detailed_info" style="display: none;">
+                                <!-- 내용을 여기에 추가하세요. -->
+                                <!-- 상세 정보 입력 필드 추가 -->
+                                <button type="button" id="prev_page1" onclick="showPage('basic_info')">이전</button>
+                                <button type="button" id="next_page2" onclick="showPage('additional_info1')">다음</button>
+                            </div>
+
+                            <!-- 추가 정보 페이지 1 -->
+                            <div class="privacy_info" id="additional_info1" style="display: none;">
+                                <!-- 내용을 여기에 추가하세요. -->
+                                <!-- 추가 정보 입력 필드 추가 -->
+                                <button type="button" id="prev_page2" onclick="showPage('detailed_info')">이전</button>
+                                <button type="button" id="next_page3" onclick="showPage('additional_info2')">다음</button>
+                            </div>
+
+                            <!-- 추가 정보 페이지 2 -->
+                            <div class="privacy_info" id="additional_info2" style="display: none;">
+                                <!-- 내용을 여기에 추가하세요. -->
+                                <!-- 추가 정보 입력 필드 추가 -->
+                                <button type="button" id="prev_page3" onclick="showPage('additional_info1')">이전</button>
+                                <button type="submit" id="submit-privacy">저장하기</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script>
+        function showPage(pageId) {
+            if (pageId === 'basic_info') {
+                document.getElementById('basic_info').style.display = 'block';
+                document.getElementById('detailed_info').style.display = 'none';
+                document.getElementById('additional_info1').style.display = 'none';
+                document.getElementById('additional_info2').style.display = 'none';
+            } else if (pageId === 'detailed_info') {
+                document.getElementById('basic_info').style.display = 'none';
+                document.getElementById('detailed_info').style.display = 'block';
+                document.getElementById('additional_info1').style.display = 'none';
+                document.getElementById('additional_info2').style.display = 'none';
+            } else if (pageId === 'additional_info1') {
+                document.getElementById('basic_info').style.display = 'none';
+                document.getElementById('detailed_info').style.display = 'none';
+                document.getElementById('additional_info1').style.display = 'block';
+                document.getElementById('additional_info2').style.display = 'none';
+            } else if (pageId === 'additional_info2') {
+                document.getElementById('basic_info').style.display = 'none';
+                document.getElementById('detailed_info').style.display = 'none';
+                document.getElementById('additional_info1').style.display = 'none';
+                document.getElementById('additional_info2').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

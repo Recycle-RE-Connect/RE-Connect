@@ -82,6 +82,10 @@ html,body {
     background-image: url(/images/m1-removebg-preview.png);
     margin-top: 4rem;
 }
+.form1{
+    font-size: 30px;
+    color: #A0C2AC;
+}
 .form2{
     display: flex;
     flex-direction: column;

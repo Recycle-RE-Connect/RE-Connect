@@ -214,46 +214,59 @@ const personalityCheckboxes = document.querySelectorAll(
 const personalitySelectionLimitText = document.getElementById(
   "personalitySelectionLimit"
 );
-let selectedPersonalityCount = 0; // 선택된 성격 개수 초기화
 
 // 체크박스 상태가 변경될 때마다 선택된 성격 목록 업데이트
 personalityCheckboxes.forEach((checkbox) => {
   checkbox.addEventListener("change", () => {
-    if (checkbox.checked) {
-      selectedPersonalityCount++;
-    } else {
-      selectedPersonalityCount--;
-    }
+    const selectedCount = Array.from(personalityCheckboxes).filter(
+      (cb) => cb.checked
+    ).length;
 
-    if (selectedPersonalityCount > maxPersonalitySelections) {
+    if (selectedCount > maxPersonalitySelections) {
       // 최대 선택 개수를 초과한 경우 체크 해제
       checkbox.checked = false;
-      selectedPersonalityCount--;
     }
 
-    updatePersonalitySelectionLimit(selectedPersonalityCount);
+    updatePersonalitySelectionLimit(selectedCount);
   });
 });
 
 // 선택 제한 텍스트 업데이트
-function updatePersonalitySelectionLimit(selectedPersonalityCount) {
-  const remainingSelections =
-    maxPersonalitySelections - selectedPersonalityCount;
+function updatePersonalitySelectionLimit(selectedCount) {
+  const remainingSelections = maxPersonalitySelections - selectedCount;
   personalitySelectionLimitText.textContent = `최대 ${maxPersonalitySelections}개 선택가능 (${
     remainingSelections >= 0 ? remainingSelections : 0
   }/${maxPersonalitySelections})`;
-
-  // 선택 가능한 개수가 0개일 경우 모든 체크박스 비활성화
-  if (remainingSelections <= 0) {
-    personalityCheckboxes.forEach((checkbox) => {
-      checkbox.disabled = true;
-    });
-  } else {
-    // 선택 가능한 개수가 0개가 아닐 경우 모든 체크박스 활성화
-    personalityCheckboxes.forEach((checkbox) => {
-      checkbox.disabled = false;
-    });
-  }
 }
 
-// 관심사 ON/off 수정
+// 결혼가치관
+
+const maxMarriageSelections = 3; // 최대 선택 가능한 결혼가치관 개수
+const marriageCheckboxes = document.querySelectorAll(
+  ".info_marriage input[type='checkbox']"
+);
+const marriageSelectionLimitText = document.getElementById("marriageSelectionLimit");
+
+// 체크박스 상태가 변경될 때마다 선택된 결혼가치관 목록 업데이트
+marriageCheckboxes.forEach((checkbox) => {
+  checkbox.addEventListener("change", () => {
+    const selectedCount = Array.from(marriageCheckboxes).filter(
+      (cb) => cb.checked
+    ).length;
+
+    if (selectedCount > maxMarriageSelections) {
+      // 최대 선택 개수를 초과한 경우 체크 해제
+      checkbox.checked = false;
+    }
+
+    updateMarriageSelectionLimit(selectedCount);
+  });
+});
+
+// 선택 제한 텍스트 업데이트
+function updateMarriageSelectionLimit(selectedCount) {
+  const remainingSelections = maxMarriageSelections - selectedCount;
+  marriageSelectionLimitText.textContent = `최대 ${maxMarriageSelections}개 선택가능 (${
+    remainingSelections >= 0 ? remainingSelections : 0
+  }/${maxMarriageSelections})`;
+}

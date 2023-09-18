@@ -89,7 +89,12 @@ a {
   font-size: 3rem;
 }
 
+.board_title strong a {
+  color: #1D3124;
+}
+
 .board_title p {
+  color: #636664;
   margin-top: 5px;
   font-size: 1.4rem;
 }
@@ -107,7 +112,7 @@ a {
   min-width: 80px;
   margin-left: 10px;
   padding: 10px;
-  border: 1px solid #000;
+  border: 1px solid #1D3124;
   border-radius: 2px;
   font-size: 1.4rem;
 }
@@ -122,7 +127,7 @@ a {
 }
 
 .bt_wrap a.on {
-  background: #000;
+  background: #1D3124;
   color: #fff;
 }
 button {
@@ -143,20 +148,20 @@ button.on {
 
 .board_list {
   width: 100%;
-  border-top: 2px solid #000;
+  border-top: 2px solid #1D3124;
 }
 
 .board_list > div {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ced1cf;
   font-size: 0;
 }
 
 .board_list > div.top {
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid #6a796e;
 }
 
 .board_list > div:last-child {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #1D3124;
 }
 
 .board_list > div > div {
@@ -207,7 +212,7 @@ button.on {
   height: 32px;
   box-sizing: border-box;
   vertical-align: middle;
-  border: 1px solid #ddd;
+  border: 1px solid #ced1cf;
   border-left: 0;
   line-height: 100%;
 }
@@ -224,8 +229,8 @@ button.on {
 }
 
 .board_page a.num.on {
-  border-color: #000;
-  background: #000;
+  border-color: #1D3124;
+  background: #1D3124;
   color: #fff;
 }
 
@@ -235,7 +240,7 @@ button.on {
 
 .board_view {
   width: 100%;
-  border-top: 2px solid #000;
+  border-top: 2px solid #1b1b1b;
 }
 
 .board_view .title {

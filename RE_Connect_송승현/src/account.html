@@ -9,6 +9,7 @@
   <meta name="description" content="안녕하세요, 마음을 다시 연결하는 결혼 정보 플랫폼 DASH 입니다." />
   <link rel="icon" href="../favicon.png" />
   <link rel="stylesheet" href="/CSS/account.css" />
+  <link rel="stylesheet" href="/CSS/footer_style.css" />
   <link rel="stylesheet" href="/CSS/reset.css" />
 </head>
 
@@ -57,7 +58,7 @@
     </a>
     <ul class="gnb">
       <li class="gnb-menu">
-        <a href="" class="menu-btn">개인정보수정</a>
+        <a href="account.html" class="menu-btn">개인정보수정</a>
       </li>
       <li class="gnb-menu">
         <a href="" class="menu-btn">내가 작성한 글</a>
@@ -72,7 +73,7 @@
         <a href="" class="menu-btn">멤버십</a>
       </li>
       <li class="gnb-menu">
-        <a href="" class="menu-btn secession">회원탈퇴</a>
+        <a href="account_withdrawal.html" class="menu-btn secession">회원탈퇴</a>
       </li>
     </ul>
     <button type="button" class="nav-icon">
@@ -112,8 +113,8 @@
                     <input type="text" name="user_name" placeholder="이름" maxlength="10" required />
                   </div>
                   <div class="info-sex">
-                    <input type="radio" id="male" name="MF" /><label for="male">남자</label>
-                    <input type="radio" id="female" name="MF" /><label for="female">여자</label>
+                    <input type="radio" id="male" name="MF" required /><label for="male">남자</label>
+                    <input type="radio" id="female" name="MF" required /><label for="female">여자</label>
                   </div>
                 </div>
                 <div class="info-age">
@@ -178,7 +179,7 @@
                   <input type="text" name="user_occupation" placeholder="직업" required />
                 </div>
                 <div class="info-body">
-                  <select class="body_type" name="user_body_type">
+                  <select class="body_type" name="user_body_type" required>
                     <option value="">체형</option>
                     <option value="-----" disabled>
                       --------------------------------------------
@@ -191,7 +192,7 @@
                   </select>
                 </div>
                 <div class="info-annual-income">
-                  <select class="annual_income" name="user_annual_income">
+                  <select class="annual_income" name="user_annual_income" required>
                     <option value="">연봉</option>
                     <option value="-----" disabled>
                       --------------------------------------------
@@ -273,8 +274,8 @@
                 <button type="button" id="prev_page" onclick="showPage('basic_info')">이전</button>
                 <button type="button" id="next_page2" onclick="showPage('additional_info1')">다음</button>
               </div>
-               <!-- 추가 정보 페이지 1 -->
-               <div class="privacy_info" id="additional_info1" style="display: none;">
+              <!-- 추가 정보 페이지 1 -->
+              <div class="privacy_info" id="additional_info1" style="display: none;">
                 <h2 class="privacy_info_header">종교</h2>
                 <div class="privacy_info_religion">
                   <label><input type="radio" name="religion" value="기독교"><span>기독교</span></label>
@@ -315,39 +316,47 @@
                 <label><input type="checkbox" value="열정적"><span>열정적</span></label>
                 <label><input type="checkbox" value="자기통제"><span>자기통제</span></label>
             </div>
-                 <button type="button" id="prev_page2" onclick="showPage('detailed_info')">이전</button>
-                 <button type="button" id="next_page3" onclick="showPage('additional_info2')">다음</button>
+                <button type="button" id="prev_page2" onclick="showPage('detailed_info')">이전</button>
+                <button type="button" id="next_page3" onclick="showPage('additional_info2')">다음</button>
               </div>
                 <div class="privacy_info" id="additional_info2" style="display: none;">
                   <h2 class="privacy_info_marriage privacy_info_header">결혼가치관</h2>
-                  <span id="marriageSelectionLimit">최대 3개 선택가능 (3/3)</span>
+                  <span id="marriageSelectionLimit">최대 5개 선택가능 (5/5)</span>
                   <div class="info_marriage">
                       <label><input type="checkbox" value="가족"> <span>가족</span></label>
                       <label><input type="checkbox" value="신뢰"> <span>신뢰</span></label>
                       <label><input type="checkbox" value="애정"> <span>애정</span></label>
                       <label><input type="checkbox" value="정직"> <span>정직</span></label>
-                      <label><input type="checkbox" value="정직"> <span>정직</span></label>
-                      <label><input type="checkbox" value="정직"> <span>정직</span></label>
                       <label><input type="checkbox" value="성장"> <span>성장</span></label>
                       <label><input type="checkbox" value="경제적 안정"> <span>경제적 안정</span></label>
-                      <label><input type="checkbox" value="유대감"> <span>유대감</span></label>
-                      <label><input type="checkbox" value="유대감"> <span>유대감</span></label>
-                      <label><input type="checkbox" value="유대감"> <span>유대감</span></label>
-                      <label><input type="checkbox" value="유대감"> <span>유대감</span></label>
                       <label><input type="checkbox" value="유대감"> <span>유대감</span></label>
                       <label><input type="checkbox" value="자율성"> <span>자율성</span></label>
                       <label><input type="checkbox" value="신뢰"> <span>신뢰</span></label>
                       <label><input type="checkbox" value="사회적 역할"> <span>사회적 역할</span></label>
-                      <label><input type="checkbox" value="사회적 역할"> <span>사회적 역할</span></label>
-                      <label><input type="checkbox" value="사회적 역할"> <span>사회적 역할</span></label>
-                      <label><input type="checkbox" value="사회적 역할"> <span>사회적 역할</span></label>
-                      <label><input type="checkbox" value="사회적 역할"> <span>사회적 역할</span></label>
-                      <label><input type="checkbox" value="사회적 역할"> <span>사회적 역할</span></label>
-                      <label><input type="checkbox" value="사회적 역할"> <span>사회적 역할</span></label>
-                      <label><input type="checkbox" value="사회적 역할"> <span>사회적 역할</span></label>
-                      <label><input type="checkbox" value="사회적 역할"> <span>사회적 역할</span></label>
-                      <label><input type="checkbox" value="사회적 역할"> <span>사회적 역할</span></label>
-                      <label><input type="checkbox" value="사회적 역할"> <span>사회적 역할</span></label>
+                      <label><input type="checkbox" value="자유"> <span>자유</span></label>
+                      <label><input type="checkbox" value="성숙"> <span>성숙</span></label>
+                      <label><input type="checkbox" value="인내"> <span>인내</span></label>
+                      <label><input type="checkbox" value="공정성"> <span>공정성</span></label>
+                      <label><input type="checkbox" value="모험"> <span>모험</span></label>
+                      <label><input type="checkbox" value="창의성"> <span>창의성</span></label>
+                      <label><input type="checkbox" value="성실함"> <span>성실함</span></label>
+                      <label><input type="checkbox" value="자기계발"> <span>자기계발</span></label>
+                      <label><input type="checkbox" value="예술"> <span>예술</span></label>
+                      <label><input type="checkbox" value="신뢰"> <span>신뢰</span></label>
+                      <label><input type="checkbox" value="사랑"> <span>사랑</span></label>
+                      <label><input type="checkbox" value="용기"> <span>용기</span></label>
+                      <label><input type="checkbox" value="참신함"> <span>참신함</span></label>
+                      <label><input type="checkbox" value="봉사"> <span>봉사</span></label>
+                      <label><input type="checkbox" value="존중"> <span>존중</span></label>
+                      <label><input type="checkbox" value="자신감"> <span>자신감</span></label>
+                      <label><input type="checkbox" value="포용력"> <span>포용력</span></label>
+                      <label><input type="checkbox" value="감사"> <span>감사</span></label>
+                      <label><input type="checkbox" value="신뢰"> <span>신뢰</span></label>
+                      <label><input type="checkbox" value="유머감각"> <span>유머감각</span></label>
+                      <label><input type="checkbox" value="책임감"> <span>책임감</span></label>
+                      <label><input type="checkbox" value="도전정신"> <span>도전정신</span></label>
+                      <label><input type="checkbox" value="자기주도"> <span>자기주도</span></label>
+                      <label><input type="checkbox" value="참여"> <span>참여</span></label>
                     </div>
                   <button type="button" id="prev_page3" onclick="showPage('additional_info1')">이전</button>
                   <button type="submit" id="submit-privacy">저장하기</button>
@@ -358,7 +367,44 @@
       </div>
     </div>
   </main>
-  <footer></footer>
+  <footer class="footer">
+    <div class="footer-content">
+      <h3>(주)Re:connect</h3>
+      <span>대표 : Recycle</span>
+      <span>사업자등록번호 : 999-99-99999</span>
+      <span
+        >주소 : (34838)대전광역시 중구 중앙로121번길 20 (선화동 41) 2층</span
+      >
+      <span>Tel.042-222-2402</span>
+      <ul class="footer-socials">
+        <li>
+          <a href="#"><img src="/images/ico_image.svg" alt="ico_image" /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="/images/ico_instagram.svg" alt="ico_instagram"
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="/images/ico_youtube.svg" alt="ico_youtube"
+          /></a>
+        </li>
+      </ul>
+      <div class="footer-menu">
+        <p>
+          copyright &copy;2023 by<a href="”#”"> Re:connect.</a> All pictures
+          cannot be copied without permission.
+        </p>
+        <ul class="f-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dash.html">About</a></li>
+          <li><a href="estimate.html">Contact</a></li>
+          <li><a href="FAQ.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
   <script src="/script/account.js"></script>
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </body>

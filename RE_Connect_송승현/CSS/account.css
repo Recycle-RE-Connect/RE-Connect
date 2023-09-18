@@ -186,7 +186,7 @@
 }
 
 .secession {
-  color: rgb(247, 41, 41);
+  color: #FF6D6D;
 }
 
 .menu-btn:hover {
@@ -619,7 +619,7 @@
   text-align: center;
   font-weight: bold;
   font-size: 13px;
-  margin-top: 20px;
+  margin-top: 8px;
 }
 .info-alcohol input[type="radio"] + label {
   background-color: #fff;

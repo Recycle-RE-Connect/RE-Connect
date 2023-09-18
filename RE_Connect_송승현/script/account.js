@@ -55,6 +55,9 @@ profilePictureInput.addEventListener("change", function () {
   }
 });
 
+// 기본세션
+// ===========================================================================================
+
 // 입력 필드에 숫자만 입력되도록 하고, 입력이 끝났을 때 "세"를 추가하는 코드
 var userAgeInput = document.getElementById("user_age");
 
@@ -241,11 +244,13 @@ function updatePersonalitySelectionLimit(selectedCount) {
 
 // 결혼가치관
 
-const maxMarriageSelections = 3; // 최대 선택 가능한 결혼가치관 개수
+const maxMarriageSelections = 5; // 최대 선택 가능한 결혼가치관 개수
 const marriageCheckboxes = document.querySelectorAll(
   ".info_marriage input[type='checkbox']"
 );
-const marriageSelectionLimitText = document.getElementById("marriageSelectionLimit");
+const marriageSelectionLimitText = document.getElementById(
+  "marriageSelectionLimit"
+);
 
 // 체크박스 상태가 변경될 때마다 선택된 결혼가치관 목록 업데이트
 marriageCheckboxes.forEach((checkbox) => {

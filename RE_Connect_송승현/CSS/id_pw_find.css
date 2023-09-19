@@ -1,0 +1,105 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  /* max-width: 1425px; */
+  height: 100%;
+  font-family: "Pretendard-Regular";
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+#box {
+  height: 0px;
+}
+
+.id_pw_find {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.id_pw_find>h2{
+  font-size: 24px;
+  color: #a0c2ac;
+  margin-bottom: 20px;
+}
+#id_find_form>h2,#pw_find_form>h2 {
+  font-size: 20px;
+  color: #a0c2ac;
+}
+
+
+.id_find_box,.pw_find_box {
+  margin-bottom: 3rem;
+}
+
+#id_find_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.contour {
+  border-top: 0.5px solid #e5e4e4;
+}
+
+
+#pw_find_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.id_find input {
+  width: 400px;
+  height: 48px;
+  padding: 0 10px;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.id_find input::placeholder {
+  color: #b7b6b6;
+}
+
+.pw_find input {
+  width: 400px;
+  height: 48px;
+  padding: 0 10px;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+
+}
+
+.pw_find input::placeholder {
+  color: #b7b6b6;
+}
+
+#submit-id_find,#submit-pw_find {
+  width: 100%;
+  height: 48px;
+  padding: 0 10px;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+  color: #fff;
+  font-size: 16px;
+  background-color: #a0c2ac;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}

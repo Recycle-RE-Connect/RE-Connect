@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <title>로그인 | 마음을 다시 연결하는 결혼 정보 플랫폼 DASH</title>
+    <title>아이디 찾기 / 비밀번호 찾기 | 마음을 다시 연결하는 결혼 정보 플랫폼 DASH</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -13,7 +13,7 @@
       content="안녕하세요, 마음을 다시 연결하는 결혼 정보 플랫폼 DASH 입니다."
     />
     <link rel="icon" href="../favicon.png" />
-    <link rel="stylesheet" href="/CSS/login.css" />
+    <link rel="stylesheet" href="/CSS/id_pw_find.css" />
     <link rel="stylesheet" href="/CSS/header_footer_noside.css" />
     <link rel="stylesheet" href="/CSS/reset.css" />
   </head>
@@ -88,44 +88,65 @@
       </nav>
       <div class="dim-layer"></div>
     </header>
+
     <main>
       <div id="box"></div>
-      <div class="login">
-        <h2>로그인</h2>
-        <form method="post" action="#" id="login-form">
-          <input type="text" name="userId" placeholder="Email" />
-          <input type="password" name="userPassword" placeholder="Password" />
-          <label for="remember-Id">
-            <input type="checkbox" id="remember-Id" /> 아이디 저장하기
-          </label>
-          <button type="submit" id="submit-login">Login</button>
-
-          <p class="easy-login-text">간편로그인</p>
-          <div class="easy-login">
-            <div class="naver">
-              <div class="naver_login">
-                <!--로그인api추가-->
-                <a href="#" id="naverLogin" class="btn-naver" type="button"
-                  >네이버로 시작하기</a
-                >
-              </div>
-            </div>
-            <div class="kakao">
-              <div class="kakao_login">
-                <!--로그인api추가-->
-                <a href="" type="button" id="kakaoLogin" class="btn-kakao"
-                  >카카오로 시작하기</a
-                >
-              </div>
-            </div>
-          </div>
-          <p class="new">
-            회원이 아니신가요 ? <a href="create_account.html"><u>회원가입</u></a>
-          </p>
-          <p class="find">
-            로그인 정보가 기억나지 않나요 ? <a href="id_pw_find.html"><u>회원정보 찾기</u></a>
-          </p>
-        </form>
+      <div class="id_pw_find">
+        <h2>아이디/비밀번호 찾기</h2>
+        <div class="id_find_box">
+          <form action="#" method="post" id="id_find_form">
+            <h2>아이디 찾기</h2>
+            <div class="contour"></div>
+            <table class="id_find">
+              <thead>
+                <tr>
+                  <th>성함</th>
+                  <td><input type="text" name="userName" placeholder="성함" /></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>생년월일</th>
+                  <td><input type="text" name="userBirth" placeholder="생년월일 앞 8자리" /></td>
+                </tr>
+                <tr>
+                  <th>휴대폰번호</th>
+                  <td><input type="text" name="userNumber" placeholder="'-' 없이 입력" maxlength="11" oninput="formatPhoneNumber()" /></td>
+                </tr>
+              </tbody>
+              </table>
+              <button type="submit" id="submit-id_find">아이디 찾기</button>
+            </form>
+        </div>
+        <div class="pw_find_box">
+          <form action="#" method="post" id="pw_find_form">
+            <h2>비밀번호 찾기</h2>
+            <div class="contour"></div>
+            <table class="pw_find">
+              <thead>
+                <tr>
+                  <th>아이디</th>
+                  <td><input type="text" name="userId" placeholder="아이디" /></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>이름</th>
+                  <td><input type="text" name="userPwName" placeholder="성함" /></td>
+                </tr>
+                <tr>
+                  <th>휴대폰 번호</th>
+                  <td><input type="text" name="userPwNumber" placeholder="'-' 없이 입력"/></td>
+                </tr>
+                <tr>
+                  <th>휴대폰 인증</th>
+                  <td><input type="text" name="verification_code" placeholder="인증번호 입력" maxlength="6"></td>
+                </tr>
+              </tbody>
+              </table>
+              <button type="submit" id="submit-pw_find">비밀번호 찾기</button>
+          </form>
+        </div>
       </div>
     </main>
     <footer class="footer">
@@ -167,6 +188,7 @@
       </div>
     </footer>
     <script src="/script/header.js"></script>
+    <script src="/script/id_pw_find.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
   </body>

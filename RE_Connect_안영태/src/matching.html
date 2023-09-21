@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title> Dash매칭 | 마음을 다시 연결하는 결혼 정보 플랫폼 DASH </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keyworeds" content="결혼, wedding, 결혼정보업체, DASH, Re:Connect, 듀오, 가연," />
+  <meta name="description" content="안녕하세요, 마음을 다시 연결하는 결혼 정보 플랫폼 DASH 입니다." />
+  <link rel="icon" href="/images/favicon.png" />
+
+
+  <script type="module" crossorigin src="../script/matching_script.js"></script>
+  <link rel="modulepreload" href="../script/matcing_script2.js">
+  <link rel="stylesheet" href="../CSS/matching_style.css">
+
+  <link rel="stylesheet" href="../CSS/reset.css">
+  <link rel="stylesheet" href="../CSS/header_footer.css">
+  <link rel="stylesheet" href="../CSS/sidebar_style.css">
+</head>
+
+<body>
+  <!-- 헤더 -->
+  <header>
+    <div class="header">
+      <div class="air"></div>
+      <a href="./index.html" id="logo">
+        <img src="../images/logo.svg" alt="로고" />
+      </a>
+      <div class="login_menu">
+        <div>
+          <a href="./login.html">로그인</a>
+        </div>
+        <div>
+          <a href="./create_account.html">회원가입</a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="./index.html" id="logo2">
+        <img src="../images/logo.svg" alt="로고" width="95"/>
+      </a>
+      <ul class="gnb">
+        <!-- <div id="test"></div> -->
+        <li class="gnb-menu">
+          <a href="#" class="menu-btn">회사소개</a>
+          <ul class="sub-menu">
+            <li><a href="./dash.html">Dash란?</a></li>
+            <li><a href="../src/greeting.html">인사말</a></li>
+            <li><a href="#">커플 매니저 소개</a></li>
+          </ul>
+        </li>
+
+        <li class="gnb-menu">
+          <a href="#" class="menu-btn">커뮤니티</a>
+          <ul class="sub-menu">
+            <li><a href="../src/notice.html">공지사항</a></li>
+            <li><a href="./board_main.html">문의하기</a></li>
+            <!-- <li><a href="#">문의하기</a></li> -->
+            <li><a href="./FAQ.html">FAQ</a></li>
+          </ul>
+        </li>
+
+        <li class="gnb-menu">
+          <a href="#" class="menu-btn">이용안내</a>
+          <ul class="sub-menu">
+            
+            <li><a href="./estimate.html">상담예약</a></li>
+            <li><a href="./price.html">이용요금</a></li>
+          </ul>
+        </li>
+
+        <li class="gnb-menu">
+          <a href="#" class="menu-btn">후기정보</a>
+          <ul class="sub-menu">
+            <li><a href="./mgr_reviews.html">매니저 후기</a></li>
+            <li><a href="../src/interview.html">인터뷰</a></li>
+          </ul>
+        </li>
+
+        <li class="gnb-menu">
+          <a href="#" class="menu-btn">매칭하기</a>
+          <ul class="sub-menu">
+            <li><a href="./matching.html">Dash매칭</a></li>
+            <li><a href="#">This Is Me</a></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="nav-icon"><iconify-icon icon="ph:list-fill"></iconify-icon></button>
+
+    </nav>
+    <div class="dim-layer"></div>
+  </header>
+
+  <main>
+    <nav class="side-bar">
+      <h2>매칭</h2>
+      <ul class="sb-list">
+        <li><a href="./matching.html">Dash 매칭</a></li>
+        <li><a href="#">This Is Me</a></li>
+        <!-- <li><a href="#">이용요금</a></li> -->
+      </ul>
+    </nav>
+
+    <div id="box"></div>
+
+    <h2 id="title">Dash 매칭</h2>
+    <p id="sub-title">가끔 만나요. 우리, 우연히</p>
+
+
+    <div id="app">
+      <!-- Carousel slider -->
+      <div class="swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="flip-container">
+              <div class="flipper">
+                <div class="front">
+                  <!-- 앞면에 보이는 내용 -->
+                  <div class="swiper-carousel-animate-opacity">
+                    <img src="https://cdn.pixabay.com/photo/2016/12/19/21/36/woman-1919143_640.jpg" alt="">
+                    <!-- <div class="slide-content">
+                      <h2>전두엽</h2>
+                      <p>20대</p>
+                    </div> -->
+                  </div>
+                </div>
+                <div class="back">
+                  <!-- 뒷면에 보이는 내용 -->
+                    <h2>전지현</h2>
+                    <p>30대</p>
+                    <p>대전</p>
+                    <p>취미 : 여행</p>
+                    <p>특기 : 노래</p>
+                    <p>성격 : 꼼꼼</p>
+                    <p>INFJ</p>
+                  <!-- 사용자가 입력한 정보를 보여줄 곳 -->
+                  <input type="text" placeholder="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="flip-container">
+              <div class="flipper">
+                <div class="front">
+                  <!-- 앞면에 보이는 내용 -->
+                  <div class="swiper-carousel-animate-opacity">
+                    <img src="https://cdn.pixabay.com/photo/2017/08/01/11/48/woman-2564660_640.jpg" alt="">
+                    <!-- <div class="slide-content">
+                      <h2>전두엽</h2>
+                      <p>20대</p>
+                    </div> -->
+                  </div>
+                </div>
+                <div class="back">
+                  <!-- 뒷면에 보이는 내용 -->
+                  <h2>이지은</h2>
+                  <p>30대</p>
+                  <p>서울</p>
+                  <p>취미 : 음악듣기</p>
+                  <p>특기 : 연기</p>
+                  <p>성격 : 섬세함</p>
+                  <p>ENTP</p>
+                  <!-- 사용자가 입력한 정보를 보여줄 곳 -->
+                  <input type="text" placeholder="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="flip-container">
+              <div class="flipper">
+                <div class="front">
+                  <!-- 앞면에 보이는 내용 -->
+                  <div class="swiper-carousel-animate-opacity">
+                    <img src="https://cdn.pixabay.com/photo/2015/03/03/18/58/woman-657753_640.jpg" alt="">
+                    <!-- <div class="slide-content">
+                      <h2>전두엽</h2>
+                      <p>20대</p>
+                    </div> -->
+                  </div>
+                </div>
+                <div class="back">
+                  <!-- 뒷면에 보이는 내용 -->
+                  <h2>전여빈</h2>
+                  <p>20대</p>
+                  <p>경기</p>
+                  <p>취미 : 독서, 영화</p>
+                  <p>특기 : 퍼즐풀기</p>
+                  <p>성격 : 긍정적</p>
+                  <p>ISTJ</p>
+                  <!-- 사용자가 입력한 정보를 보여줄 곳 -->
+                  <input type="text" placeholder="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="flip-container">
+              <div class="flipper">
+                <div class="front">
+                  <!-- 앞면에 보이는 내용 -->
+                  <div class="swiper-carousel-animate-opacity">
+                    <img src="https://cdn.pixabay.com/photo/2016/03/23/08/34/woman-1274361_640.jpg" alt="">
+                    <!-- <div class="slide-content">
+                      <h2>전두엽</h2>
+                      <p>20대</p>
+                    </div> -->
+                  </div>
+                </div>
+                <div class="back">
+                  <!-- 뒷면에 보이는 내용 -->
+                  <h2>박은빈</h2>
+                  <p>30대</p>
+                  <p>대전</p>
+                  <p>취미 : 자수</p>
+                  <p>특기 : 작곡</p>
+                  <p>성격 : 활발</p>
+                  <p>ENTJ</p>
+                  <!-- 사용자가 입력한 정보를 보여줄 곳 -->
+                  <input type="text" placeholder="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="flip-container">
+              <div class="flipper">
+                <div class="front">
+                  <!-- 앞면에 보이는 내용 -->
+                  <div class="swiper-carousel-animate-opacity">
+                    <img src="https://cdn.pixabay.com/photo/2017/11/19/07/30/girl-2961959_640.jpg" alt="">
+                    <!-- <div class="slide-content">
+                      <h2>전두엽</h2>
+                      <p>20대</p>
+                    </div> -->
+                  </div>
+                </div>
+                <div class="back">
+                  <!-- 뒷면에 보이는 내용 -->
+                  <h2>김고은</h2>
+                  <p>20대</p>
+                  <p>인천</p>
+                  <p>취미 : 강아지 영상보기</p>
+                  <p>특기 : 강아지랑 놀아주기</p>
+                  <p>성격 : 발랄</p>
+                  <p>ENFP</p>
+                  <!-- 사용자가 입력한 정보를 보여줄 곳 -->
+                  <input type="text" placeholder="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="flip-container">
+              <div class="flipper">
+                <div class="front">
+                  <!-- 앞면에 보이는 내용 -->
+                  <div class="swiper-carousel-animate-opacity">
+                    <img src="https://cdn.pixabay.com/photo/2017/08/01/08/29/woman-2563491_640.jpg" alt="">
+                    <!-- <div class="slide-content">
+                      <h2>전두엽</h2>
+                      <p>20대</p>
+                    </div> -->
+                  </div>
+                </div>
+                <div class="back">
+                  <!-- 뒷면에 보이는 내용 -->
+                  <h2>김세정</h2>
+                  <p>30대</p>
+                  <p>부산</p>
+                  <p>취미 : 여행, 독서</p>
+                  <p>특기 : 게임</p>
+                  <p>성격 : 털털</p>
+                  <p>ISTP</p>
+                  <!-- 사용자가 입력한 정보를 보여줄 곳 -->
+                  <input type="text" placeholder="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="flip-container">
+              <div class="flipper">
+                <div class="front">
+                  <!-- 앞면에 보이는 내용 -->
+                  <div class="swiper-carousel-animate-opacity">
+                    <img src="https://cdn.pixabay.com/photo/2018/03/06/22/57/portrait-3204843_640.jpg" alt="">
+                    <!-- <div class="slide-content">
+                      <h2>전두엽</h2>
+                      <p>20대</p>
+                    </div> -->
+                  </div>
+                </div>
+                <div class="back">
+                  <!-- 뒷면에 보이는 내용 -->
+                  <h2>김태희</h2>
+                  <p>30대</p>
+                  <p>광주</p>
+                  <p>취미 : 여행</p>
+                  <p>특기 : 노래</p>
+                  <p>성격 : 꼼꼼</p>
+                  <p>INFJ</p>
+                  <!-- 사용자가 입력한 정보를 보여줄 곳 -->
+                  <input type="text" placeholder="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- 버튼 -->
+      <div class="swiper-button">
+        <div id="air2"></div>
+        <div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <button id="show">Reset</button>
+      </div>
+      <!-- 단추 -->
+      <div class="swiper-pagination"></div>
+
+
+      <!-- 리셋 -->
+      <div class="background">
+        <div class="window">
+          <div class="popup">
+            <div class="reset-content">
+              <p>G등급 및 D등급은 매일 한번 Reset입니다.</p>
+              <p>내일 다시 이용 바랍니다.</p><br>
+              <p>무제한 Reset을 이용하시려면</p>
+              <p>A등급, S등급, H등급을 구매하시기 <br>바랍니다.</p>
+            </div>
+            <button id="close">X</button>
+          </div>
+        </div>
+      </div>
+
+  </main>
+
+  <!-- 풋터 -->
+  <footer class="footer">
+    <div class="footer-content">
+      <h3>(주)Re:connect</h3>
+      <span>대표 : Recycle</span>
+      <span>사업자등록번호 : 999-99-99999</span>
+      <span>주소 : (34838)대전광역시 중구 중앙로121번길 20 (선화동 41) 2층</span>
+      <span>Tel.042-222-2402</span>
+      <ul class="footer-socials">
+        <li>
+          <a href="#"><img src="/images/ico_image.svg" alt="ico_image" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="/images/ico_instagram.svg" alt="ico_instagram" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="/images/ico_youtube.svg" alt="ico_youtube" /></a>
+        </li>
+      </ul>
+      <div class="footer-menu">
+        <p>
+          copyright &copy;2023 by<a href="”#”"> Re:connect.</a> All pictures
+          cannot be copied without permission.
+        </p>
+        <ul class="f-menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./dash.html">About</a></li>
+          <li><a href="./estimate.html">Contact</a></li>
+          <li><a href="./FAQ.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Cloudflare Pages Analytics -->
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "07e9b2efafbd4b458690b79234a62148"}'></script><!-- Cloudflare Pages Analytics -->
+  <script src="../script/header_script.js"></script>
+</body>
+
+</html>

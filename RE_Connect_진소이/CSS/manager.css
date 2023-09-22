@@ -83,9 +83,10 @@ a {
 
 .manager_wrap {
   width: 1000px;
+  height: 1200px; /*전체화면의 높이*/
   margin: auto;
   padding-bottom: 3rem;
-  background-color: #c3f05b;
+  /* background-color: #c3f05b; */
 }
 
 section {
@@ -93,16 +94,31 @@ section {
   height: 100vh;
 }
 
+
 .area_1 {
-  /* background-color: #aca8a8; */
   background-position: center 0px;
   background-size: cover;
+  display: flex;
+  flex-wrap: wrap; /* 이 부분을 수정합니다. */
+  justify-content: center;
+  margin-top: 9rem;
 }
-
 
 .wrapper {
   background: #f7f7f7;
   border: 3px solid #a0c2ac;
+  width: 300px; /* 원하는 너비로 조정합니다. */
+  margin: 10px; /* 요소 사이의 간격을 조정합니다. */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 /* .wrapper, */
@@ -128,7 +144,7 @@ section {
   font-size: 17px;
   color: #31344b;
   position: absolute;
-  cursor: pointer;
+  /* cursor: pointer; */
   opacity: 0.7;
   top: 15px;
   height: 35px;

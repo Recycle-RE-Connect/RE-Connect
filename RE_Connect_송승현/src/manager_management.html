@@ -61,7 +61,7 @@
         <a href="manager_management.html" class="menu-btn">매니저 관리</a>
       </li>
       <li class="gnb-menu">
-        <a href="" class="menu-btn">게시물 관리</a>
+        <a href="post_management.html" class="menu-btn">게시물 관리</a>
       </li>
       <li class="gnb-menu">
         <a href="" class="menu-btn">회원관리</a>
@@ -87,7 +87,6 @@
           <h1>커플매니저 관리</h1>
           <div class="authority">
             <div class="search-box">
-
                 <select name="user_search" class="user_search">
                   <option value="성함">성함</option>
                   <option value="ID">ID</option>
@@ -161,8 +160,71 @@
                   </button>
                 </div>
               </div>
+              <div id="modal2" class="modal">
+                <div class="modal-content">
+                  <h3 class="modal-heder">관리자 등록</h3>
+                  <div class="modal-text">
+                      <form action="#" method="post" id="add_administrator" enctype="multipart/form-data">
+                        <div class="add_info">
+                          <table class="info">
+                            <thead>
+                              <tr>
+                                <td>* 사용자 ID</td>
+                                <td><input type="text" name="userId" required value="tpsk0415"></td>
+                                <td>* 사용자명</td>
+                                <td><input type="text" name="userName" required value="유세나"></td>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>* 암호</td>
+                                <td><input type="password" name="userPassword" required value="tpsk0415"></td>
+                                <td>이메일</td>
+                                <td><input type="text" name="userEmail" value="tpsk0415@naver.com"></td>
+                              </tr>
+                              <tr>
+                                <td>연락처</td>
+                                <td><input type="text" name="userNumber"></td>
+                                <td>비상연락처</td>
+                                <td><input type="text" name="userNumber2"></td>
+                              </tr>
+                              <tr>
+                                <td>* 사용여부</td>
+                                <td>
+                                  <select name="userUse" id="userUse">
+                                  <option value="사용여부">사용여부</option>
+                                  <option value="--------------------------------------------" disabled>--------------------------------------------</option>
+                                  <option value="Y" selected >사용</option>
+                                  <option value="N">미사용</option>
+                                </select>
+                              </td>
+                                <td>사용자권한</td>
+                                <td>
+                                  <select name="userGroup" id="userGroup">
+                                    <option value="사용자권한" selected>사용자권한</option>
+                                    <option value="--------------------------------------------" disabled>--------------------------------------------</option>
+                                    <option value="관리자">관리자</option>
+                                    <option value="커플매니저" selected >커플매니저</option>
+                                    <option value="일반">일반</option>
+                                  </select>
+                                </td>
+                              </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                        <div class="btn_box">
+                          <button type="submit" id="submit-authority" class="modal_btn active_btn">수정</button>
+                          <button type="button" onclick="closeModal('modal2')" class="modal_btn">닫기</button>
+                        </div>
+                      </form>
+                    </div>
+                    <button tpye="button" onclick="closeModal('modal2')" class="close_btn">
+                      <iconify-icon icon="ph:x-light" width="30px"></iconify-icon>
+                    </button>
+                  </div>
+                </div>
               <div class="manager_list">
-                <table class="tg manager_table">
+                <table class="manager_table">
                   <thead>
                     <tr>
                       <th>사용자ID</th>
@@ -173,7 +235,8 @@
                       <th>등록일</th>
                       <th>수정자</th>
                       <th>수정일</th>
-                      <th></th>
+                      <th colspan="2"></th>
+                      <!-- <th></th> -->
                     </tr>
                   </thead>
                   <tbody>
@@ -186,7 +249,20 @@
                       <td>2023.10.24</td>
                       <td></td>
                       <td></td>
-                      <td>수정</td>
+                      <td><button>수정</button></td>
+                      <td><button>삭제</button></td>
+                    </tr>
+                    <tr>
+                      <td>tpsk0415</td>
+                      <td>유세나</td>
+                      <td>커플매니저</td>
+                      <td>Y</td>
+                      <td>안영태</td>
+                      <td>2023.10.24</td>
+                      <td>송승현</td>
+                      <td>2023.10.25</td>
+                      <td><button onclick="correctionModal('modal2')">수정</button></td>
+                      <td><button onclick="deleteBtn()">삭제</button></td>
                     </tr>
                   </tbody>
                   </table>

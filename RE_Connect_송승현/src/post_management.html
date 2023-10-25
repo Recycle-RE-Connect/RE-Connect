@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>게시물 관리 | 마음을 다시 연결하는 결혼 정보 플랫폼 DASH</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keyworeds"
+      content="결혼, wedding, 결혼정보업체, DASH, Re:Connect, 듀오, 가연,"
+    />
+    <meta
+      name="description"
+      content="안녕하세요, 마음을 다시 연결하는 결혼 정보 플랫폼 DASH 입니다."
+    />
+    <link rel="icon" href="../favicon.png" />
+    <link rel="stylesheet" href="/CSS/post_management.css" />
+    <link rel="stylesheet" href="/CSS/footer_style.css" />
+    <link rel="stylesheet" href="/CSS/reset.css" />
+  </head>
+
+  <body>
+    <header class="account_header">
+      <div class="header_btn">
+        <div class="message_badge">
+          <button type="button" class="btn_messenger" onclick="">메신저</button>
+          <span class="push_num" style="display: none">0</span>
+        </div>
+        <div class="alarm_badge">
+          <button type="button" class="btn_alarm" onclick="">알림</button>
+          <span class="push_num" style="display: none">0</span>
+        </div>
+      </div>
+
+      <div class="member">
+        <button type="button" class="btn_member">
+          <div class="user_photo">
+            <figure class="user_img">
+              <img src="/images/Song.jpg" alt="user_img" />
+            </figure>
+          </div>
+        </button>
+
+        <div class="layer_member">
+          <ul>
+            <li>
+              <img src="/images/Song.jpg" alt="user_img" /><span>송승현</span>
+            </li>
+            <li>
+              <a href="#"
+                ><span>개인정보 수정</span
+                ><iconify-icon icon="la:edit-solid" width="30"></iconify-icon
+              ></a>
+            </li>
+            <li>
+              <a href="index.html"
+                ><span>로그아웃</span
+                ><iconify-icon
+                  icon="material-symbols:logout"
+                  width="25"
+                ></iconify-icon
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="nav">
+      <a href="index.html" id="logo2">
+        <img src="/images/logo.svg" alt="logo" />
+      </a>
+      <ul class="gnb">
+        <li class="gnb-menu">
+          <a href="manager_management.html" class="menu-btn">매니저 관리</a>
+        </li>
+        <li class="gnb-menu">
+          <a href="" class="menu-btn">게시물 관리</a>
+        </li>
+        <li class="gnb-menu">
+          <a href="" class="menu-btn">회원관리</a>
+        </li>
+        <li class="gnb-menu">
+          <a href="" class="menu-btn">DASH 매칭</a>
+        </li>
+        <li class="gnb-menu">
+          <a href="" class="menu-btn">마이페이지</a>
+        </li>
+        <li class="gnb-menu">
+          <a href="account_withdrawal.html" class="menu-btn secession"
+            >회원탈퇴</a
+          >
+        </li>
+      </ul>
+      <button type="button" class="nav-icon">
+        <iconify-icon icon="ph:list-fill"></iconify-icon>
+      </button>
+    </div>
+    <main>
+      <div class="container">
+        <div class="container_main">
+          <div class="content">
+            <h1>게시물 관리</h1>
+            <div class="post_management">
+              <div class="menu-tab">
+                <button class="tab_btn active"><a href="#">전체</a></button>
+                <button class="tab_btn"><a href="#">공지사항</a></button>
+                <button class="tab_btn"><a href="#">게시판</a></button>
+                <button class="tab_btn"><a href="#">FAQ</a></button>
+              </div>
+              <div class="search-box">
+                <select name="user_search" class="user_search">
+                  <option value="성함">제목</option>
+                  <option value="내용">내용</option>
+                  <option value="작성자">작성자</option>
+                </select>
+                <input type="search">
+              <button type="button" class="search-btn">조회</button>
+              <button type="button" onclick="openModal('modal1')" class="add_btn">등록</button>
+            </div>
+            <div id="modal1" class="modal">
+              <div class="modal-content">
+                <h3 class="modal-heder">게시판 관리</h3>
+                <div class="modal-text">
+                    <form action="#" method="post" id="add_post" enctype="multipart/form-data">
+                      <div class="add_post_management">
+                        <table class="add_post_table">
+                          <thead>
+                            <tr>
+                              <th>*작성자</th>
+                              <th><input type="text" name="userName" required></th>
+                              <th>*분류</th>
+                              <th>
+                                <select name="classification" id="classification">
+                                  <option value="분류" selected>분류</option>
+                                  <option value="--------------------------------------------" disabled>--------------------------------------------</option>
+                                  <option value="공지사항">공지사항</option>
+                                  <option value="게시판">게시판</option>
+                                  <option value="FAQ">FAQ</option>
+                                </select>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>제목</td>
+                              <td colspan="3"><input type="text" name="title"></td>
+                            </tr>
+                            <tr>
+                              <td rowspan="2">내용</td>
+                              <td colspan="3" rowspan="2"><input type="text" name="main_text"></td>
+                            </tr>
+                            <tr>
+                            </tr>
+                            <tr>
+                              <td>파일첨부</td>
+                              <td colspan="3"><input type="file"></td>
+                            </tr>
+                          </tbody>
+                          </table>
+                      </div>
+                      <div class="btn_box">
+                        <button type="submit" id="submit-authority" class="modal_btn active_btn">저장</button>
+                        <button type="button" onclick="closeModal('modal1')" class="modal_btn">닫기</button>
+                      </div>
+                    </form>
+                  </div>
+                  <button tpye="button" onclick="closeModal('modal1')" class="close_btn">
+                    <iconify-icon icon="ph:x-light" width="30px"></iconify-icon>
+                  </button>
+                </div>
+              </div>
+              <div class="post_list">
+                <table class="post_table">
+                <thead>
+                  <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>작성일</th>
+                    <th>조회수</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10</td>
+                    <td><a href="#">[공지사항] 2023년 5월 가정의 달 팝업 이미지</a></td>
+                    <td>admin</td>
+                    <td>2023.05.01</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td><a href="#">[FAQ] 멤버십 자동결제 해지 방법</a></td>
+                    <td>admin</td>
+                    <td>2023.05.01</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td><a href="#">[공지사항] 2023년 7월 무더위 팝업 이미지</a></td>
+                    <td>admin</td>
+                    <td>2023.05.01</td>
+                    <td>2045</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td><a href="#">[공지사항] 2023년 5월 가정의 달 팝업 이미지</a></td>
+                    <td>admin</td>
+                    <td>2023.05.01</td>
+                    <td>2060</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td><a href="#">[게시판] 신규 커플매니저 추가</a></td>
+                    <td>admin</td>
+                    <td>2023.05.01</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td><a href="#">[이벤트] 신규오픈 이벤트</a></td>
+                    <td>admin</td>
+                    <td>2023.05.01</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td><a href="#">[공지사항] 2023년 5월 가정의 달 팝업 이미지</a></td>
+                    <td>admin</td>
+                    <td>2023.05.01</td>
+                    <td>205</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td><a href="#">[FAQ] 멤버십 자동결제 해지 방법</a></td>
+                    <td>admin</td>
+                    <td>2023.05.01</td>
+                    <td>13</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td><a href="#">[게시판] 신규 커플매니저 추가</a></td>
+                    <td>admin</td>
+                    <td>2023.05.01</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td><a href="#">[이벤트] 신규오픈 이벤트</a></td>
+                    <td>admin</td>
+                    <td>2023.05.01</td>
+                    <td>98</td>
+                  </tr>
+                </tbody>
+                </table>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-content">
+        <h3>(주)Re:connect</h3>
+        <span>대표 : Recycle</span>
+        <span>사업자등록번호 : 999-99-99999</span>
+        <span
+          >주소 : (34838)대전광역시 중구 중앙로121번길 20 (선화동 41) 2층</span
+        >
+        <span>Tel.042-222-2402</span>
+        <ul class="footer-socials">
+          <li>
+            <a href="#"><img src="/images/ico_image.svg" alt="ico_image" /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="/images/ico_instagram.svg" alt="ico_instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="/images/ico_youtube.svg" alt="ico_youtube"
+            /></a>
+          </li>
+        </ul>
+        <div class="footer-menu">
+          <p>
+            copyright &copy;2023 by<a href="”#”"> Re:connect.</a> All pictures
+            cannot be copied without permission.
+          </p>
+          <ul class="f-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dash.html">About</a></li>
+            <li><a href="estimate.html">Contact</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="/script/post_management.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  </body>
+</html>

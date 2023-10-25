@@ -253,8 +253,28 @@
   font-size: 36px;
 }
 /* 기본 입력 값 */
+
+.menu-tab {
+  display: flex;
+  gap: 0.1rem;
+}
+
+.menu-tab .tab_btn {
+  width: 100px;
+  height: 42px;
+  border: 2px solid #e5e4e4;
+  background-color: #f7f7f7;
+  cursor: pointer;
+  border-bottom: none;
+}
+
+.menu-tab .tab_btn.active {
+  background-color: transparent;
+}
+
 .search-box {
   width: 1000px;
+  height: 75px;
   border: 1px solid #e5e4e4;
   padding: 0.5rem;
   display: flex;
@@ -315,12 +335,46 @@
   color: #f8f8f8;
 }
 
-.info {
+.post_table {
+  width: 1000px;
+  margin-top: 1rem;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.post_table td {
+  border-color: black;
+  border-bottom: solid;
+  border-width: 1px;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+.post_table th {
+  background-color: #eee;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.post_table tr th:nth-child(1) {
+  border-left: 0;
+}
+.post_table tr th:nth-child(5) {
+  border-right: 0;
+}
+
+.add_post_table {
   display: flex;
   flex-direction: column;
 }
 
-.info input {
+.add_post_table input {
   width: 300px;
   height: 45px;
   padding: 0 10px;
@@ -331,7 +385,7 @@
   margin-bottom: 1.5rem;
 }
 
-.info select {
+.add_post_table select {
   width: 300px;
   height: 45px;
   border: 1px solid #e5e4e4;
@@ -339,6 +393,23 @@
   font-weight: 400;
   font-size: 12px;
   align-items: center;
+  margin-left: 1rem;
+}
+
+tbody tr td:nth-child(2) input {
+  width: 700px;
+}
+
+tbody tr:nth-child(4) td:nth-child(2) input {
+  background-color: transparent;
+}
+
+thead tr th:nth-child(2) input {
+  margin-right: 3rem;
+}
+
+tbody tr:nth-child(2) td:nth-child(2) input {
+  height: 230px;
 }
 
 .btn_box {
@@ -383,8 +454,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 960px;
-  height: 500px;
+  width: 1200px;
+  height: 700px;
   transform: translate(-50%, -50%);
   text-align: center;
   background-color: #fff;
@@ -405,44 +476,4 @@
   width: 60px;
   background-color: transparent;
   padding: 1rem;
-}
-
-.manager_table {
-  width: 1000px;
-  margin-top: 1rem;
-  text-align: center;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.manager_table td {
-  border-color: black;
-  /* td의 첫번쨰꺼에 left solid */
-  /* td의 마지막꺼에 right solid */
-  border-bottom: solid;
-  border-width: 1px;
-  font-size: 14px;
-  overflow: hidden;
-  padding: 10px 5px;
-  word-break: normal;
-}
-
-/* .manager_table td:nth-child(1) {
-  border-left: solid;
-  border-width: 1px;
-}
-.manager_table td:nth-child(10) {
-  border-right: solid;
-  border-width: 1px;
-} */
-
-.manager_table th {
-  background-color: #eee;
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
-  font-size: 14px;
-  overflow: hidden;
-  padding: 10px 5px;
-  word-break: normal;
 }

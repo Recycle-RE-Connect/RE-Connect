@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA 예시</title>
+    <style>
+        /* CSS 스타일링을 여기에 추가하세요 */
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- 네비게이션 바 -->
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0);" onclick="changeSection('board')">게시판</a></li>
+                <li><a href="javascript:void(0);" onclick="changeSection('faq')">FAQ</a></li>
+                <li><a href="javascript:void(0);" onclick="changeSection('notices')">공지사항</a></li>
+            </ul>
+        </nav>
+        
+        <!-- SPA 내용을 동적으로 로드할 컨테이너 -->
+        <div id="content"></div>
+    </div>
+
+    <!-- JavaScript 파일을 로드 -->
+    <script>
+      // 각 섹션의 내용을 저장하는 객체
+const sections = {
+    board: `
+        <div>
+            <h2>게시판</h2>
+            <!-- 게시판 컨텐츠를 이곳에 추가하세요 -->
+        </div>
+    `,
+    faq: `
+        <div>
+            <h2>FAQ</h2>
+            <!-- FAQ 컨텐츠를 이곳에 추가하세요 -->
+        </div>
+    `,
+    notices: `
+        <div>
+            <h2>공지사항</h2>
+            <!-- 공지사항 컨텐츠를 이곳에 추가하세요 -->
+        </div>
+    `
+};
+
+// 초기 섹션 설정
+let currentSection = 'board';
+
+// 섹션을 변경하는 함수
+function changeSection(section) {
+    currentSection = section;
+    renderContent();
+}
+
+// 컨텐츠를 렌더링하는 함수
+function renderContent() {
+    const contentContainer = document.getElementById('content');
+    contentContainer.innerHTML = sections[currentSection];
+}
+
+// 초기 렌더링
+renderContent();
+
+    </script>
+</body>
+</html>

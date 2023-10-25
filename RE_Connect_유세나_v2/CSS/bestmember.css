@@ -67,11 +67,13 @@ swiper-slide img {
   padding: 2rem 0;
   /* gap: 2rem; */
   border-bottom: 1px solid rgb(204, 204, 204);
+  width: 800px;
 }
 .ranking-number-1, .ranking-number-2, .ranking-number-3{
   padding: 1rem;
   font-size: 42px;
   font-weight: 600;
+  width: 60px;
 }
 .ranking-number-1{
   color: gold;
@@ -87,19 +89,22 @@ swiper-slide img {
   padding: 1rem;
   font-size: 23px;
   color: #A0C2AC;
+  width: 60px;
+  text-align: center;
 }
 .ranking{
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding: 0 2rem;
+  width: 600px;
 }
 .heart-container {
   --heart-color: rgb(255, 91, 137);
   position: relative;
   width: 50px;
   height: 50px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .heart-container .checkbox {

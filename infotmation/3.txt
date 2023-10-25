@@ -1,0 +1,56 @@
+// 사용자 정보 엔티티 클래스
+public class User {
+    private int id;
+    private String password;
+    private String name;
+    private LocalDate birthDate;
+    private Gender gender;
+    private String contactNumber;
+    private String address;
+    private MaritalStatus maritalStatus;
+    private int profileId;
+}
+
+// 프로필 정보 엔티티 클래스
+public class Profile {
+    private int id;
+    private int userId;
+    private String interests;
+    private String personalityTraits;
+    private String partnerPreferences;
+    private int matchResultId;
+}
+
+// 매칭 결과 엔티티 클래스
+public class MatchResult {
+    private int id;
+    private int userId;
+    private int partnerId;
+    private double matchScore;
+    private int chatId;
+}
+
+// 채팅 기록 엔티티 클래스
+public class Chat {
+    private int id;
+    private int chatRoomId;
+    private int senderId;
+    private String message;
+    private LocalDateTime sentTime;
+}
+
+// 채팅방 엔티티 클래스
+public class ChatRoom {
+    private int id;
+    private int user1Id;
+    private int user2Id;
+}
+
+// 매칭 알고리즘 설정 엔티티 클래스
+public class MatchingAlgorithm {
+    private int id;
+    private String algorithmName;
+    private Map<ProfileAttribute, Double> matchingWeights;
+    private MatchingLogic personalityMatchingLogic;
+    private MatchingLogic partnerPreferencesMatchingLogic;
+}

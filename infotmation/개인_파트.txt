@@ -1,0 +1,22 @@
+개인별 파트
+
+안영태
+인사말: greeting
+공지사항: notice
+인터뷰: interview
+
+진소이
+메인페이지: main (index)
+커플매니저: coupleMgr
+문의하기: contact
+후기: reviews
+
+송승현
+견적문의: quoteInq
+게시판: board
+매니저 후기: mgrReviews
+
+유세나
+스토리: story
+FAQ: faq
+Price: price

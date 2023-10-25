@@ -1,0 +1,57 @@
+Java 결혼정보업체 프로젝트 정보구조도:
+
+- User (사용자)
+  - id: int (Primary Key)
+  - username: String
+  - password: String (hashed)
+  - fullName: String
+  - birthDate: LocalDate
+  - gender: Gender (Enum: MALE, FEMALE)
+  - contactNumber: String
+  - address: String
+  - maritalStatus: MaritalStatus (Enum: SINGLE, REMARRIED)
+  - profileId: int (Foreign Key: Profile)
+
+- Profile (프로필)
+  - id: int (Primary Key)
+  - userId: int (Foreign Key: User)
+  - interests: String
+  - personalityTraits: String
+  - partnerPreferences: String
+  - matchResultId: int (Foreign Key: MatchResult)
+
+- MatchResult (매칭 결과)
+  - id: int (Primary Key)
+  - userId: int (Foreign Key: User)
+  - partnerId: int (Foreign Key: User)
+  - matchScore: double
+  - chatId: int (Foreign Key: Chat)
+
+- Chat (채팅)
+  - id: int (Primary Key)
+  - chatRoomId: int (Foreign Key: ChatRoom)
+  - senderId: int (Foreign Key: User)
+  - message: String
+  - sentTime: LocalDateTime
+
+- ChatRoom (채팅방)
+  - id: int (Primary Key)
+  - user1Id: int (Foreign Key: User)
+  - user2Id: int (Foreign Key: User)
+
+- MatchingAlgorithm (매칭 알고리즘 설정)
+  - id: int (Primary Key)
+  - algorithmName: String
+  - matchingWeights: Map<ProfileAttribute, Double>
+  - personalityMatchingLogic: MatchingLogic
+  - partnerPreferencesMatchingLogic: MatchingLogic
+
+- MatchingLogic (매칭 로직)
+  - id: int (Primary Key)
+  - logicName: String
+  - logicDescription: String
+
+- Enum Definitions:
+  - Gender: MALE, FEMALE
+  - MaritalStatus: SINGLE, REMARRIED
+  - ProfileAttribute: INTERESTS, PERSONALITY_TRAITS, PARTNER_PREFERENCES

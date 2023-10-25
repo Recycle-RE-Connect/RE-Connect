@@ -622,7 +622,7 @@ body {
 }
 
 .swiper-carousel img {
-  width: 100%;
+  width: 300px;
   height: 100%;
   display: block;
   object-fit: cover;
@@ -953,7 +953,7 @@ body {
   gap: 0.5rem;
 }
 
-.flip-container.flipped .flipper {
+.flipper.flipped {
   transform: rotateY(180deg);
 }
 

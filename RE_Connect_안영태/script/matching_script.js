@@ -56,8 +56,8 @@ document.querySelector("#show").addEventListener("click", show);
 document.querySelector("#close").addEventListener("click", close);
 
 // -----------------------------------
-document.querySelectorAll('.swiper-slide').forEach(function(slide) {
+document.querySelectorAll('.flip-container').forEach(function(slide) {
   slide.addEventListener('click', function() {
-    this.querySelector('.flip-container').classList.toggle('flipped');
+    this.querySelector('.flipper').classList.toggle('flipped');
   });
 });

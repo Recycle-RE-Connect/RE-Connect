@@ -252,6 +252,12 @@
 .container_main .content > h1 {
   font-size: 36px;
 }
+.container_main .content >div> p {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 1rem;
+  width: 1000px;
+}
 /* 기본 입력 값 */
 .search-box {
   width: 1000px;
@@ -445,4 +451,9 @@
   overflow: hidden;
   padding: 10px 5px;
   word-break: normal;
+  
+}
+#myChart{
+  max-width: 1000px;
+  max-height: 500px;
 }

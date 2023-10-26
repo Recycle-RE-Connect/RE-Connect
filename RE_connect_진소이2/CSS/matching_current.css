@@ -294,6 +294,7 @@
   margin-top: 4rem;
   padding-right: 3rem;
   background-color: #f5f7f8;
+  border-radius: 10%;
 }
 
 
@@ -302,16 +303,16 @@
   align-items: center;
   justify-content: center;
   width: 350px;
-  height: 650px;
+  height: 750px;
   background-color: #f8f8f8;
   border-radius: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
   box-shadow: -3px -3px 7px #ffffff, 4px 4px 6px #ceced1;
-  cursor: pointer;
   position: relative; /* 추가: 부모 요소에 상대적으로 배치 */
 }
 
+/* 맨 위에 상단바 아이콘 */
 .area_1 .event_box1 .box_e {
   display: flex;
   align-items: center;
@@ -320,10 +321,115 @@
   height: 90px;
   border-radius: 2rem 2rem 0 0;
   background-color: #c1e0cc;
-  position: absolute; /* 추가: 절대 위치 지정 */
-  top: 0; /* 추가: 상단에 딱 붙임 */
-  left: 0; /* 추가: 좌측에 딱 붙임 */
+  position: absolute; 
+  top: 0; 
+  left: 0; 
 }
+
+.box_e .box_group { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 90px;
+  position: absolute; 
+  top: -30px; 
+  left: 0; 
+}
+
+.box_group .box_group1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute; 
+  top: 35px; 
+  left: 20px; 
+}
+
+.box_group1 .group_1 {
+  margin: 0 0.5rem 0 0;
+  text-align: center;
+  color: #3d3d41;
+  font-size: 13px;
+}
+.box_group1 .group_2 {
+  text-align: center;
+  color: #3d3d41;
+  font-size: 13px;
+}
+
+.box_group .group_3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  color: #3d3d41;
+  font-size: 13px; 
+  position: absolute; 
+  top: 35px; 
+  left: 152px; 
+}
+
+.box_group .box_group2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 90px;
+  position: absolute; 
+  top: -3px;  
+  left: 120px; 
+}
+
+.box_group2 .group_4 {
+  margin: 0 0.3rem 0 0;
+  text-align: center;
+  color: #3d3d41;
+  font-size: 13px;
+}
+.box_group2 .group_5 {
+  text-align: center;
+  font-size: 13px;
+  color: #3d3d41;
+  margin-top: 4px;
+}
+.group_5 img {
+  width: 25px;
+  height: 25px;
+}
+
+.box_e .h5_0 {
+  position: absolute; 
+  top: 55px; 
+  left: 136px; 
+  font-size: 20px;
+  color: #151516;
+}
+
+.box_e .h5_img {
+  position: absolute; 
+  top: 30px; 
+  left: 20px; 
+}
+.box_e .h5_img img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #9abea7;
+}
+
+.box_e .h5_text {
+  position: absolute; 
+  top: 58px; 
+  left: 55px; 
+  font-size: 20px;
+  color: #7fce51;
+  -webkit-text-stroke: 2.5px rgb(255, 255, 255);
+  z-index: 5;
+}
+/* 여기까지 */
+
 
 .area_1 .event_box1 .box_e1 {
   display: flex;
@@ -345,7 +451,29 @@
   height: 30px;
   border-radius: 0.5rem;
   background-color: rgb(243, 243, 243);
+  cursor: pointer;
 }
+
+.box_e1 .box_e_1 .box_e_1_1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.1rem;
+}
+
+.box_e1 .box_e_1 img {
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+  margin-right: 4px;
+}
+
+.box_e1 .box_e_1 .h5_1 {
+  font-size: 17px;
+  color: #929296;
+  font-weight: 500;
+}
+
 
 .area_1 .event_box1 .box_e2 {
   display: flex;
@@ -354,6 +482,7 @@
   width: 350px;
   height: 50px;
   background-color: rgb(236, 236, 236);
+  background-image: url("../images/chance.png");
   position: absolute;
   top: 140px; 
   left: 0; 
@@ -364,46 +493,202 @@
   align-items: center;
   justify-content: center;
   width: 350px;
-  height: 400px;
-  background-color: rgb(163, 142, 142);
+  height: 500px;
+  background-color: rgb(255, 255, 255);
   position: absolute;
   top: 190px; 
   left: 0;
   flex-direction: column; 
 }
 
-.area_1 .event_box1 .box_e3 .text_1 {
+.area_1 .event_box1 .box_e4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  font-weight: 600;
+  width: 350px;
+  height: 60px;
+  background-color: rgb(245, 245, 245);
   position: absolute;
-  top: 0;
+  border-radius: 0 0 2rem 2rem;
+  top: 690px; 
   left: 0;
-  margin: 1.5rem 0 0 1.5rem;
+  flex-direction: column; 
 }
 
-hr {
-  background-color: #fff;
-  padding: 0;
-  margin: 20px;
+/* box_e3 코드의 채팅창 목록 코드 (매칭 + 매칭 대상) */
+.area_1 .event_box1 .box_e3 .text_0 {
+  position: absolute;
+  top: 13px;
+  left: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #6d8b78;
 }
 
-hr.hr-1 {
-  border: 0;
-  height: 0;
-  border-top: 1px solid #8c8c8c;
+.area_1 .event_box1 .box_e3 .text_1 {
+  position: absolute;
+  top: 185px;
+  left: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #6d8b78;
+}
+/* 여기까지 */
+
+
+/* box_e4 안의 코드 */
+.box_e4 .box_e4_1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 60px;
 }
 
-hr.hr-2 {
-  border: 0;
-  height: 0;
-  border-top: 1px solid #8c8c8c;
+.box_e4_1 .icon_icon_0 {
+  margin-right: 2rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+.box_e4_1 .icon_icon_1 {
+  margin-right: 2rem;
+  cursor: pointer;
+}
+.box_e4_1 .icon_icon_2 {
+  margin-right: 2rem;
+  cursor: pointer;
+}
+.box_e4_1 .icon_icon_3 {
+  margin-right: 2rem;
+  cursor: pointer;
 }
 
+/* 여기까지 */
 
 
+/* box_e3 코드 채팅할때 사람 목록 */
+.area_1 .event_box1 .box_e3 .text_box {
+  position: absolute;
+  top: 55px;
+  left: 15px;
+  display: flex; 
+  align-items: center; 
+  width: 330px;
+  cursor: pointer;
+}
+
+.area_1 .event_box1 .box_e3 .text_box2 {
+  position: absolute;
+  top: 110px;
+  left: 15px;
+  display: flex; 
+  align-items: center; 
+  width: 330px;
+  cursor: pointer;
+}
+
+.area_1 .event_box1 .box_e3 .text_box3 {
+  position: absolute;
+  top: 220px;
+  left: 15px;
+  display: flex; 
+  align-items: center; 
+  width: 330px;
+  cursor: pointer;
+}
+
+.area_1 .event_box1 .box_e3 .text_box4 {
+  position: absolute;
+  top: 275px;
+  left: 15px;
+  display: flex; 
+  align-items: center; 
+  width: 330px;
+  cursor: pointer;
+}
+
+.area_1 .event_box1 .box_e3 .text_box5 {
+  position: absolute;
+  top: 330px;
+  left: 15px;
+  display: flex; 
+  align-items: center; 
+  width: 330px;
+  cursor: pointer;
+}
+
+.area_1 .event_box1 .box_e3 .text_box6 {
+  position: absolute;
+  top: 385px;
+  left: 15px;
+  display: flex; 
+  align-items: center; 
+  width: 330px;
+  cursor: pointer;
+}
+
+.area_1 .event_box1 .box_e3 .text_box7 {
+  position: absolute;
+  top: 440px;
+  left: 15px;
+  display: flex; 
+  align-items: center; 
+  width: 330px;
+  cursor: pointer;
+}
+
+/* 여기까지 */
+
+
+/* 그 안의 관련 코드 (이미지, 폰트, text_box안에 다있는거) */
+.box_img {
+  width: 40px;
+  margin-right: 12px;
+}
+
+.box_img2 {
+  margin-right: 5px;
+}
+
+.box_img2 img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 2px;
+}
+
+img { 
+  border-radius: 43%;
+  width: 40px;
+  height: 40px;
+}
+
+.font_box {
+  flex-grow: 1; 
+}
+
+.text_time {
+  font-size: 10px;
+  margin-right: 6px;
+  color: #a0c2ac;
+  font-weight: 500;
+}
+/* 여기까지 */
+
+
+/* text 관련 코드 */
+.textt_1 {
+  font-size: 15px;
+  color: #151516;
+  margin: 0;
+}
+
+.textt_2 {
+  font-size: 13px;
+  font-weight: 300;
+  margin: 0;
+  color: #bbbbc0;
+}
+/* 여기까지 */
 
 
 

@@ -451,8 +451,19 @@
 .manber_list>div>button:last-child{
   width: 100px;
 }
-
+td>img{
+  height: 250px;
+}
+.modal .search-box{
+  width: auto;
+}
+.modal .search-box .user_search{
+  margin-left: 1rem;
+}
 #myChart{
   max-width: 1000px;
   max-height: 500px;
+}
+.info tr:nth-child(9) td{
+  margin-top: 5rem;
 }

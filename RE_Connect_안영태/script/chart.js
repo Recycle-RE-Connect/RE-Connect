@@ -5,7 +5,7 @@ let today = new Date();
 let month = today.getMonth() + 1;
 let date = today.getDate();
 
-const monthDate = [`${month}.${date}`,`${month}.${date-1}`,`${month}.${date-2}`,`${month}.${date-3}`,`${month}.${date-4}`,`${month}.${date-5}`,`${month}.${date-6 }`];
+const monthDate = [`${month}월`,`${month-1}월`,`${month-2}월`,`${month-3}월`];
 
 // 차트를 생성한다. 
 var myChart = new Chart(chartArea, {
@@ -14,17 +14,11 @@ var myChart = new Chart(chartArea, {
     labels: monthDate,
     datasets: [
       {
-        label: '남성',
-        data: [201, 145, 94, 178, 192, 89, 116],
-        borderColor: 'rgba(99, 161, 255, 1)',
-        backgroundColor: 'rgba(99, 161, 255, 0.2)',
+        label: '매칭횟수',
+        data: [20, 34, 15, 26],
+        borderColor: 'rgba(160, 194, 172, 1)',
+        backgroundColor: 'rgba(160, 194, 172, 0.2)', 
         borderRadius : "25px",
-      },
-      {
-        label: '여성',
-        data: [112, 82, 74, 91, 172, 84, 69],
-        borderColor: 'rgba(255, 99, 132, 1)',
-        backgroundColor: 'rgba(255, 99, 132, 0.2)',
       },
     ]
   },

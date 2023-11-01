@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>마이페이지 | 마음을 다시 연결하는 결혼 정보 플랫폼 DASH</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keyworeds" content="결혼, wedding, 결혼정보업체, DASH, Re:Connect, 듀오, 가연," />
+  <meta name="description" content="안녕하세요, 마음을 다시 연결하는 결혼 정보 플랫폼 DASH 입니다." />
+  <link rel="icon" href="../favicon.png" />
+  <link rel="stylesheet" href="/CSS/account.css" />
+  <link rel="stylesheet" href="/CSS/footer_style.css" />
+  <link rel="stylesheet" href="/CSS/reset.css" />
+</head>
+
+<body>
+  <header class="account_header">
+    <div class="header_btn">
+      <div class="message_badge">
+        <button type="button" class="btn_messenger" onclick="">메신저</button>
+        <span class="push_num" style="display: none">0</span>
+      </div>
+      <div class="alarm_badge">
+        <button type="button" class="btn_alarm" onclick="">알림</button>
+        <span class="push_num" style="display: none">0</span>
+      </div>
+    </div>
+
+    <div class="member">
+      <button type="button" class="btn_member">
+        <div class="user_photo">
+          <figure class="user_img">
+            <img src="/images/Song.jpg" alt="user_img" />
+          </figure>
+        </div>
+      </button>
+
+      <div class="layer_member">
+        <ul>
+          <li>
+            <img src="/images/Song.jpg" alt="user_img" /><span>송승현</span>
+          </li>
+          <li>
+            <a href="#"><span>개인정보 수정</span><iconify-icon icon="la:edit-solid" width="30"></iconify-icon></a>
+          </li>
+          <li>
+            <a href="index.html"><span>로그아웃</span><iconify-icon icon="material-symbols:logout"
+                width="25"></iconify-icon></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav">
+    <a href="index.html" id="logo2">
+      <img src="/images/logo.svg" alt="logo" />
+    </a>
+    <ul class="gnb">
+      <li class="gnb-menu">
+        <a href="account.html" class="menu-btn">개인정보수정</a>
+      </li>
+      <li class="gnb-menu">
+        <a href="" class="menu-btn">내가 작성한 글</a>
+      </li>
+      <li class="gnb-menu">
+        <a href="" class="menu-btn">좋아요 현황</a>
+      </li>
+      <li class="gnb-menu">
+        <a href="" class="menu-btn">매칭현황</a>
+      </li>
+      <li class="gnb-menu">
+        <a href="" class="menu-btn">멤버십</a>
+      </li>
+      <li class="gnb-menu">
+        <a href="account_withdrawal.html" class="menu-btn secession">회원탈퇴</a>
+      </li>
+    </ul>
+    <button type="button" class="nav-icon">
+      <iconify-icon icon="ph:list-fill"></iconify-icon>
+    </button>
+  </div>
+  <main>
+    <div class="container">
+      <div class="container_main">
+        <div class="content">
+          <h1>개인정보 수정</h1>
+          <div class="privacy_update">
+            <form action="#" method="post" id="privacy_form" enctype="multipart/form-data">
+              <!-- 프로필 사진 업로드 섹션 -->
+              <div class="photo_wrap">
+                <span class="photo" id="myhome_profile_photo">
+                  <img alt="" src="" />
+                </span>
+                <span class="photo_border"></span>
+                <button type="button" class="btn_photo" aria-label="프로필 편집/삭제" aria-haspopup="menu"
+                  onclick="toggleEditMenu()">
+                  &#9776;
+                </button>
+                <div class="photo_edit_btn" id="edit_menu">
+                  <input type="file" id="profile_picture_input" accept="image/*" style="display: none" />
+                  <label for="profile_picture_input"><span>프로필 사진 업로드</span></label>
+                  <button type="button" id="btnPhotoDelete" onclick="deleteProfilePhoto()">
+                    <span>프로필 삭제</span>
+                  </button>
+                </div>
+              </div>
+              <!-- 기본 정보 섹션 -->
+              <div class="privacy_info" id="basic_info">
+                <!-- 내용을 여기에 추가하세요. -->
+                <div class="name-sex-box">
+                  <div class="info-name">
+                    <input type="text" name="user_name" placeholder="이름" maxlength="10" required />
+                  </div>
+                  <div class="info-sex">
+                    <input type="radio" id="male" name="MF" required /><label for="male">남자</label>
+                    <input type="radio" id="female" name="MF" required /><label for="female">여자</label>
+                  </div>
+                </div>
+                <div class="info-age">
+                  <input type="text" name="user_age" id="user_age" placeholder="나이" maxlength="3" required />
+                </div>
+                <div class="country-education-box">
+                  <div class="info-country">
+                    <select class="country" name="user_country" required>
+                      <option value="">거주지역</option>
+                      <option value="-----" disabled>
+                        --------------------------------------------
+                      </option>
+
+                      <option value="01">서울</option>
+                      <option value="15">수원/화성</option>
+                      <option value="02">인천</option>
+                      <option value="16">천안/당진</option>
+                      <option value="35">청주</option>
+                      <option value="08">대전</option>
+                      <option value="12">전주</option>
+                      <option value="09">광주</option>
+                      <option value="07">대구</option>
+                      <option value="04">부산</option>
+                      <option value="05">울산</option>
+                      <option value="06">창원/마산</option>
+                      <option value="22">경기</option>
+                      <option value="31">평택/오산</option>
+                      <option value="25">세종</option>
+                      <option value="30">충북</option>
+                      <option value="29">충남</option>
+                      <option value="34">아산</option>
+                      <option value="27">전북</option>
+                      <option value="26">전남</option>
+                      <option value="24">경북</option>
+                      <option value="21">강원</option>
+                      <option value="23">경남</option>
+                      <option value="28">제주</option>
+                    </select>
+                  </div>
+
+                  <div class="info-education">
+                    <select class="education" name="user_education" required>
+                      <option value="">학력</option>
+                      <option value="-----" disabled>
+                        --------------------------------------------
+                      </option>
+                      <option value="09">대학교졸업</option>
+                      <option value="10">대학교중퇴</option>
+                      <option value="07">대학교재학</option>
+                      <option value="13">대학원졸업</option>
+                      <option value="05">대학(2,3년제)졸업</option>
+                      <option value="06">대학(2,3년제)중퇴</option>
+                      <option value="02">고등학교 졸업</option>
+                      <option value="15">기타</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="info-hight">
+                  <input type="text" name="user_hight" id="user_hight" placeholder="키" maxlength="5" required />
+                </div>
+                <div class="info-occupation">
+                  <input type="text" name="user_occupation" placeholder="직업" required />
+                </div>
+                <div class="info-body">
+                  <select class="body_type" name="user_body_type" required>
+                    <option value="">체형</option>
+                    <option value="-----" disabled>
+                      --------------------------------------------
+                    </option>
+                    <option value="슬림">슬림</option>
+                    <option value="날씬">날씬</option>
+                    <option value="보통">보통</option>
+                    <option value="통통">통통</option>
+                    <!-- 다른 체형 옵션을 필요에 따라 추가할 수 있습니다. -->
+                  </select>
+                </div>
+                <div class="info-annual-income">
+                  <select class="annual_income" name="user_annual_income" required>
+                    <option value="">연봉</option>
+                    <option value="-----" disabled>
+                      --------------------------------------------
+                    </option>
+                    <option value="0-200">2천만원 미만</option>
+                    <option value="2-300">2천만원 이상 - 3천만원 미만</option>
+                    <option value="3-400">3천만원 이상 - 4천만원 미만</option>
+                    <option value="4-500">4천만원 이상 - 5천만원 미만</option>
+                    <option value="5-600">5천만원 이상 - 6천만원 미만</option>
+                    <option value="6-700">6천만원 이상 - 7천만원 미만</option>
+                    <option value="7-800">7천만원 이상 - 8천만원 미만</option>
+                    <option value="8-900">8천만원 이상 - 9천만원 미만</option>
+                    <option value="9-1000">9천만원 이상 - 1억 미만</option>
+                    <option value="1000-2000">1억 이상 - 2억 미만</option>
+                    <option value="2000-3000">2억 이상 - 3억 미만</option>
+                    <option value="3000-4000">3억 이상 - 4억 미만</option>
+                    <option value="4000-5000">4억 이상 - 5억 미만</option>
+                    <option value="5000-">5억 이상</option>
+                  </select>
+                </div>
+                <div class="info-marital-status">
+                  <input type="radio" id="first_marriage" name="marital_status" required /><label
+                    for="first_marriage">초혼</label>
+                  <input type="radio" id="remarriage" name="marital_status" required /><label
+                    for="remarriage">재혼</label>
+                </div>
+                <div class="info-children">
+                  <input type="radio" id="has_children" name="children" value="Y" required /><label
+                    for="has_children">자녀있음</label>
+                  <input type="radio" id="no_children" name="children" value="N" required /><label
+                    for="no_children">자녀없음</label>
+                </div>
+                <div class="info-child-count" id="child_count_container" style="display: none">
+                  <select id="child_count" name="child_count">
+                    <option value="1">1명</option>
+                    <option value="2">2명</option>
+                    <option value="3">3명</option>
+                    <option value="4">4명 이상</option>
+                  </select>
+                </div>
+                <button type="button" id="next_page" onclick="showPage('detailed_info')">다음</button>
+              </div>
+
+              <!-- 상세 정보 섹션 -->
+              <div class="privacy_info" id="detailed_info" style="display: none;">
+                <!-- 내용을 여기에 추가하세요. -->
+                <h2 class="privacy_info_header">관심사</h2>
+                <span id="selectionLimit">최대 3개 선택가능 (3/3)</span>
+                <div class="info-hobby">
+                  <label><input type="checkbox" value="음악"><span>음악</span></label>
+                  <label><input type="checkbox" value="영화"><span>영화</span></label>
+                  <label><input type="checkbox" value="스포츠"> <span>스포츠</span></label>
+                  <label><input type="checkbox" value="요리"><span>요리</span></label>
+                  <label><input type="checkbox" value="여행"><span>여행</span></label>
+                  <label><input type="checkbox" value="DIY"><span>DIY</span></label>
+                  <label><input type="checkbox" value="낚시"><span>낚시</span></label>
+                  <label><input type="checkbox" value="게임"><span>게임</span></label>
+                  <label><input type="checkbox" value="등산"><span>등산</span></label>
+                  <label><input type="checkbox" value="전시회관람"><span>전시회관람</span></label>
+                  <label><input type="checkbox" value="사진"><span>사진</span></label>
+                  <label><input type="checkbox" value="요가"><span>요가</span></label>
+                  <label><input type="checkbox" value="반려동물"><span>반려동물</span></label>
+                  <label><input type="checkbox" value="캠핑"><span>캠핑</span></label>
+                  <label><input type="checkbox" value="운동"><span>운동</span></label>
+                  <label><input type="checkbox" value="미술"><span>미술</span></label>
+                  <label><input type="checkbox" value="골프"><span>골프</span></label>
+                  <label><input type="checkbox" value="독서"><span>독서</span></label>
+              </div>
+              <h2 class="privacy_info_header">혈액형</h2>
+              <div class="info-blood-type">
+                <label><input type="radio" name="bloodType" value="A"><span>A형</span></label>
+                <label><input type="radio" name="bloodType" value="B"><span>B형</span></label>
+                <label><input type="radio" name="bloodType" value="O"><span>O형</span></label>
+                <label><input type="radio" name="bloodType" value="AB"><span>AB형</span></label>
+            </div>
+            <div class="privacy_info-mbti">
+              <input type="text" name="user_mbti" placeholder="MBTI" maxlength="4">
+            </div>
+                <button type="button" id="prev_page" onclick="showPage('basic_info')">이전</button>
+                <button type="button" id="next_page2" onclick="showPage('additional_info1')">다음</button>
+              </div>
+              <!-- 추가 정보 페이지 1 -->
+              <div class="privacy_info" id="additional_info1" style="display: none;">
+                <h2 class="privacy_info_header">종교</h2>
+                <div class="privacy_info_religion">
+                  <label><input type="radio" name="religion" value="기독교"><span>기독교</span></label>
+                  <label><input type="radio" name="religion" value="천주교"><span>천주교</span></label>
+                  <label><input type="radio" name="religion" value="불교"><span>불교</span></label>
+                  <label><input type="radio" name="religion" value="원불교"><span>원불교</span></label>
+                  <label><input type="radio" name="religion" value="무교"><span>무교</span></label>
+              </div>
+              <div class="info-alcohol">
+                <input type="radio" id="drinking" name="alcohol" /><label
+                  for="drinking">음주</label>
+                <input type="radio" id="non-drinking" name="alcohol" /><label
+                  for="non-drinking">비음주</label>
+              </div>
+              <div class="info-smoking">
+                <input type="radio" id="smoking" name="smoking" /><label for="smoking">흡연</label>
+                <input type="radio" id="non-smoking" name="smoking"/><label for="non-smoking">비흡연</label>
+              </div>
+              <h2 class="privacy_info_personality privacy_info_header">성격</h2>
+              <span id="personalitySelectionLimit">최대 3개 선택가능 (3/3)</span>
+              <div class="info-personality">
+                <label><input type="checkbox" value="내향성"><span>내향성</span></label>
+                <label><input type="checkbox" value="친화력"> <span>친화력</span></label>
+                <label><input type="checkbox" value="인내력"><span>인내력</span></label>
+                <label><input type="checkbox" value="유머감각"><span>유머감각</span></label>
+                <label><input type="checkbox" value="자신감"><span>자신감</span></label>
+                <label><input type="checkbox" value="외향성"><span>외향성</span></label>
+                <label><input type="checkbox" value="유연함"><span>유연함</span></label>
+                <label><input type="checkbox" value="정직성"><span>정직성</span></label>
+                <label><input type="checkbox" value="고집"><span>고집</span></label>
+                <label><input type="checkbox" value="솔직함"><span>솔직함</span></label>
+                <label><input type="checkbox" value="공감능력"><span>공감능력</span></label>
+                <label><input type="checkbox" value="책임감"><span>책임감</span></label>
+                <label><input type="checkbox" value="숨김"><span>숨김</span></label>
+                <label><input type="checkbox" value="창의성"><span>창의성</span></label>
+                <label><input type="checkbox" value="의존성"><span>의존성</span></label>
+                <label><input type="checkbox" value="독립성"><span>독립성</span></label>
+                <label><input type="checkbox" value="열정적"><span>열정적</span></label>
+                <label><input type="checkbox" value="자기통제"><span>자기통제</span></label>
+            </div>
+                <button type="button" id="prev_page2" onclick="showPage('detailed_info')">이전</button>
+                <button type="button" id="next_page3" onclick="showPage('additional_info2')">다음</button>
+              </div>
+                <div class="privacy_info" id="additional_info2" style="display: none;">
+                  <h2 class="privacy_info_marriage privacy_info_header">결혼가치관</h2>
+                  <span id="marriageSelectionLimit">최대 5개 선택가능 (5/5)</span>
+                  <div class="info_marriage">
+                      <label><input type="checkbox" value="가족"> <span>가족</span></label>
+                      <label><input type="checkbox" value="신뢰"> <span>신뢰</span></label>
+                      <label><input type="checkbox" value="애정"> <span>애정</span></label>
+                      <label><input type="checkbox" value="정직"> <span>정직</span></label>
+                      <label><input type="checkbox" value="성장"> <span>성장</span></label>
+                      <label><input type="checkbox" value="경제적 안정"> <span>경제적 안정</span></label>
+                      <label><input type="checkbox" value="유대감"> <span>유대감</span></label>
+                      <label><input type="checkbox" value="자율성"> <span>자율성</span></label>
+                      <label><input type="checkbox" value="신뢰"> <span>신뢰</span></label>
+                      <label><input type="checkbox" value="사회적 역할"> <span>사회적 역할</span></label>
+                      <label><input type="checkbox" value="자유"> <span>자유</span></label>
+                      <label><input type="checkbox" value="성숙"> <span>성숙</span></label>
+                      <label><input type="checkbox" value="인내"> <span>인내</span></label>
+                      <label><input type="checkbox" value="공정성"> <span>공정성</span></label>
+                      <label><input type="checkbox" value="모험"> <span>모험</span></label>
+                      <label><input type="checkbox" value="창의성"> <span>창의성</span></label>
+                      <label><input type="checkbox" value="성실함"> <span>성실함</span></label>
+                      <label><input type="checkbox" value="자기계발"> <span>자기계발</span></label>
+                      <label><input type="checkbox" value="예술"> <span>예술</span></label>
+                      <label><input type="checkbox" value="신뢰"> <span>신뢰</span></label>
+                      <label><input type="checkbox" value="사랑"> <span>사랑</span></label>
+                      <label><input type="checkbox" value="용기"> <span>용기</span></label>
+                      <label><input type="checkbox" value="참신함"> <span>참신함</span></label>
+                      <label><input type="checkbox" value="봉사"> <span>봉사</span></label>
+                      <label><input type="checkbox" value="존중"> <span>존중</span></label>
+                      <label><input type="checkbox" value="자신감"> <span>자신감</span></label>
+                      <label><input type="checkbox" value="포용력"> <span>포용력</span></label>
+                      <label><input type="checkbox" value="감사"> <span>감사</span></label>
+                      <label><input type="checkbox" value="신뢰"> <span>신뢰</span></label>
+                      <label><input type="checkbox" value="유머감각"> <span>유머감각</span></label>
+                      <label><input type="checkbox" value="책임감"> <span>책임감</span></label>
+                      <label><input type="checkbox" value="도전정신"> <span>도전정신</span></label>
+                      <label><input type="checkbox" value="자기주도"> <span>자기주도</span></label>
+                      <label><input type="checkbox" value="참여"> <span>참여</span></label>
+                    </div>
+                  <button type="button" id="prev_page3" onclick="showPage('additional_info1')">이전</button>
+                  <button type="submit" id="submit-privacy">저장하기</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-content">
+      <h3>(주)Re:connect</h3>
+      <span>대표 : Recycle</span>
+      <span>사업자등록번호 : 999-99-99999</span>
+      <span
+        >주소 : (34838)대전광역시 중구 중앙로121번길 20 (선화동 41) 2층</span
+      >
+      <span>Tel.042-222-2402</span>
+      <ul class="footer-socials">
+        <li>
+          <a href="#"><img src="/images/ico_image.svg" alt="ico_image" /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="/images/ico_instagram.svg" alt="ico_instagram"
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="/images/ico_youtube.svg" alt="ico_youtube"
+          /></a>
+        </li>
+      </ul>
+      <div class="footer-menu">
+        <p>
+          copyright &copy;2023 by<a href="”#”"> Re:connect.</a> All pictures
+          cannot be copied without permission.
+        </p>
+        <ul class="f-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dash.html">About</a></li>
+          <li><a href="estimate.html">Contact</a></li>
+          <li><a href="FAQ.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="/script/account.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>
+
+</html>

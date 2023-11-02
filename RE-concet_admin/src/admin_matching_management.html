@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>커플매니저 관리 | 마음을 다시 연결하는 결혼 정보 플랫폼 DASH</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keyworeds" content="결혼, wedding, 결혼정보업체, DASH, Re:Connect, 듀오, 가연," />
+  <meta name="description" content="안녕하세요, 마음을 다시 연결하는 결혼 정보 플랫폼 DASH 입니다." />
+  <link rel="icon" href="../favicon.png" />
+  <link rel="stylesheet" href="/CSS/admin_matching_management.css" />
+  <link rel="stylesheet" href="/CSS/footer_style.css" />
+  <link rel="stylesheet" href="/CSS/reset.css" />
+</head>
+
+<body>
+  <header class="account_header">
+    <div class="header_btn">
+      <div class="message_badge">
+        <button type="button" class="btn_messenger" onclick="">메신저</button>
+        <span class="push_num" style="display: none">0</span>
+      </div>
+      <div class="alarm_badge">
+        <button type="button" class="btn_alarm" onclick="">알림</button>
+        <span class="push_num" style="display: none">0</span>
+      </div>
+    </div>
+
+    <div class="member">
+      <button type="button" class="btn_member">
+        <div class="user_photo">
+          <figure class="user_img">
+            <img src="/images/Song.jpg" alt="user_img" />
+          </figure>
+        </div>
+      </button>
+
+      <div class="layer_member">
+        <ul>
+          <li>
+            <img src="/images/Song.jpg" alt="user_img" /><span>송승현</span>
+          </li>
+          <li>
+            <a href="#"><span>개인정보 수정</span><iconify-icon icon="la:edit-solid" width="30"></iconify-icon></a>
+          </li>
+          <li>
+            <a href="index.html"><span>로그아웃</span><iconify-icon icon="material-symbols:logout"
+                width="25"></iconify-icon></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav">
+    <a href="index.html" id="logo2">
+      <img src="/images/logo.svg" alt="logo" />
+    </a>
+    <ul class="gnb">
+      <li class="gnb-menu">
+        <a href="admin_manager_management.html" class="menu-btn">매니저 관리</a>
+      </li>
+      <li class="gnb-menu">
+        <a href="admin_post_management.html" class="menu-btn">게시물 관리</a>
+      </li>
+      <li class="gnb-menu">
+        <a href="../src/admin_user_management.html" class="menu-btn">회원관리</a>
+      </li>
+      <li class="gnb-menu">
+        <a href="../src/admin_matching_management.html" class="menu-btn">DASH 매칭</a>
+      </li>
+    </ul>
+    <button type="button" class="nav-icon">
+      <iconify-icon icon="ph:list-fill"></iconify-icon>
+    </button>
+  </div>
+
+  <main>
+    <div class="container">
+      <div class="container_main">
+        <div class="content">
+          <h1>DASH매칭</h1>
+
+          <div>
+            <p>월별 매칭표</p>
+            <canvas id="myChart"></canvas>
+          </div>
+
+          <div class="authority">
+            <div class="search-box">
+
+              <select name="user_search" class="user_search">
+                <option value="성함">성함</option>
+                <option value="ID">ID</option>
+                <!-- <option value="사용권한">사용권한</option> -->
+              </select>
+              <input type="search">
+              <button type="button" class="search-btn">조회</button>
+              <button type="button" onclick="openModal('modal1')" class="add_btn">등록</button>
+            </div>
+
+            <div id="modal1" class="modal">
+              <div class="modal-content">
+                <h3 class="modal-heder">커플 등록</h3>
+                <div class="modal-text">
+                  <form action="#" method="post" id="add_administrator" enctype="multipart/form-data">
+                    <div class="search-box">
+
+                      <select name="user_search" class="user_search">
+                        <option value="성함">성함</option>
+                        <option value="ID">ID</option>
+                      </select>
+                      <input type="search">
+                      <button type="button" class="search-btn">조회</button>
+                    </div>
+                    <div class="btn_box">
+                      <button type="submit" id="submit-authority" class="modal_btn active_btn">저장</button>
+                      <button type="button" onclick="closeModal('modal1')" class="modal_btn">닫기</button>
+                    </div>
+                  </form>
+                </div>
+                <button tpye="button" onclick="closeModal('modal1')" class="close_btn">
+                  <iconify-icon icon="ph:x-light" width="30px"></iconify-icon>
+                </button>
+              </div>
+            </div>
+            <div id="modal2" class="modal">
+              <div class="modal-content">
+                <h3 class="modal-heder">회원관리</h3>
+                <div class="modal-text">
+                  <form action="#" method="post" id="add_administrator" enctype="multipart/form-data">
+                    <div class="add_info">
+                      <table class="info">
+
+                        <tr>
+                          <td colspan="4"><img src="../images/손호준.jpg" alt="손호준"></td>
+                        </tr>
+                        <tr>
+                          <td>이름</td>
+                          <td>손호준</td>
+                          <td>ID</td>
+                          <td>asd1234</td>
+                        </tr>
+
+
+                        <tr>
+                          <td>성별</td>
+                          <td>남</td>
+                          <td>연락처</td>
+                          <td>010-1234-5678</td>
+                        </tr>
+                        <tr>
+                          <td>생년월일</td>
+                          <td>950415</td>
+                          <td>이메일</td>
+                          <td>tpsk0415@naver.com</td>
+                        </tr>
+                        <tr>
+                          <td>나이</td>
+                          <td>29</td>
+                          <td>주소</td>
+                          <td>대전 서구 용문동</td>
+                        </tr>
+                        <tr>
+                          <td>매칭횟수</td>
+                          <td>24</td>
+                          <td>가입일</td>
+                          <td>2023.08.16</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td>문의사항</td>
+                          <td>2</td>
+                        </tr>
+                        <tr>
+                          <td>등급</td>
+                          <td>
+                            <select name="umembership" id="membership">
+                              <option value="manbership">등급</option>
+                              <option value="--------------------------------------------" disabled>
+                                --------------------------------------------</option>
+                              <option value="D" selected>Dabble</option>
+                              <option value="A">Advence</option>
+                              <option value="S">Special</option>
+                              <option value="H">Highest</option>
+                            </select>
+                          </td>
+                          <td>커플매니저</td>
+                          <td>
+                            <select name="manager" id="manager">
+                              <option value="manager">커플매니져</option>
+                              <option value="--------------------------------------------" disabled>
+                                --------------------------------------------</option>
+                              <option value="유세나" selected>유세나</option>
+                              <option value="송승현">송승현</option>
+                              <option value="진소이">진소이</option>
+                              <option value="안영태">안영태</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2">이용자 프로필</td>
+                          <td colspan="2">선호하는 이성</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td>나이</td>
+                          <td>2~30대</td>
+                        </tr>
+                        <tr>
+                          <td>키</td>
+                          <td>178</td>
+                          <td>키</td>
+                          <td>160대</td>
+                        </tr>
+                        <tr>
+                          <td>직업</td>
+                          <td>세무사</td>
+                          <td>직업</td>
+                          <td>상관무</td>
+                        </tr>
+                        <tr>
+                          <td>학력</td>
+                          <td>4년제 졸업</td>
+                          <td>학력</td>
+                          <td>대졸</td>
+                        </tr>
+                        <tr>
+                          <td>체형</td>
+                          <td>근육질</td>
+                          <td>체형</td>
+                          <td>슬림</td>
+                        </tr>
+                        <tr>
+                          <td>연봉</td>
+                          <td>5000</td>
+                          <td>연봉</td>
+                          <td>상관무</td>
+                        </tr>
+                        <tr>
+                          <td>결혼여부</td>
+                          <td>N</td>
+                          <td>결혼여부</td>
+                          <td>N</td>
+                        </tr>
+                        <tr>
+                          <td>자녀여부</td>
+                          <td>N</td>
+                          <td>자녀여부</td>
+                          <td>N</td>
+                        </tr>
+                        <tr>
+                          <td>취미</td>
+                          <td>계산</td>
+                          <td>취미</td>
+                          <td>상관무</td>
+                        </tr>
+                        <tr>
+                          <td>특기</td>
+                          <td>암산</td>
+                          <td>특기</td>
+                          <td>상관무</td>
+                        </tr>
+                        <tr>
+                          <td>장거리 여부</td>
+                          <td>Y</td>
+                          <td>지역</td>
+                          <td>상관무</td>
+                        </tr>
+                        <tr>
+                          <td>혈액형</td>
+                          <td>Rh+A</td>
+                          <td>혈액형</td>
+                          <td>상관무</td>
+                        </tr>
+                        <tr>
+                          <td>음주</td>
+                          <td>2잔</td>
+                          <td>음주</td>
+                          <td>상관무</td>
+                        </tr>
+                        <tr>
+                          <td>흡연</td>
+                          <td>Y</td>
+                          <td>흡연</td>
+                          <td>상관무</td>
+                        </tr>
+                        <tr>
+                          <td>성격</td>
+                          <td>Nice</td>
+                          <td>성격</td>
+                          <td>상관무</td>
+                        </tr>
+                        <tr>
+                          <td>결혼가치관</td>
+                          <td>Nice</td>
+                          <td>결혼가치관</td>
+                          <td>상관무</td>
+                        </tr>
+
+
+                      </table>
+                    </div>
+                    <div class="btn_box">
+                      <button type="submit" id="submit-authority" class="modal_btn active_btn">수정</button>
+                      <button type="button" onclick="closeModal('modal2')" class="modal_btn">닫기</button>
+                    </div>
+                  </form>
+                </div>
+                <button tpye="button" onclick="closeModal('modal2')" class="close_btn">
+                  <iconify-icon icon="ph:x-light" width="30px"></iconify-icon>
+                </button>
+              </div>
+            </div>
+            <div id="modal3" class="modal">
+              <div class="modal-content">
+                <h3 class="modal-heder">회원관리</h3>
+                <div class="modal-text">
+                  <form action="#" method="post" id="add_administrator" enctype="multipart/form-data">
+                    <div class="add_info">
+                      <table class="info">
+
+                        <tr>
+                          <td colspan="4"><img src="../images/한지민.jpg" alt="한지민"></td>
+                        </tr>
+                        <tr>
+                          <td>이름</td>
+                          <td>한지민</td>
+                          <td>ID</td>
+                          <td>qweqr1234</td>
+                        </tr>
+
+
+                        <tr>
+                          <td>성별</td>
+                          <td>여</td>
+                          <td>연락처</td>
+                          <td>010-8765-4321</td>
+                        </tr>
+                        <tr>
+                          <td>생년월일</td>
+                          <td>970225</td>
+                          <td>이메일</td>
+                          <td>tpsk0415@naver.com</td>
+                        </tr>
+                        <tr>
+                          <td>나이</td>
+                          <td>27</td>
+                          <td>주소</td>
+                          <td>대전 중구 선화동</td>
+                        </tr>
+                        <tr>
+                          <td>매칭횟수</td>
+                          <td>2</td>
+                          <td>가입일</td>
+                          <td>2023.08.16</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td>문의사항</td>
+                          <td>2</td>
+                        </tr>
+                        <tr>
+                          <td>등급</td>
+                          <td>
+                            <select name="umembership" id="membership">
+                              <option value="manbership">등급</option>
+                              <option value="--------------------------------------------" disabled>
+                                --------------------------------------------</option>
+                              <option value="D" selected>Dabble</option>
+                              <option value="A">Advence</option>
+                              <option value="S">Special</option>
+                              <option value="H">Highest</option>
+                            </select>
+                          </td>
+                          <td>커플매니저</td>
+                          <td>
+                            <select name="manager" id="manager">
+                              <option value="manager">커플매니져</option>
+                              <option value="--------------------------------------------" disabled>
+                                --------------------------------------------</option>
+                              <option value="유세나">유세나</option>
+                              <option value="송승현" selected>송승현</option>
+                              <option value="진소이">진소이</option>
+                              <option value="안영태">안영태</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2">이용자 프로필</td>
+                          <td colspan="2">선호하는 이성</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td>나이</td>
+                          <td>2~30대</td>
+                        </tr>
+                        <tr>
+                          <td>키</td>
+                          <td>165</td>
+                          <td>키</td>
+                          <td>160대</td>
+                        </tr>
+                        <tr>
+                          <td>직업</td>
+                          <td>회계사</td>
+                          <td>직업</td>
+                          <td>상관무</td>
+                        </tr>
+                        <tr>
+                          <td>학력</td>
+                          <td>4년제 졸업</td>
+                          <td>학력</td>
+                          <td>대졸</td>
+                        </tr>
+                        <tr>
+                          <td>체형</td>
+                          <td>슬림</td>
+                          <td>체형</td>
+                          <td>근육질</td>
+                        </tr>
+                        <tr>
+                          <td>연봉</td>
+                          <td>4000</td>
+                          <td>연봉</td>
+                          <td>상관무</td>
+                        </tr>
+                        <tr>
+                          <td>결혼여부</td>
+                          <td>N</td>
+                          <td>결혼여부</td>
+                          <td>N</td>
+                        </tr>
+                        <tr>
+                          <td>자녀여부</td>
+                          <td>N</td>
+                          <td>자녀여부</td>
+                          <td>N</td>
+                        </tr>
+                        <tr>
+                          <td>취미</td>
+                          <td>회계</td>
+                          <td>취미</td>
+                          <td>상관무</td>
+                        </tr>
+                        <tr>
+                          <td>특기</td>
+                          <td>회계</td>
+                          <td>특기</td>
+                          <td>상관무</td>
+                        </tr>
+                        <tr>
+                          <td>장거리 여부</td>
+                          <td>Y</td>
+                          <td>지역</td>
+                          <td>상관무</td>
+                        </tr>
+                        <tr>
+                          <td>혈액형</td>
+                          <td>Rh+B</td>
+                          <td>혈액형</td>
+                          <td>상관무</td>
+                        </tr>
+                        <tr>
+                          <td>음주</td>
+                          <td>1병</td>
+                          <td>음주</td>
+                          <td>상관무</td>
+                        </tr>
+                        <tr>
+                          <td>흡연</td>
+                          <td>N</td>
+                          <td>흡연</td>
+                          <td>상관무</td>
+                        </tr>
+                        <tr>
+                          <td>성격</td>
+                          <td>Nice</td>
+                          <td>성격</td>
+                          <td>상관무</td>
+                        </tr>
+                        <tr>
+                          <td>결혼가치관</td>
+                          <td>Nice</td>
+                          <td>결혼가치관</td>
+                          <td>상관무</td>
+                        </tr>
+
+
+                      </table>
+                    </div>
+                    <div class="btn_box">
+                      <button type="submit" id="submit-authority" class="modal_btn active_btn">수정</button>
+                      <button type="button" onclick="closeModal('modal3')" class="modal_btn">닫기</button>
+                    </div>
+                  </form>
+                </div>
+                <button tpye="button" onclick="closeModal('modal3')" class="close_btn">
+                  <iconify-icon icon="ph:x-light" width="30px"></iconify-icon>
+                </button>
+              </div>
+            </div>
+            <div class="manber_list">
+              <div>
+                <p>1</p>
+                <button onclick="correctionModal('modal2')"><img src="../images/손호준.jpg" alt="손호준">손호준</button>
+                <div><img src="../images/arrowheart.svg" alt="arrowheart"></div>
+                <button onclick="correctionModal('modal3')"><img src="../images/한지민.jpg" alt="한지민">한지민</button>
+                <button onclick="deleteBtn()" style="color: red;">탈퇴</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-content">
+      <h3>(주)Re:connect</h3>
+      <span>대표 : Recycle</span>
+      <span>사업자등록번호 : 999-99-99999</span>
+      <span>주소 : (34838)대전광역시 중구 중앙로121번길 20 (선화동 41) 2층</span>
+      <span>Tel.042-222-2402</span>
+      <ul class="footer-socials">
+        <li>
+          <a href="#"><img src="/images/ico_image.svg" alt="ico_image" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="/images/ico_instagram.svg" alt="ico_instagram" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="/images/ico_youtube.svg" alt="ico_youtube" /></a>
+        </li>
+      </ul>
+      <div class="footer-menu">
+        <p>
+          copyright &copy;2023 by<a href="”#”"> Re:connect.</a> All pictures
+          cannot be copied without permission.
+        </p>
+        <ul class="f-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dash.html">About</a></li>
+          <li><a href="estimate.html">Contact</a></li>
+          <li><a href="FAQ.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.3/dist/chart.umd.min.js"></script>
+  <script src="/script/admin_matching_chart.js"></script>
+  <script src="/script/admin_matching_management.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>
+
+</html>

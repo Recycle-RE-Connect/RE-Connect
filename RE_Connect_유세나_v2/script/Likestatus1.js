@@ -57,3 +57,9 @@ profilePictureInput.addEventListener("change", function () {
 
 // 기본세션
 // ===========================================================================================
+
+
+function confirmBtn(){
+  confirm("정말 좋아요를 취소하시겠습니까? 진짜?");
+  const deleteBtn = document.querySelectorAll(".button");
+}

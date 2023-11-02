@@ -241,24 +241,28 @@
 }
 
 .content{
+  position: relative;
+  margin: 88px auto 136px;
+  width: 1248px;
+  margin: 10rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* gap: 4rem; */
 }
 .heart-container  {
   display: flex;
   flex-direction: column;
 }
 .title{
-  margin: 1rem;
-  text-align: center;
-  font-size: 30px;
-  color: #A0C2AC;
+font-size: 36px;
+/* margin-top: 4rem 0; */
+margin-bottom: 4rem;
 }
 .sub-title{
-  margin: 1rem;
-  font-size: 30px;
-  color: #A0C2AC;
+  /* margin: 1rem; */
+  margin-bottom: 4rem;
+  /* font-size: 30px; */
+  /* color: #A0C2AC; */
 }
 
 .heart-container {
@@ -349,21 +353,96 @@
 /* Inspired by twitter.com/marina_uiux */
 
 .button{
-  background-color: #A0C2AC;
+  background-color: #9b9b9b;
   width: 70px;
-  height: 50px;
+  height: 40px;
   /* border: 2px solid #5db37b; */
   border-radius: 10px;
   font-size: 16px;
+  color: #f5f7f8;
 }
 
 .like_member_list{
   display: flex;
   align-items: center;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
+  border-bottom:1px solid rgb(204, 204, 204);
+  padding: 2rem;
+  width: 1000px;
 }
 .ranking-list{
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+.like_member_img{
+  border-radius: 10px;
+}
+.ranking{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.ranking p:nth-child(1){
+  font-size: 20px;
+  font-weight: 600;
+}
+.button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+  position: relative;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  left: 100px;
+  
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: .3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.button:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: .3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+}
+
+.button:hover .svgIcon {
+  width: 50px;
+  transition-duration: .3s;
+  transform: translateY(60%);
+}
+
+.button::before {
+  position: absolute;
+  top: -20px;
+  content: "Delete";
+  color: white;
+  transition-duration: .3s;
+  font-size: 2px;
+}
+
+.button:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(30px);
+  transition-duration: .3s;
 }

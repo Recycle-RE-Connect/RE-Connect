@@ -55,6 +55,7 @@ function close() {
 document.querySelector("#show").addEventListener("click", show);
 document.querySelector("#close").addEventListener("click", close);
 
+
 // -----------------------------------
 document.querySelectorAll('.flip-container').forEach(function(slide) {
   slide.addEventListener('click', function() {

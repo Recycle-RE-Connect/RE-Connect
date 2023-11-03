@@ -908,6 +908,8 @@ body {
     display: none;
   }
 }
+
+/* 카드 뒤집기 */
 /* CSS */
 .flip-container {
   perspective: 1000px;
@@ -958,6 +960,8 @@ body {
 }
 
 
+
+
 @media (max-width: 640px) {
 
   .swiper-carousel .swiper-button-next,
@@ -972,3 +976,4 @@ body {
     display: none;
   }
 } */
+

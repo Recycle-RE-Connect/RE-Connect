@@ -186,7 +186,7 @@
 }
 
 .secession {
-  color: #ff6d6d;
+  color: rgb(247, 41, 41);
 }
 
 .menu-btn:hover {
@@ -446,12 +446,7 @@
   cursor: pointer;
 }
 
-#prev_page,
-#next_page2,
-#prev_page2,
-#next_page3,
-#prev_page3,
-#submit-privacy {
+#prev_page,#next_page2,#prev_page2,#next_page3,#prev_page3,#next_page4,#prev_page4,#submit-privacy {
   width: 100%;
   height: 48px;
   padding: 0 10px;
@@ -469,14 +464,12 @@
   color: #333;
   margin-top: 10px;
 }
-#selectionLimit,
-#personalitySelectionLimit,
-#marriageSelectionLimit {
+#selectionLimit, #personalitySelectionLimit, #marriageSelectionLimit {
   font-size: 12px;
   color: red;
 }
 
-.info-hobby {
+.info-hobby{
   max-width: 400px;
   display: flex;
   flex-wrap: wrap;
@@ -494,15 +487,16 @@
 .info-hobby label span {
   position: relative;
   display: inline-block;
-  background-color: #f5f7f8;
+  background-color: #F5F7F8;
   padding: 15px 30px;
-  color: #a0c2ac;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: #A0C2AC;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .1);
   border-radius: 30px;
   font-size: 12px;
   transition: 0.3s;
   user-select: none;
   overflow: hidden;
+
 }
 
 .info-hobby label span::before {
@@ -512,16 +506,17 @@
   left: 0;
   width: 100%;
   height: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, .1);
 }
 
-.info-hobby label input[type="checkbox"]:checked ~ span {
+.info-hobby label input[type="checkbox"]:checked ~ span{
   background-color: #a0c2ac;
   color: #fff;
   /* box-shadow: 0 2px 20px #a0c2ac; */
 }
 
-.info-blood-type {
+
+.info-blood-type{
   max-width: 400px;
   display: flex;
   flex-wrap: wrap;
@@ -539,10 +534,10 @@
 .info-blood-type label span {
   position: relative;
   display: inline-block;
-  background-color: #f5f7f8;
+  background-color: #F5F7F8;
   padding: 15px 30px;
-  color: #a0c2ac;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: #A0C2AC;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .1);
   border-radius: 30px;
   font-size: 12px;
   transition: 0.3s;
@@ -557,16 +552,16 @@
   left: 0;
   width: 100%;
   height: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, .1);
 }
 
-.info-blood-type label input[type="radio"]:checked ~ span {
+.info-blood-type label input[type="radio"]:checked ~ span{
   background-color: #a0c2ac;
   color: #fff;
   /* box-shadow: 0 2px 20px #a0c2ac; */
 }
 
-.privacy_info_religion {
+.privacy_info_religion{
   max-width: 400px;
   display: flex;
   flex-wrap: wrap;
@@ -584,10 +579,10 @@
 .privacy_info_religion label span {
   position: relative;
   display: inline-block;
-  background-color: #f5f7f8;
+  background-color: #F5F7F8;
   padding: 10px 20px;
-  color: #a0c2ac;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: #A0C2AC;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .1);
   border-radius: 30px;
   font-size: 12px;
   transition: 0.3s;
@@ -602,10 +597,10 @@
   left: 0;
   width: 100%;
   height: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, .1);
 }
 
-.privacy_info_religion label input[type="radio"]:checked ~ span {
+.privacy_info_religion label input[type="radio"]:checked ~ span{
   background-color: #a0c2ac;
   color: #fff;
   /* box-shadow: 0 2px 20px #a0c2ac; */
@@ -659,7 +654,7 @@
   color: #fff;
 }
 
-.info-personality {
+.info-personality{
   max-width: 400px;
   display: flex;
   flex-wrap: wrap;
@@ -677,15 +672,16 @@
 .info-personality label span {
   position: relative;
   display: inline-block;
-  background-color: #f5f7f8;
+  background-color: #F5F7F8;
   padding: 15px 30px;
-  color: #a0c2ac;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: #A0C2AC;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .1);
   border-radius: 30px;
   font-size: 12px;
   transition: 0.3s;
   user-select: none;
   overflow: hidden;
+
 }
 
 .info-personality label span::before {
@@ -695,16 +691,18 @@
   left: 0;
   width: 100%;
   height: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, .1);
 }
 
-.info-personality label input[type="checkbox"]:checked ~ span {
+.info-personality label input[type="checkbox"]:checked ~ span{
   background-color: #a0c2ac;
   color: #fff;
   /* box-shadow: 0 2px 20px #a0c2ac; */
 }
 
-.info_marriage {
+
+
+.info_marriage{
   max-width: 400px;
   display: flex;
   flex-wrap: wrap;
@@ -722,15 +720,16 @@
 .info_marriage label span {
   position: relative;
   display: inline-block;
-  background-color: #f5f7f8;
+  background-color: #F5F7F8;
   padding: 15px 30px;
-  color: #a0c2ac;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: #A0C2AC;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .1);
   border-radius: 30px;
   font-size: 12px;
   transition: 0.3s;
   user-select: none;
   overflow: hidden;
+
 }
 
 .info_marriage label span::before {
@@ -740,11 +739,30 @@
   left: 0;
   width: 100%;
   height: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, .1);
 }
 
-.info_marriage label input[type="checkbox"]:checked ~ span {
+.info_marriage label input[type="checkbox"]:checked ~ span{
   background-color: #a0c2ac;
   color: #fff;
   /* box-shadow: 0 2px 20px #a0c2ac; */
+}
+
+#additional_info3 {
+  width: 400px;
+}
+.about_me{
+  height: 486px;
+}
+
+textarea {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 400px;
+  height: 454px;
+  /* border: 1px solid #75757e; */
+  resize: none;
+  font-size: 1rem;
+  padding: 1rem;
+  box-shadow: 5px 5px 5px 5px #ebebef;
 }

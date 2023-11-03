@@ -58,6 +58,7 @@ profilePictureInput.addEventListener("change", function () {
 // 기본세션
 // ===========================================================================================
 
+
 // 입력 필드에 숫자만 입력되도록 하고, 입력이 끝났을 때 "세"를 추가하는 코드
 var userAgeInput = document.getElementById("user_age");
 
@@ -157,21 +158,31 @@ function showPage(pageId) {
     document.getElementById("detailed_info").style.display = "none";
     document.getElementById("additional_info1").style.display = "none";
     document.getElementById("additional_info2").style.display = "none";
+    document.getElementById("additional_info3").style.display = "none";
   } else if (pageId === "detailed_info") {
     document.getElementById("basic_info").style.display = "none";
     document.getElementById("detailed_info").style.display = "block";
     document.getElementById("additional_info1").style.display = "none";
     document.getElementById("additional_info2").style.display = "none";
+    document.getElementById("additional_info3").style.display = "none";
   } else if (pageId === "additional_info1") {
     document.getElementById("basic_info").style.display = "none";
     document.getElementById("detailed_info").style.display = "none";
     document.getElementById("additional_info1").style.display = "block";
     document.getElementById("additional_info2").style.display = "none";
+    document.getElementById("additional_info3").style.display = "none";
   } else if (pageId === "additional_info2") {
     document.getElementById("basic_info").style.display = "none";
     document.getElementById("detailed_info").style.display = "none";
     document.getElementById("additional_info1").style.display = "none";
     document.getElementById("additional_info2").style.display = "block";
+    document.getElementById("additional_info3").style.display = "none";
+  }else if (pageId === "additional_info3") {
+    document.getElementById("basic_info").style.display = "none";
+    document.getElementById("detailed_info").style.display = "none";
+    document.getElementById("additional_info1").style.display = "none";
+    document.getElementById("additional_info2").style.display = "none";
+    document.getElementById("additional_info3").style.display = "block";
   }
 }
 
@@ -248,9 +259,7 @@ const maxMarriageSelections = 5; // 최대 선택 가능한 결혼가치관 개�
 const marriageCheckboxes = document.querySelectorAll(
   ".info_marriage input[type='checkbox']"
 );
-const marriageSelectionLimitText = document.getElementById(
-  "marriageSelectionLimit"
-);
+const marriageSelectionLimitText = document.getElementById("marriageSelectionLimit");
 
 // 체크박스 상태가 변경될 때마다 선택된 결혼가치관 목록 업데이트
 marriageCheckboxes.forEach((checkbox) => {

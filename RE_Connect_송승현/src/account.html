@@ -61,6 +61,9 @@
       </a>
       <ul class="gnb">
         <li class="gnb-menu">
+          <a href="profil.html" class="menu-btn">마이프로필</a>
+        </li>
+        <li class="gnb-menu">
           <a href="account.html" class="menu-btn">개인정보수정</a>
         </li>
         <li class="gnb-menu">
@@ -113,24 +116,47 @@
                 <!-- 내용을 여기에 추가하세요. -->
                 <div class="name-sex-box">
                   <div class="info-name">
-                    <input type="text" name="user_name" placeholder="이름" maxlength="10" required />
+                    <input type="text" name="user_name" placeholder="* 이름" maxlength="10" required/>
                   </div>
                   <div class="info-sex">
-                    <input type="radio" id="male" name="MF" required /><label for="male">남자</label>
-                    <input type="radio" id="female" name="MF" required /><label for="female">여자</label>
+                    <input type="radio" id="male" name="MF" required/><label for="male">남자</label>
+                    <input type="radio" id="female" name="MF" required/><label for="female">여자</label>
                   </div>
                 </div>
                 <div class="info-age">
-                  <input type="text" name="user_age" id="user_age" placeholder="나이" maxlength="3" required />
+                  <input type="text" name="user_age" id="user_age" placeholder="* 나이" maxlength="3" required/>
+                </div>
+                <div class="info-phone">
+                  <input type="text" name="user_phone" id="user_phone" placeholder="* 연락처" maxlength="13" required oninput="autoHyphen2(this)" />
                 </div>
                 <div class="country-education-box">
                   <div class="info-country">
-                    <select class="country" name="user_country" required>
-                      <option value="">거주지역</option>
+                    
+                  <div class="info-education">
+                    <select class="education" name="user_education" onchange="changeSelectFontColor(this)" required>
+                      <option value="" disabled selected>* 학력</option>
                       <option value="-----" disabled>
                         --------------------------------------------
                       </option>
+                      <option value="09">대학교졸업</option>
+                      <option value="10">대학교중퇴</option>
+                      <option value="07">대학교재학</option>
+                      <option value="13">대학원졸업</option>
+                      <option value="05">대학(2,3년제)졸업</option>
+                      <option value="06">대학(2,3년제)중퇴</option>
+                      <option value="02">고등학교 졸업</option>
+                      <option value="15">기타</option>
+                    </select>
+                  </div>
+                  <div class="info-occupation">
+                    <input type="text" name="user_occupation" placeholder="*직업" required />
+                  </div>
 
+                    <select class="country" name="user_country" onchange="changeSelectFontColor(this)" >
+                      <option value="" disabled selected>거주지역</option>
+                      <option value="-----" disabled>
+                        --------------------------------------------
+                      </option>
                       <option value="01">서울</option>
                       <option value="15">수원/화성</option>
                       <option value="02">인천</option>
@@ -157,33 +183,13 @@
                       <option value="28">제주</option>
                     </select>
                   </div>
-
-                  <div class="info-education">
-                    <select class="education" name="user_education" required>
-                      <option value="">학력</option>
-                      <option value="-----" disabled>
-                        --------------------------------------------
-                      </option>
-                      <option value="09">대학교졸업</option>
-                      <option value="10">대학교중퇴</option>
-                      <option value="07">대학교재학</option>
-                      <option value="13">대학원졸업</option>
-                      <option value="05">대학(2,3년제)졸업</option>
-                      <option value="06">대학(2,3년제)중퇴</option>
-                      <option value="02">고등학교 졸업</option>
-                      <option value="15">기타</option>
-                    </select>
-                  </div>
                 </div>
                 <div class="info-hight">
-                  <input type="text" name="user_hight" id="user_hight" placeholder="키" maxlength="5" required />
-                </div>
-                <div class="info-occupation">
-                  <input type="text" name="user_occupation" placeholder="직업" required />
+                  <input type="text" name="user_hight" id="user_hight" placeholder="키" maxlength="5"   />
                 </div>
                 <div class="info-body">
-                  <select class="body_type" name="user_body_type" required>
-                    <option value="">체형</option>
+                  <select class="body_type" name="user_body_type" onchange="changeSelectFontColor(this)">
+                    <option value="" disabled selected>체형</option>
                     <option value="-----" disabled>
                       --------------------------------------------
                     </option>
@@ -195,8 +201,8 @@
                   </select>
                 </div>
                 <div class="info-annual-income">
-                  <select class="annual_income" name="user_annual_income" required>
-                    <option value="">연봉</option>
+                  <select class="annual_income" name="user_annual_income" onchange="changeSelectFontColor(this)" >
+                    <option value="" disabled selected>연봉</option>
                     <option value="-----" disabled>
                       --------------------------------------------
                     </option>
@@ -217,15 +223,15 @@
                   </select>
                 </div>
                 <div class="info-marital-status">
-                  <input type="radio" id="first_marriage" name="marital_status" required /><label
+                  <input type="radio" id="first_marriage" name="marital_status"   /><label
                     for="first_marriage">초혼</label>
-                  <input type="radio" id="remarriage" name="marital_status" required /><label
+                  <input type="radio" id="remarriage" name="marital_status"   /><label
                     for="remarriage">재혼</label>
                 </div>
                 <div class="info-children">
-                  <input type="radio" id="has_children" name="children" value="Y" required /><label
+                  <input type="radio" id="has_children" name="children" value="Y"   /><label
                     for="has_children">자녀있음</label>
-                  <input type="radio" id="no_children" name="children" value="N" required /><label
+                  <input type="radio" id="no_children" name="children" value="N"   /><label
                     for="no_children">자녀없음</label>
                 </div>
                 <div class="info-child-count" id="child_count_container" style="display: none">

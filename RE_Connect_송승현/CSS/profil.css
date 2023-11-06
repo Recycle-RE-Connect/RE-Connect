@@ -285,7 +285,7 @@
 
 .btn_photo {
   position: absolute;
-  bottom: 77%;
+  bottom: 68%;
   right: 10px;
   background-color: #a0c2ac;
   color: #fff;
@@ -310,6 +310,7 @@
   border-radius: 5px;
   padding: 10px;
   text-align: center;
+  z-index: 1;
 }
 
 .photo_edit_btn span {
@@ -332,6 +333,7 @@
 .my_profil_header {
   display: flex;
   justify-content: center;
+  height: 500px;
   /* gap: 1rem;
   margin-left: 10rem; */
 }
@@ -339,5 +341,85 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
+.information_table {
+  width: 900px;
+  margin-top: 1rem;
+  /* text-align: center; */
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 auto ;
+}
+.information_table td {
+  width: 300px;
+  border-bottom: solid;
+  border-right: solid;
+  border-width: 1px;
+  font-size: 14px;
+  color: #3d3d3d;
+  border-color: #EFF0F2;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+  padding: 1rem;
+}
+.information_table th {
+  width: 200px;
+  border-bottom: solid;
+  border-left: solid;
+  border-width: 1px;
+  font-size: 15px;
+  font-weight: 700;
+  border-color: #EFF0F2;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.information_table tr:nth-child(1) {
+  border-top: solid;
+  border-width: 1px;
+  border-color: #EFF0F2;
+}
+.information_table tr:last-child{
+  border-top: solid;
+  border-width: 1px;
+}
+
+.information_table:nth-child(1) {
+  margin-bottom: 1rem;
+}
+
+.information_table:last-child tr:last-child>th{
+  /* height: 200px;
+  line-height: 184px; */
+  vertical-align: middle;
+}
+.information_table:last-child tr:last-child>td{
+  vertical-align:top;
+}
+
+.about_me {
+  width: 100%;
+  height: 200px;
+  resize: none;
+}
+
+.amend_box{
+  display: flex;
+  justify-content: center;
+}
+.amend_btn {
+  width: 100px;
+  height: 48px;
+  padding: 0 10px;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+  color: #fff;
+  font-size: 16px;
+  background-color: #a0c2ac;
+  /* margin-bottom: 1px; */
+  margin-top: 15px;
+  cursor: pointer;
 }

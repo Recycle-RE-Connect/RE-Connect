@@ -75,7 +75,7 @@ profilePictureInput.addEventListener("change", function () {
         { x: "정직", value: 3},
         { x: "경제적안정", value: 3},
         { x: "신뢰", value: 3},
-        { x: "유며감각", value: 3},
+        { x: "유머감각", value: 3},
         { x: "자유", value: 3},
       ];
 

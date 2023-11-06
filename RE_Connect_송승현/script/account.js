@@ -58,6 +58,32 @@ profilePictureInput.addEventListener("change", function () {
 // 기본세션
 // ===========================================================================================
 
+const autoHyphen2 = (target) => {
+  target.value = target.value
+    .replace(/[^0-9]/g, '')
+    .replace(/^(\d{0,3})(\d{0,4})(\d{0,4})$/g, "$1-$2-$3").replace(/(\-{1,2})$/g, "");
+}
+
+function changeSelectFontColor(select) {
+  var selectedValue = select.value;
+  var selectFontColor;
+
+  // 선택된 값에 따라 <select> 요소의 폰트 색상을 설정
+  switch (selectedValue) {
+      case "default":
+          selectFontColor = "#75757e"; // 기본 폰트 색상 (검은색)
+          break;
+      default:
+          selectFontColor = "#111"; // 기본 폰트 색상 (검은색)
+  }
+
+  select.style.color = selectFontColor;
+}
+
+
+
+
+
 
 // 입력 필드에 숫자만 입력되도록 하고, 입력이 끝났을 때 "세"를 추가하는 코드
 var userAgeInput = document.getElementById("user_age");

@@ -56,9 +56,40 @@ document.querySelector("#show").addEventListener("click", show);
 document.querySelector("#close").addEventListener("click", close);
 
 
-// -----------------------------------
+// ----------------뒤집기-------------------
 document.querySelectorAll('.flip-container').forEach(function(slide) {
-  slide.addEventListener('click', function() {
-    this.querySelector('.flipper').classList.toggle('flipped');
+  slide.addEventListener('click', function(e) {
+    if (!e.target.classList.contains('openModal')) {
+      this.querySelector('.flipper').classList.toggle('flipped');
+    }
   });
 });
+// ----------------userModal-------------------
+
+const openModalButtons = document.querySelectorAll(".openModal");
+const closeModalButtons = document.querySelectorAll(".close");
+const modal = document.querySelector(".modal");
+
+openModalButtons.forEach(button => {
+    button.addEventListener("click", function() {
+        modal.style.display = "block";
+    });
+});
+
+closeModalButtons.forEach(button => {
+    button.addEventListener("click", function() {
+        modal.style.display = "none";
+    });
+});
+
+window.addEventListener("click", function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
+// DB에서 유저의 아이디 및 등급을 받아와 낮은 등급(G, D등급)이면 리셋불가능
+// 나머지 높은 등급은 리셋가능
+// 상세정보도 유저의 아이디를 불러와 불러온 유저의 정보로 업로드 
+// G등급이면 상세정보 못보게
+

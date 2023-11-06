@@ -5,6 +5,7 @@
   font-style: normal
 }
 
+
 /* :root {
   --swiper-theme-color: #007aff
 } */
@@ -958,7 +959,87 @@ body {
 .flipper.flipped {
   transform: rotateY(180deg);
 }
+/* 유저 모달 */
+.openModal{
+  font-size: 1rem;
+  width: 100px;
+  height: 40px;
+  border: 2px solid #E59560;
+  color: #E59560;
+  border-radius: 10px;
+  background-color: #1D3124;
+  position: absolute;
+  top: 80%;
+}
 
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border-radius: 10px;
+}
+.info{
+  padding: 1rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+}
+
+.info td{
+  width: 150px;
+  padding: 0.5rem 0;
+  padding-left: 1rem;
+}
+.info td:nth-child(1), .info td:nth-child(3){
+  font-weight: bold;
+}
+.info td:nth-child(2), .info td:nth-child(4){
+  text-align: center;
+}
+
+.close {
+  float: right;
+  font-weight: bold;
+  position: absolute;
+  left: 90%;
+  top: 87%;
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  line-height: 28px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #A0C2AC;
+  cursor: pointer;
+}
+
+.close:hover {
+  border: 1px solid #A0C2AC;
+  background-color: #fff;
+  color: #A0C2AC;
+  text-decoration: none;
+}
+.close:active{
+  color: #fff;
+  background-color: #A0C2AC;
+}
 
 
 
